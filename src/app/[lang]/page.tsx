@@ -1,0 +1,52 @@
+import { LandingNav } from "@/components/landing/LandingNav";
+import { Hero } from "@/components/landing/Hero";
+import { StatsBar } from "@/components/landing/StatsBar";
+import { Promises } from "@/components/landing/Promises";
+import { WhyDiagnose } from "@/components/landing/WhyDiagnose";
+import { HowItWorks } from "@/components/landing/HowItWorks";
+import { Methodology } from "@/components/landing/Methodology";
+import { Features } from "@/components/landing/Features";
+import { Pricing } from "@/components/landing/Pricing";
+import { FAQ } from "@/components/landing/FAQ";
+import { CTA } from "@/components/landing/CTA";
+import { Footer } from "@/components/landing/Footer";
+import { createClient, isSupabaseConfigured } from "@/lib/supabase/server";
+import { getServerDictionary } from "@/i18n/getDictionary";
+
+export default async function Home({
+  searchParams,
+}: {
+  searchParams: Promise<{ compte_supprime?: string }>;
+}) {
+  const user = isSupabaseConfigured
+    ? (await (await createClient()).auth.getUser()).data.user
+    : null;
+  const { compte_supprime } = await searchParams;
+  const { home: t } = (await getServerDictionary()).landing;
+
+  return (
+    <>
+      <LandingNav loggedIn={!!user} />
+      <main className="flex-1">
+        {compte_supprime === "1" && (
+          <div className="max-w-[1160px] mx-auto px-5 sm:px-6 pt-6">
+            <div className="px-4 py-3 rounded-lg bg-teal/10 border border-teal/20 text-[13px] text-teal">
+              {t.accountDeleted}
+            </div>
+          </div>
+        )}
+        <Hero />
+        <StatsBar />
+        <Promises />
+        <WhyDiagnose />
+        <HowItWorks />
+        <Methodology />
+        <Features />
+        <Pricing />
+        <FAQ />
+        <CTA />
+      </main>
+      <Footer />
+    </>
+  );
+}

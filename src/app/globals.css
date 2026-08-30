@@ -1,0 +1,159 @@
+@import "tailwindcss";
+
+:root {
+  --color-bg: #e9ecea;
+  --color-surface: #ffffff;
+  --color-ink: #091315;
+  --color-ink-soft: #686464;
+  --color-ink-faint: #6d7373;
+  --color-line: #d7dbd8;
+  --color-line-soft: #e2e5e2;
+  --color-accent: #55631a;
+  --color-accent-deep: #3d4712;
+  --color-accent-soft: #f2ffd9;
+  --color-accent-vivid: #d7ff53;
+  --color-gold: #83641f;
+  --color-gold-tint: #c9a227;
+  --color-gold-soft: #f7efdc;
+  --color-amber: #9a6c1b;
+  --color-amber-tint: #dca13a;
+  --color-olive: #6b7d31;
+  --color-olive-tint: #8aa23f;
+  --color-coral: #c45033;
+  --color-coral-tint: #d0654a;
+  --color-teal: #348269;
+  --color-teal-tint: #3e9b7e;
+
+  --shadow-card: 0 1px 2px rgba(20, 23, 26, 0.04), 0 6px 20px rgba(20, 23, 26, 0.05);
+  --shadow-card-lg: 0 4px 10px rgba(20, 23, 26, 0.05), 0 18px 46px rgba(20, 23, 26, 0.08);
+}
+
+@theme inline {
+  --color-bg: var(--color-bg);
+  --color-surface: var(--color-surface);
+  --color-ink: var(--color-ink);
+  --color-ink-soft: var(--color-ink-soft);
+  --color-ink-faint: var(--color-ink-faint);
+  --color-line: var(--color-line);
+  --color-line-soft: var(--color-line-soft);
+  --color-accent: var(--color-accent);
+  --color-accent-deep: var(--color-accent-deep);
+  --color-accent-soft: var(--color-accent-soft);
+  --color-accent-vivid: var(--color-accent-vivid);
+  --color-gold: var(--color-gold);
+  --color-gold-tint: var(--color-gold-tint);
+  --color-gold-soft: var(--color-gold-soft);
+  --color-amber: var(--color-amber);
+  --color-amber-tint: var(--color-amber-tint);
+  --color-olive: var(--color-olive);
+  --color-olive-tint: var(--color-olive-tint);
+  --color-coral: var(--color-coral);
+  --color-coral-tint: var(--color-coral-tint);
+  --color-teal: var(--color-teal);
+  --color-teal-tint: var(--color-teal-tint);
+
+  --font-sans: var(--font-sans), system-ui, sans-serif;
+  --font-display: var(--font-display), var(--font-sans), system-ui, sans-serif;
+  --font-mono: var(--font-mono), ui-monospace, monospace;
+
+  --shadow-card: var(--shadow-card);
+  --shadow-card-lg: var(--shadow-card-lg);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: var(--color-bg);
+  color: var(--color-ink);
+}
+
+::selection {
+  background: var(--color-accent-soft);
+  color: var(--color-accent-deep);
+}
+
+:focus-visible {
+  outline: 2px solid var(--color-accent);
+  outline-offset: 2px;
+}
+
+input[type="range"] {
+  -webkit-appearance: none;
+  appearance: none;
+  height: 5px;
+  border-radius: 3px;
+  background: var(--color-line-soft);
+  outline: none;
+}
+input[type="range"]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 17px;
+  height: 17px;
+  border-radius: 50%;
+  background: var(--color-accent);
+  cursor: pointer;
+  border: 3px solid #fff;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.18);
+}
+input[type="range"]::-moz-range-thumb {
+  width: 17px;
+  height: 17px;
+  border-radius: 50%;
+  background: var(--color-accent);
+  cursor: pointer;
+  border: 3px solid #fff;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+.animate-spin-slow {
+  animation: spin 1s linear infinite;
+}
+
+@keyframes tab-fade-in {
+  from {
+    opacity: 0;
+    transform: translateY(4px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+.animate-tab-fade-in {
+  animation: tab-fade-in 0.22s ease-out;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  * {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+@media print {
+  .no-print {
+    display: none !important;
+  }
+  .print-header {
+    display: block !important;
+  }
+  body {
+    background: #fff;
+  }
+}

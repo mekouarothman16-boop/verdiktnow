@@ -1,0 +1,20 @@
+{
+  "detector": {
+    "ignoreRules": [],
+    "ignoreFiles": [],
+    "ignoreValues": [
+      {
+        "rule": "design-system-color",
+        "value": "rgba(220,161,58,1)",
+        "createdAt": "2026-08-29T02:04:09.668Z",
+        "reason": "matches existing token --color-amber-tint (#dca13a), expressed as raw rgba for gradient opacity fade"
+      },
+      {
+        "rule": "design-system-color",
+        "value": "rgba(138,162,63,1)",
+        "createdAt": "2026-08-29T02:04:10.009Z",
+        "reason": "matches existing token --color-olive-tint (#8aa23f), expressed as raw rgba for gradient opacity fade"
+      }
+    ]
+  }
+}

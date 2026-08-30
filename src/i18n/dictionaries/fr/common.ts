@@ -1,0 +1,40 @@
+export const common = {
+  nav: {
+    howItWorks: "Comment ça marche",
+    features: "Fonctionnalités",
+    pricing: "Forfaits",
+    faq: "FAQ",
+    login: "Connexion",
+    myPortfolio: "Mon portefeuille",
+    seePricing: "Voir les forfaits",
+  },
+  appHeader: {
+    login: "Connexion",
+    myPortfolio: "Mon portefeuille",
+    myTasks: "Mes tâches",
+    logout: "Se déconnecter",
+    mySubscription: "Mon abonnement",
+    tabContext: "Contexte",
+    tabAptitude: "Aptitude",
+    tabRoi: "ROI",
+    tabPrio: "Priorisation",
+    tabRoadmap: "Feuille de route",
+  },
+  footer: {
+    about: "À propos",
+    help: "Aide",
+    privacy: "Confidentialité",
+    terms: "Conditions d'utilisation",
+    copyright: "© {year} CADRAN. Tous droits réservés.",
+  },
+  language: {
+    fr: "Français",
+    en: "English",
+  },
+  notFound: {
+    eyebrow: "404",
+    title: "Page introuvable",
+    description: "Cette page n'existe pas ou a été déplacée. Vérifiez l'adresse ou retournez à l'accueil.",
+    cta: "Retour à l'accueil",
+  },
+};
