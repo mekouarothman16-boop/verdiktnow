@@ -4,7 +4,7 @@ export const landing = {
     titleLine: "Sachez quel processus",
     titleHighlight: "automatiser en premier",
     subtitle:
-      "CADRAN évalue l'aptitude d'un processus à l'automatisation, en chiffre le retour sur investissement et le priorise face aux autres, un processus à la fois, avec une méthode pondérée et transparente.",
+      "VerdiktNow évalue l'aptitude d'un processus à l'automatisation, en chiffre le retour sur investissement et le priorise face aux autres, un processus à la fois, avec une méthode pondérée et transparente.",
     ctaPricing: "Voir les forfaits",
     ctaHowItWorks: "Voir comment ça marche",
     badgeInstall: "Aucune installation",
@@ -23,25 +23,25 @@ export const landing = {
       {
         value: "2 %",
         text: "seulement des entreprises sont prêtes pour l'automatisation.",
-        response: "CADRAN vous situe sur 6 leviers pondérés, avant le premier dollar investi.",
+        response: "VerdiktNow vous situe sur 6 leviers pondérés, avant le premier dollar investi.",
       },
       {
         value: "61 %",
         text: "jugent leurs outils d'automatisation sous exploités, faute de stratégie claire.",
         response:
-          "CADRAN priorise vos processus sur une matrice Valeur × Aptitude, pour savoir lequel attaquer en premier.",
+          "VerdiktNow priorise vos processus sur une matrice Valeur × Aptitude, pour savoir lequel attaquer en premier.",
       },
       {
         value: "36 %",
         text: "de réduction de coûts pour les entreprises qui automatisent avec une méthode structurée.",
         response:
-          "CADRAN chiffre ce potentiel pour votre processus : économies nettes, délai de récupération, valeur actualisée nette sur 5 ans.",
+          "VerdiktNow chiffre ce potentiel pour votre processus : économies nettes, délai de récupération, valeur actualisée nette sur 5 ans.",
       },
     ],
   },
   promises: {
     eyebrow: "Ce que nous vous devons",
-    title: "Les promesses de CADRAN",
+    title: "Les promesses de VerdiktNow",
     items: [
       {
         title: "Aucun score sans explication",
@@ -63,8 +63,8 @@ export const landing = {
     costIntro: "Un audit de préparation à l'automatisation mené par une firme externe, pour un seul processus et avant même de commencer à automatiser, coûte généralement :",
     costVendorLabel: "Firme d'automatisation externe",
     costVendorValue: "3 000 $ à 25 000 $ US par mandat",
-    costCadranLabel: "CADRAN, diagnostics illimités",
-    costCadranValue: "à partir de 50 $ CAD / mois",
+    costVerdiktNowLabel: "VerdiktNow, diagnostics illimités",
+    costVerdiktNowValue: "à partir de 50 $ CAD / mois",
     costSource: "Fourchette usuelle observée sur le marché du conseil en automatisation pour un audit de préparation, petites et moyennes entreprises.",
   },
   whyDiagnose: {
@@ -207,7 +207,7 @@ export const landing = {
   },
   features: {
     eyebrow: "Conçu pour la décision",
-    title: "Ce qui distingue CADRAN",
+    title: "Ce qui distingue VerdiktNow",
     items: [
       {
         title: "Double pondération",
@@ -259,14 +259,14 @@ export const landing = {
     customPricing: "Sur mesure",
     enterpriseCaption: "Toutes les fonctionnalités, avec support prioritaire et conditions négociées selon le nombre d'utilisateurs et de processus à évaluer.",
     contactUs: "Nous contacter",
-    enterpriseEmailSubject: "CADRAN : palier Entreprise",
+    enterpriseEmailSubject: "VerdiktNow : palier Entreprise",
     viewerSeatBadge: "Ajout à la personne",
   },
   faq: {
     eyebrow: "Questions fréquentes",
     title: "Vous vous posez des questions ?",
     intro:
-      "Les réponses aux questions qu'on nous pose le plus souvent sur la méthode, le diagnostic et la tarification de CADRAN.",
+      "Les réponses aux questions qu'on nous pose le plus souvent sur la méthode, le diagnostic et la tarification de VerdiktNow.",
     ctaLabel: "Voir toute l'aide",
     items: [
       {
@@ -274,7 +274,7 @@ export const landing = {
         a: "La plupart des échecs d'automatisation ne viennent pas de l'outil, mais d'un processus qui n'était pas prêt. Un diagnostic en amont révèle si le processus est réellement prêt, ce qu'il faut corriger d'abord, et lequel prioriser s'il y en a plusieurs.",
       },
       {
-        q: "Comment fonctionne CADRAN ?",
+        q: "Comment fonctionne VerdiktNow ?",
         a: "Cinq modules qui s'enchaînent pour un même processus : contexte, diagnostic d'aptitude (30 énoncés sur 6 leviers), calculateur de ROI, priorisation sur une matrice Valeur × Aptitude, puis une feuille de route générée automatiquement. Vous repartez avec une décision claire sur la suite.",
       },
       {
@@ -286,19 +286,19 @@ export const landing = {
         a: "Non : dès que le contexte que vous déclarez révèle un risque (volume imprévisible, aucune documentation, forte variabilité), le score du levier concerné est automatiquement plafonné — le diagnostic ne peut pas afficher un résultat élevé si les signaux disent le contraire. Vous pouvez aussi inviter un collègue à remplir un second avis indépendant, et chaque rapport affiche un niveau de fiabilité (Faible, Moyenne ou Élevée) qui indique exactement combien s'y fier.",
       },
       {
-        q: "Qu'est ce qui distingue CADRAN des autres outils ?",
+        q: "Qu'est ce qui distingue VerdiktNow des autres outils ?",
         a: "Une méthode transparente et pondérée plutôt qu'un score arbitraire, une analyse assistée par IA pour amorcer le diagnostic, et un dossier d'affaires chiffré (économies nettes, délai de récupération, VAN sur 5 ans) prêt à présenter en comité.",
       },
       {
-        q: "CADRAN est il lié à un fournisseur RPA ou IA en particulier ?",
-        a: "Non. CADRAN est pensé comme l'étape à faire avant de contacter un fournisseur RPA/IA ou un consultant, pas comme un canal de vente pour l'un d'eux — nous ne touchons aucune commission ni aucun avantage des fournisseurs mentionnés dans votre rapport. Le dossier généré est d'ailleurs conçu pour être remis tel quel à ce fournisseur : il répond à la plupart des questions qu'il vous poserait en première rencontre.",
+        q: "VerdiktNow est il lié à un fournisseur RPA ou IA en particulier ?",
+        a: "Non. VerdiktNow est pensé comme l'étape à faire avant de contacter un fournisseur RPA/IA ou un consultant, pas comme un canal de vente pour l'un d'eux — nous ne touchons aucune commission ni aucun avantage des fournisseurs mentionnés dans votre rapport. Le dossier généré est d'ailleurs conçu pour être remis tel quel à ce fournisseur : il répond à la plupart des questions qu'il vous poserait en première rencontre.",
       },
       {
-        q: "Combien coûte CADRAN ?",
+        q: "Combien coûte VerdiktNow ?",
         a: "Des forfaits simples, facturés à la personne, sans limite de processus : le contexte, le diagnostic, le ROI et la priorisation sont complets à tous les paliers. Ce qui change, c'est le prix par utilisateur selon la taille de votre équipe.",
       },
       {
-        q: "Pourquoi CADRAN a t il été créé ?",
+        q: "Pourquoi VerdiktNow a t il été créé ?",
         a: "Cinq ans à voir des automatisations échouer pour les mêmes raisons évitables ont convaincu son fondateur qu'il fallait d'abord savoir si un processus est prêt, avant même d'acheter quoi que ce soit — d'où un score qu'on peut toujours expliquer, jamais deviner.",
       },
       {
@@ -315,7 +315,7 @@ export const landing = {
   },
   home: {
     accountDeleted: "Votre compte et vos données ont été supprimés définitivement.",
-    title: "CADRAN — Diagnostic avant de contacter un fournisseur d'automatisation",
+    title: "VerdiktNow — Diagnostic avant de contacter un fournisseur d'automatisation",
     description:
       "Le diagnostic indépendant à faire avant d'appeler un fournisseur RPA/IA ou un consultant : évaluez l'aptitude d'un processus, chiffrez le ROI et priorisez — en une seule séance, sans engagement.",
   },

@@ -99,7 +99,7 @@ export function SummaryDocument({
           {orgLogoUrl ? (
             <Image src={orgLogoUrl} style={{ height: 18, maxWidth: 100, objectFit: "contain" }} />
           ) : (
-            <Text style={s.wordmark}>CADRAN</Text>
+            <Text style={s.wordmark}>VerdiktNow</Text>
           )}
           <Text style={s.headerMeta}>{t.headerMeta.replace("{date}", generatedAt)}</Text>
         </View>

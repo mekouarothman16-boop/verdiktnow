@@ -27,7 +27,7 @@ export const common: typeof fr = {
     help: "Help",
     privacy: "Privacy",
     terms: "Terms of use",
-    copyright: "© {year} CADRAN. All rights reserved.",
+    copyright: "© {year} VerdiktNow. All rights reserved.",
   },
   language: {
     fr: "Français",

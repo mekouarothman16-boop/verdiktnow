@@ -4,7 +4,7 @@ export const isEmailConfigured = !!process.env.RESEND_API_KEY;
 
 /** Même expéditeur que le SMTP Supabase déjà configuré (Resend) — tant qu'aucun domaine n'est
  * vérifié, `onboarding@resend.dev` ne livre qu'à l'adresse du compte Resend lui-même. */
-const FROM = "CADRAN <onboarding@resend.dev>";
+const FROM = "VerdiktNow <onboarding@resend.dev>";
 
 /** Appel direct à l'API Resend plutôt que le mailer Supabase Auth : ce dernier ne sert que les
  * flux d'authentification (OTP, invitation), pas un courriel transactionnel arbitraire. N'appelle

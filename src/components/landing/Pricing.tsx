@@ -25,7 +25,7 @@ export async function Pricing() {
         </p>
         <div className="text-center mb-8">
           <a
-            href={locale === "en" ? "/example-report-cadran.pdf" : "/exemple-rapport-cadran.pdf"}
+            href={locale === "en" ? "/example-report-verdiktnow.pdf" : "/exemple-rapport-verdiktnow.pdf"}
             target="_blank"
             rel="noopener noreferrer"
             className="inline-flex items-center gap-1.5 text-[13.5px] font-semibold text-accent hover:underline"

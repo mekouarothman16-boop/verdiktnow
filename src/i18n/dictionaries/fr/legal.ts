@@ -3,7 +3,7 @@ export const legal = {
     backHome: "Retour à l'accueil",
   },
   myTasks: {
-    metaTitle: "Mes tâches · CADRAN",
+    metaTitle: "Mes tâches · VerdiktNow",
     title: "Mes tâches",
     subtitle: "Les étapes de feuille de route qui vous sont assignées, tous processus confondus, triées par échéance.",
     emptyTitle: "Aucune tâche assignée",
@@ -14,8 +14,8 @@ export const legal = {
   },
   aide: {
     title: "Aide",
-    subtitle: "Questions fréquentes sur CADRAN. Vous ne trouvez pas votre réponse ? Écrivez-nous directement.",
-    metaTitle: "Aide · CADRAN",
+    subtitle: "Questions fréquentes sur VerdiktNow. Vous ne trouvez pas votre réponse ? Écrivez-nous directement.",
+    metaTitle: "Aide · VerdiktNow",
     faq: [
       {
         q: "Comment fonctionne le score d'aptitude ?",
@@ -58,10 +58,10 @@ export const legal = {
     needHelpText: "Écrivez-nous directement, nous répondons personnellement.",
   },
   apropos: {
-    metaTitle: "À propos · CADRAN",
+    metaTitle: "À propos · VerdiktNow",
     title: "À propos",
     whoTitle: "Qui suis-je ?",
-    whoText: "Je suis CADRAN, un diagnostic d'aptitude à l'automatisation. Mon travail : évaluer si un processus métier est prêt à être automatisé, chiffrer sa valeur économique, le prioriser face aux autres, et produire un dossier d'affaires assez rigoureux pour être présenté à une direction financière — le tout en une seule séance, pas en semaines de mandat de conseil.",
+    whoText: "Je suis VerdiktNow, un diagnostic d'aptitude à l'automatisation. Mon travail : évaluer si un processus métier est prêt à être automatisé, chiffrer sa valeur économique, le prioriser face aux autres, et produire un dossier d'affaires assez rigoureux pour être présenté à une direction financière — le tout en une seule séance, pas en semaines de mandat de conseil.",
     missionTitle: "Ma mission",
     missionText: "Remplacer le ressenti par des chiffres avant qu'un budget d'automatisation ne soit engagé. La plupart des projets d'automatisation échouent non pas à cause de l'outil choisi, mais parce que le processus n'était pas prêt — un problème qu'un score sur 100 et un dossier d'affaires chiffré permettent de voir avant, pas après.",
     valuesTitle: "Mes valeurs",
@@ -90,13 +90,13 @@ export const legal = {
     ],
   },
   confidentialite: {
-    metaTitle: "Politique de confidentialité · CADRAN",
+    metaTitle: "Politique de confidentialité · VerdiktNow",
     title: "Politique de confidentialité",
     lastUpdated: "Dernière mise à jour :",
     notice:
-      "Avis important : ce texte est un premier jet rédigé pour couvrir honnêtement ce que CADRAN fait réellement de vos données. Ce n'est pas un avis juridique : il doit être révisé par un professionnel du droit avant de constituer votre politique officielle.",
+      "Avis important : ce texte est un premier jet rédigé pour couvrir honnêtement ce que VerdiktNow fait réellement de vos données. Ce n'est pas un avis juridique : il doit être révisé par un professionnel du droit avant de constituer votre politique officielle.",
     intro:
-      "CADRAN (« nous ») exploite un outil d'évaluation de l'aptitude à l'automatisation des processus d'affaires. Cette politique explique quelles données nous collectons, pourquoi, et quels sont vos droits.",
+      "VerdiktNow (« nous ») exploite un outil d'évaluation de l'aptitude à l'automatisation des processus d'affaires. Cette politique explique quelles données nous collectons, pourquoi, et quels sont vos droits.",
     sections: [
       {
         h2: "1. Données que nous collectons",
@@ -150,16 +150,16 @@ export const legal = {
     ],
   },
   conditions: {
-    metaTitle: "Conditions d'utilisation · CADRAN",
+    metaTitle: "Conditions d'utilisation · VerdiktNow",
     title: "Conditions d'utilisation",
     lastUpdated: "Dernière mise à jour :",
     notice:
       "Avis important : ce texte est un premier jet, pas un avis juridique. Il doit être révisé par un professionnel du droit, notamment la juridiction applicable et l'entité légale exploitante, laissées à compléter ci-dessous, avant de constituer vos conditions officielles.",
-    intro: "En créant un compte ou en utilisant CADRAN, vous acceptez les conditions suivantes.",
+    intro: "En créant un compte ou en utilisant VerdiktNow, vous acceptez les conditions suivantes.",
     sections: [
       {
         h2: "1. Le service",
-        p: "CADRAN est un outil d'évaluation de l'aptitude à l'automatisation de processus d'affaires : diagnostic, calcul de retour sur investissement, priorisation et génération de rapports. Les scores, recommandations et estimations produits sont des aides à la décision basées sur les informations que vous fournissez : ce ne sont ni des garanties de résultat, ni un avis professionnel (juridique, comptable, technique ou financier). Vous demeurez responsable de valider toute décision d'automatisation avec vos propres experts avant de vous engager.",
+        p: "VerdiktNow est un outil d'évaluation de l'aptitude à l'automatisation de processus d'affaires : diagnostic, calcul de retour sur investissement, priorisation et génération de rapports. Les scores, recommandations et estimations produits sont des aides à la décision basées sur les informations que vous fournissez : ce ne sont ni des garanties de résultat, ni un avis professionnel (juridique, comptable, technique ou financier). Vous demeurez responsable de valider toute décision d'automatisation avec vos propres experts avant de vous engager.",
       },
       {
         h2: "2. Votre compte",
@@ -193,7 +193,7 @@ export const legal = {
       },
       {
         h2: "6. Limitation de responsabilité",
-        p: "CADRAN est fourni « tel quel ». Dans la mesure permise par la loi applicable, nous ne pouvons être tenus responsables des décisions d'affaires prises sur la base des évaluations produites par l'outil, ni des pertes indirectes découlant de l'utilisation ou de l'impossibilité d'utiliser le service.",
+        p: "VerdiktNow est fourni « tel quel ». Dans la mesure permise par la loi applicable, nous ne pouvons être tenus responsables des décisions d'affaires prises sur la base des évaluations produites par l'outil, ni des pertes indirectes découlant de l'utilisation ou de l'impossibilité d'utiliser le service.",
       },
       {
         h2: "7. Résiliation",
@@ -202,7 +202,7 @@ export const legal = {
       {
         h2: "8. Droit applicable",
         pItalic:
-          "[À compléter : juridiction et entité légale exploitant CADRAN. Cette section doit être précisée avec un conseiller juridique avant publication.]",
+          "[À compléter : juridiction et entité légale exploitant VerdiktNow. Cette section doit être précisée avec un conseiller juridique avant publication.]",
       },
       {
         h2: "9. Contact",

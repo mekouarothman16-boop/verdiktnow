@@ -1,7 +1,7 @@
 export const pdf = {
   untitledProcess: "Processus sans titre",
   summary: {
-    documentTitle: "CADRAN : Résumé : {name}",
+    documentTitle: "VerdiktNow : Résumé : {name}",
     headerMeta: "{date} · Résumé exécutif",
     eyebrow: "Résumé exécutif · une page",
     verdictMissing: "Diagnostic d'aptitude non complété au moment de l'export : la recommandation globale ne peut pas être établie.",
@@ -14,10 +14,10 @@ export const pdf = {
     topRiskMitigation: "Mitigation : {mitigation}",
     nextStepsTitle: "Prochaines étapes immédiates",
     reliabilityLine: "Fiabilité de l'évaluation : {label}. {reasons}.",
-    footerNote: "Résumé généré automatiquement par CADRAN à partir des informations fournies par l'utilisateur. Voir le rapport détaillé pour l'analyse complète (diagnostic, ROI, gouvernance, feuille de route).",
+    footerNote: "Résumé généré automatiquement par VerdiktNow à partir des informations fournies par l'utilisateur. Voir le rapport détaillé pour l'analyse complète (diagnostic, ROI, gouvernance, feuille de route).",
   },
   report: {
-    documentTitle: "CADRAN : {name}",
+    documentTitle: "VerdiktNow : {name}",
     sectionSommaire: "Sommaire",
     sectionSynthese: "Synthèse exécutive",
     sectionDiagnostic: "Diagnostic d'aptitude",
@@ -26,7 +26,7 @@ export const pdf = {
     sectionGouvernance: "Gouvernance & risques",
     sectionFeuilleDeRoute: "Feuille de route",
     sectionAnnexe: "Annexe",
-    footerLine: "CADRAN · rapport généré automatiquement · {section}",
+    footerLine: "VerdiktNow · rapport généré automatiquement · {section}",
     footerPage: "Page {n} / {total}",
 
     matrixAxisAptitude: "Aptitude ↑",
@@ -68,7 +68,7 @@ export const pdf = {
     coverGeneratedOn: "Généré le",
     coverCurrency: "Devise",
     coverConfidence: "Fiabilité de l'évaluation",
-    coverFooterNote: "Ce rapport a été généré automatiquement par CADRAN à partir des informations fournies par l'utilisateur. Les scores et projections financières reposent sur les hypothèses déclarées et ne constituent pas un audit indépendant. À usage interne, à valider avec les parties prenantes concernées avant toute décision d'investissement.",
+    coverFooterNote: "Ce rapport a été généré automatiquement par VerdiktNow à partir des informations fournies par l'utilisateur. Les scores et projections financières reposent sur les hypothèses déclarées et ne constituent pas un audit indépendant. À usage interne, à valider avec les parties prenantes concernées avant toute décision d'investissement.",
 
     diagnosticTitleIncomplete: "Diagnostic d'aptitude non complété",
     diagnosticTitleWeak: "Score de {score}/100, freiné par {label} ({leverScore}/100)",
@@ -154,7 +154,7 @@ export const pdf = {
     diagStepsAutoNo: "Non",
     diagStepsTotal: "Total : {n} min par occurrence, tel que documenté par l'utilisateur. « Auto. » indique si l'étape suit une règle constante et utilise des données déjà numériques.",
     diagVendorShortlistTitle: "Pistes d'outils",
-    diagVendorShortlistNote: "Sélection indicative et non exhaustive, à valider selon vos besoins, contraintes d'achat et intégrations existantes ; pas une recommandation d'achat. CADRAN ne touche aucune commission ni aucun avantage de ces fournisseurs.",
+    diagVendorShortlistNote: "Sélection indicative et non exhaustive, à valider selon vos besoins, contraintes d'achat et intégrations existantes ; pas une recommandation d'achat. VerdiktNow ne touche aucune commission ni aucun avantage de ces fournisseurs.",
     diagVendorQuestionsTitle: "Questions à poser à un prestataire",
     diagVendorHandoffNote: "Apportez cette page à votre première rencontre avec un fournisseur ou un consultant : elle résume ce qu'il doit savoir pour vous faire une proposition pertinente, sans qu'il ait à redécouvrir le contexte du processus.",
     diagVendorLimitsLabel: "Limites :",
@@ -305,7 +305,7 @@ export const pdf = {
     updateDocs: "Mettre à jour la documentation et former les équipes concernées aux nouveaux points de contrôle.",
     designateOperator: "Désigner qui opère et maintient l'automate en continu : centre d'excellence dédié ou équipe métier existante, avec un point de contact clair pour les incidents.",
     trackSavings: "Suivre les économies nettes réalisées par rapport à la cible ({amount}/an) et ajuster les hypothèses si nécessaire.",
-    reassessAfterDeploy: "Réévaluer ce processus dans CADRAN après le déploiement pour documenter l'évolution de l'aptitude et des gains.",
+    reassessAfterDeploy: "Réévaluer ce processus dans VerdiktNow après le déploiement pour documenter l'évolution de l'aptitude et des gains.",
     shareReportWithSponsor: "Partager ce rapport avec {sponsor} et confirmer le go / no-go de la phase de cadrage.",
     shareReportFallback: "Partager ce rapport avec le commanditaire et confirmer le go / no-go de la phase de cadrage.",
     prioritizeWeakest: "Prioriser en premier le levier le plus faible : {label} ({score}/100).",

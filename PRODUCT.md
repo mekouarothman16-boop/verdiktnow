@@ -10,15 +10,15 @@ web
 
 Deux profils d'utilisateurs primaires :
 - Leaders internes (opérations, transformation, TI) au sein de PME et d'entreprises, qui évaluent l'automatisation de leurs propres processus.
-- Consultants en automatisation et fournisseurs RPA/IA qui utilisent CADRAN comme outil de diagnostic et de vente auprès de leurs clients.
+- Consultants en automatisation et fournisseurs RPA/IA qui utilisent VerdiktNow comme outil de diagnostic et de vente auprès de leurs clients.
 
 ## Product Purpose
 
-CADRAN diagnostique l'aptitude d'un processus métier à l'automatisation, chiffre sa valeur économique (ROI), le priorise dans un portefeuille, et produit une feuille de route et un rapport PDF partageable. Le succès se mesure par la production d'un dossier d'affaires défendable, assez rigoureux pour être présenté à une direction financière ou un comité de gouvernance.
+VerdiktNow diagnostique l'aptitude d'un processus métier à l'automatisation, chiffre sa valeur économique (ROI), le priorise dans un portefeuille, et produit une feuille de route et un rapport PDF partageable. Le succès se mesure par la production d'un dossier d'affaires défendable, assez rigoureux pour être présenté à une direction financière ou un comité de gouvernance.
 
 ## Positioning
 
-Deux axes que CADRAN peut honnêtement revendiquer, qu'un outil freemium générique ne peut pas copier sans effort équivalent :
+Deux axes que VerdiktNow peut honnêtement revendiquer, qu'un outil freemium générique ne peut pas copier sans effort équivalent :
 - Rigueur financière et gouvernance : VAN sur 5 ans, analyse de sensibilité (tornade), scénarios, registre de risques, matrice RACI, checklist de conformité — dérivés automatiquement des réponses, pas du texte générique.
 - Rapidité par rapport à un mandat de conseil : un dossier d'affaires défendable en une session, plutôt qu'en semaines d'entretiens et de livrables consultants.
 
@@ -40,7 +40,7 @@ Un porteur de processus (ou un consultant en son nom) remplit un diagnostic stru
 
 ## Brand Commitments
 
-Nom : CADRAN (français pour « cadran », évoque l'instrument de mesure). Élément signature : le cadran semi-circulaire du score d'aptitude. Palette « Feu Vert » (fond gris-vert clair #e9ecea, encre #091315, accent chartreuse vif #d7ff53 en remplissage uniquement), typographie Outfit (titres) + Inter (texte courant) sur le web — direction visuelle adoptée du gabarit ERPSAA (erpsaas.framer.website) sur décision explicite du fondateur, remplaçant l'ancienne identité « instrument de précision ».
+Nom : VerdiktNow (anciennement CADRAN — renommé pour la mise en marché après que la recherche de domaine ait révélé plusieurs produits actifs déjà nommés « Cadran »). Élément signature conservé malgré le changement de nom : le cadran semi-circulaire du score d'aptitude — un clin d'œil à l'ancien nom qui reste pertinent, puisque l'élément est bel et bien un cadran. Palette « Feu Vert » (fond gris-vert clair #e9ecea, encre #091315, accent chartreuse vif #d7ff53 en remplissage uniquement), typographie Outfit (titres) + Inter (texte courant) sur le web — direction visuelle adoptée du gabarit ERPSAA (erpsaas.framer.website) sur décision explicite du fondateur, remplaçant l'ancienne identité « instrument de précision ».
 
 ## Evidence on Hand
 

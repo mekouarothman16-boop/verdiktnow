@@ -21,7 +21,7 @@ export function Footer() {
           <div className="w-7 h-7 rounded-md bg-ink flex items-center justify-center">
             <Gauge size={14} color="var(--color-accent-soft)" />
           </div>
-          <span className="font-display text-[14px] font-extrabold tracking-[0.01em] text-ink">CADRAN</span>
+          <span className="font-display text-[14px] font-extrabold tracking-[0.01em] text-ink">VerdiktNow</span>
         </div>
         <nav className="flex items-center gap-5">
           {LEGAL_LINKS.map((l) => (

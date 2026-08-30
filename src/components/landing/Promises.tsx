@@ -62,10 +62,10 @@ export async function Promises() {
               <div className="font-display text-[15px] font-bold text-gold-tint shrink-0">vs</div>
               <div>
                 <div className="font-mono text-[10.5px] uppercase tracking-[0.14em] text-gold-tint mb-2">
-                  {t.costCadranLabel}
+                  {t.costVerdiktNowLabel}
                 </div>
                 <div className="font-display text-[26px] sm:text-[30px] font-extrabold text-white">
-                  {t.costCadranValue}
+                  {t.costVerdiktNowValue}
                 </div>
               </div>
             </div>

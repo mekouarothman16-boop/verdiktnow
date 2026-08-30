@@ -15,12 +15,12 @@ function digestHtml(processes: { name: string; count: number }[], origin: string
     .join("");
   return `
     <p>Bonjour,</p>
-    <p>Votre organisation a des échéances de feuille de route en retard ou dues aujourd'hui sur CADRAN :</p>
+    <p>Votre organisation a des échéances de feuille de route en retard ou dues aujourd'hui sur VerdiktNow :</p>
     <ul>${items}</ul>
     <p><a href="${origin}/fr/processus">Voir mon portefeuille</a></p>
     <hr>
     <p>Hello,</p>
-    <p>Your organization has roadmap deadlines that are overdue or due today on CADRAN:</p>
+    <p>Your organization has roadmap deadlines that are overdue or due today on VerdiktNow:</p>
     <ul>${items}</ul>
     <p><a href="${origin}/en/processus">View my portfolio</a></p>
   `;
@@ -74,7 +74,7 @@ export async function GET(request: NextRequest) {
       if (!email) continue;
       const { ok } = await sendEmail({
         to: email,
-        subject: "CADRAN — Échéances à traiter / Deadlines to address",
+        subject: "VerdiktNow — Échéances à traiter / Deadlines to address",
         html,
       });
       if (ok) emailsSent += 1;

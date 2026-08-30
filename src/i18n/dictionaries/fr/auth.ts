@@ -68,7 +68,7 @@ export const auth = {
   },
   orgBranding: {
     description:
-      "Le logo remplace la marque CADRAN sur la couverture du rapport PDF et du résumé exécutif, pour que le document que vous transmettez porte votre marque. PNG, JPEG ou WebP, 2 Mo max.",
+      "Le logo remplace la marque VerdiktNow sur la couverture du rapport PDF et du résumé exécutif, pour que le document que vous transmettez porte votre marque. PNG, JPEG ou WebP, 2 Mo max.",
     logoAlt: "Logo de l'organisation",
     replaceLogo: "Remplacer le logo",
     uploadLogo: "Téléverser un logo",
@@ -79,7 +79,7 @@ export const auth = {
   },
   orgCalibration: {
     description:
-      "Ces trois repères déterminent comment CADRAN juge si une économie est « élevée » et où se situe le seuil de priorisation — spécifiques à votre organisation, pas des constantes universelles.",
+      "Ces trois repères déterminent comment VerdiktNow juge si une économie est « élevée » et où se situe le seuil de priorisation — spécifiques à votre organisation, pas des constantes universelles.",
     hoursPerFteLabel: "Heures productives / ETP / an",
     hoursPerFteHint: "Nombre d'heures annuelles considérées comme un équivalent temps plein libéré. Repère courant : 1 600 à 1 800 h.",
     magnitudeRefLabel: "Repère « économie élevée »",
@@ -122,7 +122,7 @@ export const auth = {
     ownerOnlyChange: "Seul le propriétaire peut changer de palier",
     negotiatedVolume: "Conditions négociées selon vos besoins",
     contactUs: "Nous contacter",
-    enterpriseEmailSubject: "CADRAN : palier Entreprise",
+    enterpriseEmailSubject: "VerdiktNow : palier Entreprise",
     genericError: "Une erreur est survenue.",
     viewerSeatBadge: "Ajout à la personne",
   },

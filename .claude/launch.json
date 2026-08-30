@@ -2,7 +2,7 @@
   "version": "0.0.1",
   "configurations": [
     {
-      "name": "cadran-dev",
+      "name": "verdiktnow-dev",
       "runtimeExecutable": "cmd.exe",
       "runtimeArgs": [
         "/c",

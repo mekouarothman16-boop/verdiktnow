@@ -186,9 +186,9 @@ function Header({ generatedAt, section, orgLogoUrl }: { generatedAt: string; sec
         ) : (
           <View style={s.logoRow}>
             <View style={s.logoMark}>
-              <Text style={s.logoMarkText}>C</Text>
+              <Text style={s.logoMarkText}>V</Text>
             </View>
-            <Text style={s.wordmark}>CADRAN</Text>
+            <Text style={s.wordmark}>VerdiktNow</Text>
           </View>
         )}
         <View style={s.headerMeta}>
@@ -819,9 +819,9 @@ export function ReportDocument({
             ) : (
               <View style={s.coverBrandRow}>
                 <View style={s.logoMark}>
-                  <Text style={s.logoMarkText}>C</Text>
+                  <Text style={s.logoMarkText}>V</Text>
                 </View>
-                <Text style={s.coverWordmark}>CADRAN</Text>
+                <Text style={s.coverWordmark}>VerdiktNow</Text>
               </View>
             )}
             <View style={s.coverRule} />

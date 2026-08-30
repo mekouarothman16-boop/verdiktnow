@@ -222,8 +222,8 @@ export function ToolShell({
     });
   };
 
-  const handleExport = () => exportPdf("/api/report", "cadran", "full");
-  const handleExportSummary = () => exportPdf("/api/report/summary", "cadran-resume", "summary");
+  const handleExport = () => exportPdf("/api/report", "verdiktnow", "full");
+  const handleExportSummary = () => exportPdf("/api/report/summary", "verdiktnow-resume", "summary");
 
   const handleAddTag = (tag: string) => {
     if (!processId || tags.includes(tag)) return;

@@ -1,5 +1,5 @@
 ---
-name: CADRAN
+name: VerdiktNow
 description: Outil-méthode SaaS pour diagnostiquer, chiffrer et prioriser l'automatisation d'un processus métier
 colors:
   accent: "#55631a"
@@ -55,13 +55,13 @@ components:
     rounded: "{rounded.pill}"
 ---
 
-# Design System: CADRAN
+# Design System: VerdiktNow
 
 ## Overview
 
 **Creative North Star: "Le Feu Vert" (The Green Light)**
 
-CADRAN dit à un décideur si un processus est prêt à automatiser — un verdict binaire dans l'esprit, même si le score est nuancé. Le système visuel emprunte donc au vocabulaire du feu vert / signal « GO » : un accent chartreuse vif et non ambigu, posé sur un fond neutre sobre et une encre presque noire. C'est délibérément l'esthétique d'un SaaS moderne et énergique plutôt que celle d'un rapport d'ingénierie — remplace le précédent système « instrument de précision » (Bricolage Grotesque + IBM Plex Mono + terracotta) sur décision explicite du fondateur, en adoptant la direction visuelle du gabarit Framer ERPSAA (erpsaas.framer.website).
+VerdiktNow dit à un décideur si un processus est prêt à automatiser — un verdict binaire dans l'esprit, même si le score est nuancé. Le système visuel emprunte donc au vocabulaire du feu vert / signal « GO » : un accent chartreuse vif et non ambigu, posé sur un fond neutre sobre et une encre presque noire. C'est délibérément l'esthétique d'un SaaS moderne et énergique plutôt que celle d'un rapport d'ingénierie — remplace le précédent système « instrument de précision » (Bricolage Grotesque + IBM Plex Mono + terracotta) sur décision explicite du fondateur, en adoptant la direction visuelle du gabarit Framer ERPSAA (erpsaas.framer.website).
 
 Le produit reste destiné à des décideurs qui doivent défendre un dossier d'affaires, mais l'esthétique choisie privilégie maintenant l'impact marketing et la modernité perçue sur la retenue éditoriale. Rejets confirmés : police serif, mascotte/illustration ludique, plus d'une couleur de marque vive à la fois hors de l'accent chartreuse.
 

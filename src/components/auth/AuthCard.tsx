@@ -29,7 +29,7 @@ export function AuthCard({
           <div className="w-8 h-8 rounded-md bg-ink flex items-center justify-center">
             <Gauge size={17} color="var(--color-accent-soft)" />
           </div>
-          <span className="font-display text-[16px] font-extrabold tracking-[0.01em] text-ink">CADRAN</span>
+          <span className="font-display text-[16px] font-extrabold tracking-[0.01em] text-ink">VerdiktNow</span>
         </LocaleLink>
         <div className="flex justify-center mb-8">
           <LanguageSwitcher />

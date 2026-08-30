@@ -49,7 +49,7 @@ export async function POST(request: NextRequest) {
       })
     );
 
-    const filename = `cadran-${parsed.processName.toLowerCase().replace(/[^a-z0-9]+/g, "-").replace(/(^-|-$)/g, "") || "rapport"}.pdf`;
+    const filename = `verdiktnow-${parsed.processName.toLowerCase().replace(/[^a-z0-9]+/g, "-").replace(/(^-|-$)/g, "") || "rapport"}.pdf`;
 
     return new NextResponse(new Uint8Array(buffer), {
       status: 200,

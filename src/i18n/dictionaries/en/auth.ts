@@ -70,7 +70,7 @@ export const auth: typeof fr = {
   },
   orgBranding: {
     description:
-      "The logo replaces the CADRAN branding on the cover of the PDF report and executive summary, so the document you share carries your brand. PNG, JPEG, or WebP, 2 MB max.",
+      "The logo replaces the VerdiktNow branding on the cover of the PDF report and executive summary, so the document you share carries your brand. PNG, JPEG, or WebP, 2 MB max.",
     logoAlt: "Organization logo",
     replaceLogo: "Replace logo",
     uploadLogo: "Upload a logo",
@@ -81,7 +81,7 @@ export const auth: typeof fr = {
   },
   orgCalibration: {
     description:
-      "These three benchmarks determine how CADRAN judges whether a saving is \"high\" and where the prioritization threshold sits — specific to your organization, not universal constants.",
+      "These three benchmarks determine how VerdiktNow judges whether a saving is \"high\" and where the prioritization threshold sits — specific to your organization, not universal constants.",
     hoursPerFteLabel: "Productive hours / FTE / year",
     hoursPerFteHint: "Annual hours counted as one freed up full time equivalent. Common benchmark: 1,600 to 1,800 h.",
     magnitudeRefLabel: "\"High savings\" benchmark",
@@ -124,7 +124,7 @@ export const auth: typeof fr = {
     ownerOnlyChange: "Only the owner can change tiers",
     negotiatedVolume: "Terms negotiated based on your needs",
     contactUs: "Contact us",
-    enterpriseEmailSubject: "CADRAN: Enterprise tier",
+    enterpriseEmailSubject: "VerdiktNow: Enterprise tier",
     genericError: "An error occurred.",
     viewerSeatBadge: "Billed per person",
   },

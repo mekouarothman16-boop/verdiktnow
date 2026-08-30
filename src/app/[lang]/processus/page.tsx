@@ -105,7 +105,7 @@ export default async function ProcessusPage({
               <div className="w-[34px] h-[34px] rounded-md bg-ink flex items-center justify-center">
                 <Gauge size={18} color="var(--color-accent-soft)" />
               </div>
-              <span className="font-display text-[16px] font-extrabold tracking-[0.01em] text-ink">CADRAN</span>
+              <span className="font-display text-[16px] font-extrabold tracking-[0.01em] text-ink">VerdiktNow</span>
             </LocaleLink>
             <div className="flex items-center gap-4">
               <LanguageSwitcher className="hidden sm:inline-flex" />
@@ -254,7 +254,7 @@ export default async function ProcessusPage({
             <div className="w-[34px] h-[34px] rounded-md bg-ink flex items-center justify-center">
               <Gauge size={18} color="var(--color-accent-soft)" />
             </div>
-            <span className="font-display text-[16px] font-extrabold tracking-[0.01em] text-ink">CADRAN</span>
+            <span className="font-display text-[16px] font-extrabold tracking-[0.01em] text-ink">VerdiktNow</span>
           </LocaleLink>
           <div className="flex items-center gap-4">
             <LanguageSwitcher className="hidden sm:inline-flex" />

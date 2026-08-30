@@ -25,7 +25,7 @@ export const common = {
     help: "Aide",
     privacy: "Confidentialité",
     terms: "Conditions d'utilisation",
-    copyright: "© {year} CADRAN. Tous droits réservés.",
+    copyright: "© {year} VerdiktNow. Tous droits réservés.",
   },
   language: {
     fr: "Français",

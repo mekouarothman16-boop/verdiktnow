@@ -6,7 +6,7 @@ export const landing: typeof fr = {
     titleLine: "Know which process",
     titleHighlight: "to automate first",
     subtitle:
-      "CADRAN assesses a process's readiness for automation, quantifies the return on investment, and prioritizes it against the others, one process at a time, with a weighted, transparent method.",
+      "VerdiktNow assesses a process's readiness for automation, quantifies the return on investment, and prioritizes it against the others, one process at a time, with a weighted, transparent method.",
     ctaPricing: "See plans",
     ctaHowItWorks: "See how it works",
     badgeInstall: "No installation",
@@ -25,24 +25,24 @@ export const landing: typeof fr = {
       {
         value: "2 %",
         text: "of companies are ready for automation.",
-        response: "CADRAN maps you against 6 weighted levers, before the first dollar is spent.",
+        response: "VerdiktNow maps you against 6 weighted levers, before the first dollar is spent.",
       },
       {
         value: "61 %",
         text: "say their automation tools are underused, for lack of a clear strategy.",
-        response: "CADRAN prioritizes your processes on a Value × Readiness matrix, so you know which one to tackle first.",
+        response: "VerdiktNow prioritizes your processes on a Value × Readiness matrix, so you know which one to tackle first.",
       },
       {
         value: "36 %",
         text: "cost reduction for companies that automate with a structured method.",
         response:
-          "CADRAN quantifies that potential for your process: net savings, payback period, net present value over 5 years.",
+          "VerdiktNow quantifies that potential for your process: net savings, payback period, net present value over 5 years.",
       },
     ],
   },
   promises: {
     eyebrow: "What we owe you",
-    title: "The CADRAN promises",
+    title: "The VerdiktNow promises",
     items: [
       {
         title: "No score without an explanation",
@@ -64,8 +64,8 @@ export const landing: typeof fr = {
     costIntro: "An automation readiness audit run by an external firm, for a single process and before you've even started automating, typically costs:",
     costVendorLabel: "External automation firm",
     costVendorValue: "$3,000 to $25,000 USD per engagement",
-    costCadranLabel: "CADRAN, unlimited diagnostics",
-    costCadranValue: "starting at $50 CAD / month",
+    costVerdiktNowLabel: "VerdiktNow, unlimited diagnostics",
+    costVerdiktNowValue: "starting at $50 CAD / month",
     costSource: "Typical range observed in the automation consulting market for a readiness audit, small and mid-size businesses.",
   },
   whyDiagnose: {
@@ -208,7 +208,7 @@ export const landing: typeof fr = {
   },
   features: {
     eyebrow: "Built for the decision",
-    title: "What sets CADRAN apart",
+    title: "What sets VerdiktNow apart",
     items: [
       {
         title: "Double weighting",
@@ -260,14 +260,14 @@ export const landing: typeof fr = {
     customPricing: "Custom",
     enterpriseCaption: "Every feature, with priority support and terms negotiated based on your number of users and processes to assess.",
     contactUs: "Contact us",
-    enterpriseEmailSubject: "CADRAN: Enterprise tier",
+    enterpriseEmailSubject: "VerdiktNow: Enterprise tier",
     viewerSeatBadge: "Billed per person",
   },
   faq: {
     eyebrow: "Frequently asked questions",
     title: "Still have questions?",
     intro:
-      "Answers to the questions we hear most often about CADRAN's method, diagnostic, and pricing.",
+      "Answers to the questions we hear most often about VerdiktNow's method, diagnostic, and pricing.",
     ctaLabel: "See the full help center",
     items: [
       {
@@ -275,7 +275,7 @@ export const landing: typeof fr = {
         a: "Most automation failures don't come from the tool, but from a process that wasn't ready. An upfront diagnostic reveals whether the process is truly ready, what needs fixing first, and which one to prioritize if there are several.",
       },
       {
-        q: "How does CADRAN work?",
+        q: "How does VerdiktNow work?",
         a: "Five modules that build on one another for a single process: context, readiness diagnostic (30 statements across 6 levers), ROI calculator, prioritization on a Value × Readiness matrix, then an automatically generated roadmap. You leave with a clear decision on what's next.",
       },
       {
@@ -287,19 +287,19 @@ export const landing: typeof fr = {
         a: "No: as soon as the context you declare reveals a risk (unpredictable volume, no documentation, high variability), the affected lever's score is automatically capped — the diagnostic can't show a high result if the signals say otherwise. You can also invite a colleague to fill out an independent second opinion, and every report displays a reliability level (Low, Medium, or High) telling you exactly how much to trust it.",
       },
       {
-        q: "What sets CADRAN apart from other tools?",
+        q: "What sets VerdiktNow apart from other tools?",
         a: "A transparent, weighted method instead of an arbitrary score, AI-assisted analysis to kick off the diagnostic, and a quantified business case (net savings, payback period, 5-year NPV) ready to present to leadership.",
       },
       {
-        q: "Is CADRAN affiliated with any particular RPA or AI vendor?",
-        a: "No. CADRAN is built as the step you take before contacting an RPA/AI vendor or a consultant, not as a sales channel for one of them — we take no commission or benefit from any vendor mentioned in your report. The generated report is actually designed to be handed to that vendor as-is: it answers most of what they'd ask at a first meeting.",
+        q: "Is VerdiktNow affiliated with any particular RPA or AI vendor?",
+        a: "No. VerdiktNow is built as the step you take before contacting an RPA/AI vendor or a consultant, not as a sales channel for one of them — we take no commission or benefit from any vendor mentioned in your report. The generated report is actually designed to be handed to that vendor as-is: it answers most of what they'd ask at a first meeting.",
       },
       {
-        q: "How much does CADRAN cost?",
+        q: "How much does VerdiktNow cost?",
         a: "Simple plans, billed per person, with no limit on processes: context, diagnostic, ROI, and prioritization are complete at every tier. What changes is the price per user based on your team's size.",
       },
       {
-        q: "Why was CADRAN created?",
+        q: "Why was VerdiktNow created?",
         a: "Five years of watching automations fail for the same avoidable reasons convinced its founder you first need to know if a process is ready, before buying anything at all — hence a score you can always explain, never guess.",
       },
       {
@@ -315,7 +315,7 @@ export const landing: typeof fr = {
   },
   home: {
     accountDeleted: "Your account and data have been permanently deleted.",
-    title: "CADRAN — Diagnose Before You Contact an Automation Vendor",
+    title: "VerdiktNow — Diagnose Before You Contact an Automation Vendor",
     description:
       "The independent diagnostic to run before calling an RPA/AI vendor or consultant: assess process readiness, quantify ROI, and prioritize — in one sitting, no commitment.",
   },

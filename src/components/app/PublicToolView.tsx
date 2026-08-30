@@ -49,7 +49,7 @@ export function PublicToolView({
               <Gauge size={16} color="var(--color-accent-soft)" />
             </div>
             <div>
-              <div className="font-display text-[16px] font-extrabold tracking-[0.01em] text-ink">CADRAN</div>
+              <div className="font-display text-[16px] font-extrabold tracking-[0.01em] text-ink">VerdiktNow</div>
               <div className="text-[10.5px] text-ink-faint tracking-[0.03em]">{t.sharedReadOnlyTag}</div>
             </div>
           </div>

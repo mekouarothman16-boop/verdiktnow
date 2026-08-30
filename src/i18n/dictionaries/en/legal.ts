@@ -5,7 +5,7 @@ export const legal: typeof fr = {
     backHome: "Back to home",
   },
   myTasks: {
-    metaTitle: "My tasks · CADRAN",
+    metaTitle: "My tasks · VerdiktNow",
     title: "My tasks",
     subtitle: "Roadmap steps assigned to you, across every process, sorted by deadline.",
     emptyTitle: "No tasks assigned",
@@ -16,8 +16,8 @@ export const legal: typeof fr = {
   },
   aide: {
     title: "Help",
-    subtitle: "Frequently asked questions about CADRAN. Can't find your answer? Write to us directly.",
-    metaTitle: "Help · CADRAN",
+    subtitle: "Frequently asked questions about VerdiktNow. Can't find your answer? Write to us directly.",
+    metaTitle: "Help · VerdiktNow",
     faq: [
       {
         q: "How does the readiness score work?",
@@ -60,10 +60,10 @@ export const legal: typeof fr = {
     needHelpText: "Write to us directly, we reply personally.",
   },
   apropos: {
-    metaTitle: "About · CADRAN",
+    metaTitle: "About · VerdiktNow",
     title: "About",
     whoTitle: "Who am I?",
-    whoText: "I am CADRAN, an automation readiness diagnostic. My job: assess whether a business process is ready to be automated, quantify its economic value, prioritize it against the others, and produce a business case rigorous enough to bring to a finance committee — all in one sitting, not weeks of a consulting engagement.",
+    whoText: "I am VerdiktNow, an automation readiness diagnostic. My job: assess whether a business process is ready to be automated, quantify its economic value, prioritize it against the others, and produce a business case rigorous enough to bring to a finance committee — all in one sitting, not weeks of a consulting engagement.",
     missionTitle: "My mission",
     missionText: "Replace gut feeling with numbers before an automation budget gets committed. Most automation projects fail not because of the tool chosen, but because the process wasn't ready — a problem a score out of 100 and a quantified business case let you see beforehand, not after.",
     valuesTitle: "My values",
@@ -92,13 +92,13 @@ export const legal: typeof fr = {
     ],
   },
   confidentialite: {
-    metaTitle: "Privacy Policy · CADRAN",
+    metaTitle: "Privacy Policy · VerdiktNow",
     title: "Privacy Policy",
     lastUpdated: "Last updated:",
     notice:
-      "Important notice: this text is a first draft written to honestly cover what CADRAN actually does with your data. It is not legal advice: it must be reviewed by a legal professional before it constitutes your official policy.",
+      "Important notice: this text is a first draft written to honestly cover what VerdiktNow actually does with your data. It is not legal advice: it must be reviewed by a legal professional before it constitutes your official policy.",
     intro:
-      "CADRAN (“we”) operates a tool for assessing business process automation readiness. This policy explains what data we collect, why, and what your rights are.",
+      "VerdiktNow (“we”) operates a tool for assessing business process automation readiness. This policy explains what data we collect, why, and what your rights are.",
     sections: [
       {
         h2: "1. Data we collect",
@@ -152,16 +152,16 @@ export const legal: typeof fr = {
     ],
   },
   conditions: {
-    metaTitle: "Terms of Use · CADRAN",
+    metaTitle: "Terms of Use · VerdiktNow",
     title: "Terms of Use",
     lastUpdated: "Last updated:",
     notice:
       "Important notice: this text is a first draft, not legal advice. It must be reviewed by a legal professional, in particular the applicable jurisdiction and the operating legal entity, left to be completed below, before it constitutes your official terms.",
-    intro: "By creating an account or using CADRAN, you agree to the following terms.",
+    intro: "By creating an account or using VerdiktNow, you agree to the following terms.",
     sections: [
       {
         h2: "1. The service",
-        p: "CADRAN is a tool for assessing business process automation readiness: diagnostic, return-on-investment calculation, prioritization, and report generation. The scores, recommendations, and estimates produced are decision aids based on the information you provide: they are neither a guarantee of results nor professional advice (legal, accounting, technical, or financial). You remain responsible for validating any automation decision with your own experts before committing.",
+        p: "VerdiktNow is a tool for assessing business process automation readiness: diagnostic, return-on-investment calculation, prioritization, and report generation. The scores, recommendations, and estimates produced are decision aids based on the information you provide: they are neither a guarantee of results nor professional advice (legal, accounting, technical, or financial). You remain responsible for validating any automation decision with your own experts before committing.",
       },
       {
         h2: "2. Your account",
@@ -195,7 +195,7 @@ export const legal: typeof fr = {
       },
       {
         h2: "6. Limitation of liability",
-        p: "CADRAN is provided “as is.” To the extent permitted by applicable law, we cannot be held liable for business decisions made based on the assessments produced by the tool, nor for indirect losses arising from the use or inability to use the service.",
+        p: "VerdiktNow is provided “as is.” To the extent permitted by applicable law, we cannot be held liable for business decisions made based on the assessments produced by the tool, nor for indirect losses arising from the use or inability to use the service.",
       },
       {
         h2: "7. Termination",
@@ -204,7 +204,7 @@ export const legal: typeof fr = {
       {
         h2: "8. Governing law",
         pItalic:
-          "[To be completed: jurisdiction and legal entity operating CADRAN. This section must be finalized with legal counsel before publication.]",
+          "[To be completed: jurisdiction and legal entity operating VerdiktNow. This section must be finalized with legal counsel before publication.]",
       },
       {
         h2: "9. Contact",

@@ -32,7 +32,7 @@ export function AppHeader({
           <div className="w-[30px] h-[30px] sm:w-[34px] sm:h-[34px] rounded-md bg-ink flex items-center justify-center shrink-0">
             <Gauge size={16} color="var(--color-accent-soft)" />
           </div>
-          <div className="hidden sm:block font-display text-[16px] font-extrabold tracking-[0.01em] text-ink">CADRAN</div>
+          <div className="hidden sm:block font-display text-[16px] font-extrabold tracking-[0.01em] text-ink">VerdiktNow</div>
         </LocaleLink>
         <nav className="flex gap-0.5 sm:gap-1 bg-bg p-1 rounded-[10px] border border-line overflow-x-auto min-w-0">
           {TABS.map((T) => {

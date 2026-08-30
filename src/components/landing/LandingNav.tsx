@@ -24,7 +24,7 @@ export function LandingNav({ loggedIn = false }: { loggedIn?: boolean }) {
           <div className="w-8 h-8 rounded-md bg-ink flex items-center justify-center">
             <Gauge size={17} color="var(--color-accent-soft)" />
           </div>
-          <span className="font-display text-[16px] font-extrabold tracking-[0.01em] text-ink">CADRAN</span>
+          <span className="font-display text-[16px] font-extrabold tracking-[0.01em] text-ink">VerdiktNow</span>
         </LocaleLink>
 
         <nav className="hidden md:flex items-center gap-7">
