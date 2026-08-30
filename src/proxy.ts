@@ -7,6 +7,28 @@ const SUPABASE_CONFIGURED =
 
 const LOCALE_COOKIE = "NEXT_LOCALE";
 
+/** Verrou temporaire pré-lancement : protège les pages (jamais /api, exclu du matcher plus bas —
+ * les webhooks Stripe et le cron n'ont aucun moyen de fournir un mot de passe) derrière une
+ * authentification HTTP Basic. Se désactive tout seul si SITE_PASSWORD n'est pas défini, pour ne
+ * jamais bloquer un environnement où la variable n'a pas été configurée. À retirer une fois le
+ * site prêt pour de vrais visiteurs. */
+function checkSitePassword(request: NextRequest): NextResponse | null {
+  const password = process.env.SITE_PASSWORD;
+  if (!password) return null;
+
+  const auth = request.headers.get("authorization");
+  if (auth?.startsWith("Basic ")) {
+    const decoded = atob(auth.slice("Basic ".length));
+    const suppliedPassword = decoded.slice(decoded.indexOf(":") + 1);
+    if (suppliedPassword === password) return null;
+  }
+
+  return new NextResponse("Authentification requise / Authentication required", {
+    status: 401,
+    headers: { "WWW-Authenticate": 'Basic realm="VerdiktNow"' },
+  });
+}
+
 function resolveLocale(request: NextRequest): Locale {
   const cookieLocale = request.cookies.get(LOCALE_COOKIE)?.value;
   if (cookieLocale && isLocale(cookieLocale)) return cookieLocale;
@@ -25,6 +47,9 @@ function resolveLocale(request: NextRequest): Locale {
 }
 
 export async function proxy(request: NextRequest) {
+  const passwordCheck = checkSitePassword(request);
+  if (passwordCheck) return passwordCheck;
+
   const { pathname } = request.nextUrl;
   const firstSegment = pathname.split("/")[1];
 
