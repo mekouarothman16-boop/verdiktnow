@@ -68,48 +68,56 @@ export function LandingNav({ loggedIn = false }: { loggedIn?: boolean }) {
         </button>
       </div>
 
-      {open && (
-        <div className="md:hidden border-t border-line bg-white px-5 py-4 flex flex-col gap-1">
-          {LINKS.map((l) => (
-            <a
-              key={l.href}
-              href={l.href}
-              onClick={() => setOpen(false)}
-              className="px-2 py-3 text-[14.5px] font-medium text-ink-soft border-b border-line-soft"
-            >
-              {l.label}
-            </a>
-          ))}
-          <div className="py-3 border-b border-line-soft">
-            <LanguageSwitcher />
+      <div
+        className="md:hidden grid transition-[grid-template-rows] duration-300 ease-out"
+        style={{ gridTemplateRows: open ? "1fr" : "0fr" }}
+      >
+        <div className="overflow-hidden">
+          <div
+            className="border-t border-line bg-white px-5 py-4 flex flex-col gap-1 transition-opacity duration-200"
+            style={{ opacity: open ? 1 : 0 }}
+          >
+            {LINKS.map((l) => (
+              <a
+                key={l.href}
+                href={l.href}
+                onClick={() => setOpen(false)}
+                className="px-2 py-3 text-[14.5px] font-medium text-ink-soft border-b border-line-soft"
+              >
+                {l.label}
+              </a>
+            ))}
+            <div className="py-3 border-b border-line-soft">
+              <LanguageSwitcher />
+            </div>
+            {!loggedIn && (
+              <LocaleLink
+                href="/connexion"
+                onClick={() => setOpen(false)}
+                className="px-2 py-3 text-[14.5px] font-medium text-ink-soft border-b border-line-soft"
+              >
+                {t.nav.login}
+              </LocaleLink>
+            )}
+            {loggedIn ? (
+              <LocaleLink
+                href="/processus"
+                className="mt-3 flex items-center justify-center gap-2 px-5 py-3.5 rounded-full bg-accent-vivid text-ink text-[14.5px] font-semibold"
+              >
+                {t.nav.myPortfolio} <ArrowRight size={15} />
+              </LocaleLink>
+            ) : (
+              <a
+                href="#tarifs"
+                onClick={() => setOpen(false)}
+                className="mt-3 flex items-center justify-center gap-2 px-5 py-3.5 rounded-full bg-accent-vivid text-ink text-[14.5px] font-semibold"
+              >
+                {t.nav.seePricing} <ArrowRight size={15} />
+              </a>
+            )}
           </div>
-          {!loggedIn && (
-            <LocaleLink
-              href="/connexion"
-              onClick={() => setOpen(false)}
-              className="px-2 py-3 text-[14.5px] font-medium text-ink-soft border-b border-line-soft"
-            >
-              {t.nav.login}
-            </LocaleLink>
-          )}
-          {loggedIn ? (
-            <LocaleLink
-              href="/processus"
-              className="mt-3 flex items-center justify-center gap-2 px-5 py-3.5 rounded-full bg-accent-vivid text-ink text-[14.5px] font-semibold"
-            >
-              {t.nav.myPortfolio} <ArrowRight size={15} />
-            </LocaleLink>
-          ) : (
-            <a
-              href="#tarifs"
-              onClick={() => setOpen(false)}
-              className="mt-3 flex items-center justify-center gap-2 px-5 py-3.5 rounded-full bg-accent-vivid text-ink text-[14.5px] font-semibold"
-            >
-              {t.nav.seePricing} <ArrowRight size={15} />
-            </a>
-          )}
         </div>
-      )}
+      </div>
     </header>
   );
 }

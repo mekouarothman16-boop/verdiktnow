@@ -20,8 +20,8 @@ export function FillBar({
     <div className={`rounded-full overflow-hidden ${className}`}>
       <motion.div
         className={`h-full rounded-full ${fillClassName}`}
-        initial={{ scaleX: 0 }}
-        whileInView={{ scaleX: percent / 100 }}
+        initial={{ transform: "scaleX(0)" }}
+        whileInView={{ transform: `scaleX(${percent / 100})` }}
         viewport={{ once: true, margin: "-80px" }}
         transition={{ duration: 0.7, delay, ease: [0.22, 1, 0.36, 1] }}
         style={{ transformOrigin: "left", width: "100%" }}

@@ -22,9 +22,9 @@ function RollingPrice({ value, className }: { value: string; className: string }
       <AnimatePresence mode="popLayout" initial={false}>
         <motion.span
           key={value}
-          initial={{ y: 14, opacity: 0 }}
-          animate={{ y: 0, opacity: 1 }}
-          exit={{ y: -14, opacity: 0 }}
+          initial={{ transform: "translateY(14px)", opacity: 0 }}
+          animate={{ transform: "translateY(0px)", opacity: 1 }}
+          exit={{ transform: "translateY(-14px)", opacity: 0 }}
           transition={{ duration: 0.3, ease: [0.22, 1, 0.36, 1] }}
           style={{ gridArea: "1 / 1" }}
         >

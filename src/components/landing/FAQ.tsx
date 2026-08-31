@@ -2,6 +2,7 @@ import { ArrowRight } from "lucide-react";
 import { Eyebrow } from "@/components/ui/Eyebrow";
 import { LocaleLink } from "@/components/i18n/LocaleLink";
 import { Reveal } from "./Reveal";
+import { FAQItem } from "./FAQItem";
 import { getServerDictionary } from "@/i18n/getDictionary";
 
 export async function FAQ() {
@@ -33,18 +34,7 @@ export async function FAQ() {
           <div className="lg:col-span-8 flex flex-col gap-3">
             {t.items.map((item, i) => (
               <Reveal key={item.q} delay={i * 0.05}>
-                <details
-                  open={i === 0}
-                  className="group rounded-xl border border-line bg-bg overflow-hidden"
-                >
-                  <summary className="cursor-pointer list-none px-5 py-4 font-sans text-[14.5px] font-semibold text-ink flex items-center justify-between gap-4">
-                    {item.q}
-                    <span className="shrink-0 w-6 h-6 rounded-full bg-accent-soft text-accent-deep flex items-center justify-center text-[15px] leading-none group-open:rotate-45 transition-transform">
-                      +
-                    </span>
-                  </summary>
-                  <p className="px-5 pb-5 text-[13.5px] text-ink-soft leading-relaxed">{item.a}</p>
-                </details>
+                <FAQItem question={item.q} answer={item.a} defaultOpen={i === 0} />
               </Reveal>
             ))}
           </div>
