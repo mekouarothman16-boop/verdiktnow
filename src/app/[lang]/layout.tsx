@@ -37,6 +37,7 @@ export async function generateMetadata({ params }: LayoutProps<"/[lang]">): Prom
   const { home } = getDictionary(lang).landing;
 
   return {
+    metadataBase: new URL(process.env.NEXT_PUBLIC_SITE_URL || "http://localhost:3000"),
     title: home.title,
     description: home.description,
     alternates: {

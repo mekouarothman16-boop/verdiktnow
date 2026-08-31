@@ -1,5 +1,6 @@
 import { Eyebrow } from "@/components/ui/Eyebrow";
 import { Reveal } from "./Reveal";
+import { FillBar } from "./FillBar";
 import { getDimensions } from "@/lib/scoring";
 import { getServerDictionary, getRootParamsLocale } from "@/i18n/getDictionary";
 
@@ -30,19 +31,25 @@ export async function Methodology() {
                 {t.weightsCardLabel}
               </div>
               <div className="space-y-4">
-                {DIMENSIONS.map((d) => (
-                  <div key={d.id}>
+                {DIMENSIONS.map((d, i) => (
+                  <button
+                    key={d.id}
+                    type="button"
+                    className="group block w-full text-left rounded-md -mx-1 px-1 py-0.5"
+                  >
                     <div className="flex justify-between mb-1.5">
-                      <span className="text-[13px] text-ink-soft">{d.label}</span>
+                      <span className="text-[13px] text-ink-soft group-hover:text-ink transition-colors">{d.label}</span>
                       <span className="font-mono text-[12.5px] text-accent-deep font-semibold">{d.weight}%</span>
                     </div>
-                    <div className="h-1.5 bg-line-soft rounded-full overflow-hidden">
-                      <div
-                        className="h-full bg-accent rounded-full"
-                        style={{ width: `${(d.weight / totalWeight) * 100}%` }}
-                      />
+                    <FillBar
+                      percent={(d.weight / totalWeight) * 100}
+                      fillClassName="bg-accent"
+                      delay={0.1 + i * 0.06}
+                    />
+                    <div className="grid grid-rows-[0fr] group-hover:grid-rows-[1fr] group-focus-visible:grid-rows-[1fr] transition-[grid-template-rows] duration-300 ease-out">
+                      <p className="overflow-hidden text-[12px] text-ink-faint leading-relaxed pt-2">{d.reco}</p>
                     </div>
-                  </div>
+                  </button>
                 ))}
               </div>
             </div>

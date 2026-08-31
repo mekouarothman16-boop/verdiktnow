@@ -37,12 +37,17 @@ export async function listRoadmapProgress(processId: string): Promise<RoadmapPro
   } = await supabase.auth.getUser();
   if (!user) return [];
 
-  const { data } = await supabase
+  const { data, error } = await supabase
     .from("roadmap_progress")
     .select(
       "step_key, done, text, is_custom, phase_key, due_date, due_date_set_by, assigned_to, title, start_date, progress_percent, is_blocking, status_color, blocking_detail, blocking_resolution"
     )
     .eq("process_id", processId);
+
+  // Ne jamais avaler une erreur en silence : sans ce log, une dérive de schéma (colonne manquante,
+  // migration non exécutée) fait planter la requête, `data` reste `null`, et l'écran retombe sur
+  // des valeurs par défaut sans aucune trace — un vrai problème passe alors pour un état vide légitime.
+  if (error) console.error("listRoadmapProgress failed:", error);
 
   const rows = data ?? [];
   const t = getDictionary(await getServerLocale()).tool.roadmapChecklist;

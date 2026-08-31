@@ -1,3 +1,4 @@
+import Image from "next/image";
 import { ScanSearch, Calculator, LayoutGrid, SlidersHorizontal } from "lucide-react";
 import { Reveal } from "./Reveal";
 import { getServerDictionary } from "@/i18n/getDictionary";
@@ -8,6 +9,17 @@ export async function Promises() {
   const { promises: t } = (await getServerDictionary()).landing;
   return (
     <section className="relative bg-ink overflow-hidden">
+      <div aria-hidden className="absolute inset-0 overflow-hidden">
+        <Image
+          src="/generated/promises-bg.png"
+          alt=""
+          fill
+          sizes="100vw"
+          className="object-cover opacity-40 animate-bg-drift"
+        />
+        <div className="absolute inset-0 bg-gradient-to-b from-ink via-transparent to-ink" />
+        <div className="absolute inset-0 bg-ink/35" />
+      </div>
       <div
         aria-hidden
         className="pointer-events-none absolute -top-32 left-1/2 -translate-x-1/2 w-[560px] h-[280px] rounded-full blur-3xl opacity-20"

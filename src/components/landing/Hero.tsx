@@ -1,8 +1,10 @@
+import Image from "next/image";
 import { ArrowRight, PlayCircle, Sparkles } from "lucide-react";
 import { GaugeArc } from "@/components/ui/GaugeArc";
 import { Eyebrow } from "@/components/ui/Eyebrow";
 import { getLevels } from "@/lib/scoring";
 import { Reveal } from "./Reveal";
+import { FillBar } from "./FillBar";
 import { getServerDictionary, getRootParamsLocale } from "@/i18n/getDictionary";
 
 export async function Hero() {
@@ -15,6 +17,17 @@ export async function Hero() {
   ];
   return (
     <section className="relative overflow-hidden">
+      <div aria-hidden className="pointer-events-none absolute inset-0 overflow-hidden">
+        <Image
+          src="/generated/hero-bg.png"
+          alt=""
+          fill
+          priority
+          sizes="100vw"
+          className="object-cover opacity-70 animate-bg-drift"
+        />
+        <div className="absolute inset-0 bg-gradient-to-b from-bg/40 via-transparent to-bg" />
+      </div>
       <div
         aria-hidden
         className="pointer-events-none absolute -top-52 left-1/2 -translate-x-1/2 w-[1100px] h-[680px] rounded-full blur-3xl opacity-60"
@@ -38,9 +51,9 @@ export async function Hero() {
           <div className="flex flex-wrap items-center gap-4">
             <a
               href="#tarifs"
-              className="flex items-center gap-2 px-6 py-3.5 rounded-full bg-accent-vivid text-ink text-[15px] font-semibold hover:brightness-95 transition shadow-card-lg"
+              className="group flex items-center gap-2 px-6 py-3.5 rounded-full bg-accent-vivid text-ink text-[15px] font-semibold hover:brightness-95 transition duration-200 shadow-card-lg hover:-translate-y-0.5 active:translate-y-0 active:scale-[0.97]"
             >
-              {t.ctaPricing} <ArrowRight size={17} />
+              {t.ctaPricing} <ArrowRight size={17} className="transition-transform duration-200 group-hover:translate-x-0.5" />
             </a>
             <a
               href="#comment-ca-marche"
@@ -78,11 +91,11 @@ export async function Hero() {
               </div>
               <GaugeArc score={78} level={level} caption={t.cardCaption} />
               <div className="mt-4 pt-4 border-t border-line-soft space-y-2.5">
-                {levers.map((r) => (
+                {levers.map((r, i) => (
                   <div key={r.label} className="flex items-center gap-3">
                     <span className="text-[11.5px] text-ink-soft flex-1">{r.label}</span>
-                    <div className="w-20 h-1.5 bg-line-soft rounded-full overflow-hidden">
-                      <div className="h-full bg-accent-vivid rounded-full" style={{ width: `${r.v}%` }} />
+                    <div className="w-20">
+                      <FillBar percent={r.v} delay={0.15 + i * 0.1} />
                     </div>
                     <span className="font-mono text-[11px] text-ink w-6 text-right">{r.v}</span>
                   </div>

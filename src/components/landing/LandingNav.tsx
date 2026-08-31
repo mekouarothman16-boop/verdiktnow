@@ -45,16 +45,16 @@ export function LandingNav({ loggedIn = false }: { loggedIn?: boolean }) {
           {loggedIn ? (
             <LocaleLink
               href="/processus"
-              className="flex items-center gap-1.5 px-4 py-2.5 rounded-full bg-accent-vivid text-ink text-[13.5px] font-semibold hover:brightness-95 transition"
+              className="group flex items-center gap-1.5 px-4 py-2.5 rounded-full bg-accent-vivid text-ink text-[13.5px] font-semibold hover:brightness-95 transition"
             >
-              {t.nav.myPortfolio} <ArrowRight size={14} />
+              {t.nav.myPortfolio} <ArrowRight size={14} className="transition-transform duration-200 group-hover:translate-x-0.5" />
             </LocaleLink>
           ) : (
             <a
               href="#tarifs"
-              className="flex items-center gap-1.5 px-4 py-2.5 rounded-full bg-accent-vivid text-ink text-[13.5px] font-semibold hover:brightness-95 transition"
+              className="group flex items-center gap-1.5 px-4 py-2.5 rounded-full bg-accent-vivid text-ink text-[13.5px] font-semibold hover:brightness-95 transition"
             >
-              {t.nav.seePricing} <ArrowRight size={14} />
+              {t.nav.seePricing} <ArrowRight size={14} className="transition-transform duration-200 group-hover:translate-x-0.5" />
             </a>
           )}
         </div>

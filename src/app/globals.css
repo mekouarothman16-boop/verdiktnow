@@ -134,6 +134,18 @@ input[type="range"]::-moz-range-thumb {
   animation: tab-fade-in 0.22s ease-out;
 }
 
+@keyframes bg-drift {
+  0% {
+    transform: scale(1.06) translate(0, 0);
+  }
+  100% {
+    transform: scale(1.14) translate(-1.5%, -1.5%);
+  }
+}
+.animate-bg-drift {
+  animation: bg-drift 22s ease-in-out infinite alternate;
+}
+
 @media (prefers-reduced-motion: reduce) {
   html {
     scroll-behavior: auto;

@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import { AnimatePresence, motion } from "framer-motion";
 import { LocaleLink } from "@/components/i18n/LocaleLink";
 import { Check, ArrowRight, Eye } from "lucide-react";
 import { Eyebrow } from "@/components/ui/Eyebrow";
@@ -12,6 +13,27 @@ import {
 } from "@/lib/plans";
 import type { Plan } from "@/lib/supabase/types";
 import type { Locale } from "@/i18n/config";
+
+/** Crossfade+slide the price string when the billing period toggles, so the
+ * new number reads as a rolled-in update rather than an instant swap. */
+function RollingPrice({ value, className }: { value: string; className: string }) {
+  return (
+    <div className={`relative overflow-hidden ${className}`} style={{ display: "grid" }}>
+      <AnimatePresence mode="popLayout" initial={false}>
+        <motion.span
+          key={value}
+          initial={{ y: 14, opacity: 0 }}
+          animate={{ y: 0, opacity: 1 }}
+          exit={{ y: -14, opacity: 0 }}
+          transition={{ duration: 0.3, ease: [0.22, 1, 0.36, 1] }}
+          style={{ gridArea: "1 / 1" }}
+        >
+          {value}
+        </motion.span>
+      </AnimatePresence>
+    </div>
+  );
+}
 
 export function PricingGrid({
   locale,
@@ -93,15 +115,14 @@ export function PricingGrid({
                     </span>
                   )}
                 </div>
-                <div
+                <RollingPrice
+                  value={formatSeatPrice(tc.priceMonthly ?? 0, period, locale, perUserLabel)}
                   className={
                     featured
-                      ? "font-mono text-[26px] font-semibold text-white mt-3 mb-1 relative"
+                      ? "font-mono text-[26px] font-semibold text-white mt-3 mb-1"
                       : "font-mono text-[26px] font-semibold text-ink mt-3 mb-1"
                   }
-                >
-                  {formatSeatPrice(tc.priceMonthly ?? 0, period, locale, perUserLabel)}
-                </div>
+                />
                 <p className={featured ? "text-[13px] text-white/50 mb-6 relative" : "text-[13px] text-ink-faint mb-6"}>
                   {tc.tagline}
                 </p>
@@ -117,11 +138,11 @@ export function PricingGrid({
                   href="/inscription"
                   className={
                     featured
-                      ? "relative mt-8 flex items-center justify-center gap-2 px-5 py-3 rounded-full bg-white text-ink text-[14px] font-semibold hover:brightness-95 transition"
-                      : "mt-8 flex items-center justify-center gap-2 px-5 py-3 rounded-full border border-line text-ink text-[14px] font-semibold hover:border-accent hover:text-accent transition"
+                      ? "group relative mt-8 flex items-center justify-center gap-2 px-5 py-3 rounded-full bg-white text-ink text-[14px] font-semibold hover:brightness-95 transition duration-200 hover:-translate-y-0.5 active:translate-y-0 active:scale-[0.97]"
+                      : "group mt-8 flex items-center justify-center gap-2 px-5 py-3 rounded-full border border-line text-ink text-[14px] font-semibold hover:border-accent hover:text-accent transition"
                   }
                 >
-                  {t.chooseThisTier} <ArrowRight size={15} />
+                  {t.chooseThisTier} <ArrowRight size={15} className="transition-transform duration-200 group-hover:translate-x-0.5" />
                 </LocaleLink>
               </div>
             </Reveal>
@@ -158,9 +179,10 @@ export function PricingGrid({
                 <Eye size={11} /> {t.viewerSeatBadge}
               </span>
             </div>
-            <div className="font-mono text-[26px] font-semibold text-ink mt-3 mb-1">
-              {formatSeatPrice(VIEWER_SEAT_PRICE_MONTHLY, period, locale, viewerSeat.unitLabel)}
-            </div>
+            <RollingPrice
+              value={formatSeatPrice(VIEWER_SEAT_PRICE_MONTHLY, period, locale, viewerSeat.unitLabel)}
+              className="font-mono text-[26px] font-semibold text-ink mt-3 mb-1"
+            />
             <p className="text-[13px] text-ink-faint mb-6">{viewerSeat.tagline}</p>
 
             <div className="flex-1 pt-6 border-t border-line">

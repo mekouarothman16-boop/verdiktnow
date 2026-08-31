@@ -1,4 +1,5 @@
 import { LandingNav } from "@/components/landing/LandingNav";
+import { ProcessLineContainer } from "@/components/landing/ProcessLineContainer";
 import { Hero } from "@/components/landing/Hero";
 import { StatsBar } from "@/components/landing/StatsBar";
 import { Promises } from "@/components/landing/Promises";
@@ -35,16 +36,18 @@ export default async function Home({
             </div>
           </div>
         )}
-        <Hero />
-        <StatsBar />
-        <Promises />
-        <WhyDiagnose />
-        <HowItWorks />
-        <Methodology />
-        <Features />
-        <Pricing />
-        <FAQ />
-        <CTA />
+        <ProcessLineContainer>
+          <Hero />
+          <StatsBar />
+          <Promises />
+          <WhyDiagnose />
+          <HowItWorks />
+          <Methodology />
+          <Features />
+          <Pricing />
+          <FAQ />
+          <CTA />
+        </ProcessLineContainer>
       </main>
       <Footer />
     </>

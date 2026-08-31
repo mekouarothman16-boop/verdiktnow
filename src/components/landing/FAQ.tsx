@@ -23,9 +23,9 @@ export async function FAQ() {
               <p className="text-ink-soft text-[14.5px] leading-relaxed mb-7">{t.intro}</p>
               <LocaleLink
                 href="/aide"
-                className="inline-flex items-center gap-1.5 px-5 py-2.5 rounded-full bg-accent-vivid text-ink text-[13.5px] font-semibold hover:brightness-95 transition"
+                className="group inline-flex items-center gap-1.5 px-5 py-2.5 rounded-full bg-accent-vivid text-ink text-[13.5px] font-semibold hover:brightness-95 transition"
               >
-                {t.ctaLabel} <ArrowRight size={14} />
+                {t.ctaLabel} <ArrowRight size={14} className="transition-transform duration-200 group-hover:translate-x-0.5" />
               </LocaleLink>
             </div>
           </Reveal>

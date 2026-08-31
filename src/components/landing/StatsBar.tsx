@@ -1,5 +1,6 @@
 import { Eyebrow } from "@/components/ui/Eyebrow";
 import { Reveal } from "./Reveal";
+import { CountUpValue } from "./CountUpValue";
 import { getServerDictionary } from "@/i18n/getDictionary";
 
 export async function StatsBar() {
@@ -21,7 +22,7 @@ export async function StatsBar() {
           <Reveal key={s.value} delay={i * 0.1}>
             <div className="h-full flex flex-col bg-surface border border-line rounded-xl p-7 shadow-card hover:shadow-card-lg hover:-translate-y-1 transition duration-300">
               <div className="font-display text-[44px] sm:text-[50px] font-extrabold tracking-[-0.02em] text-accent leading-none mb-3">
-                {s.value}
+                <CountUpValue value={s.value} />
               </div>
               <p className="text-[13.5px] text-ink-soft leading-relaxed mb-5">{s.text}</p>
               <div className="mt-auto pt-5 border-t border-line-soft">
