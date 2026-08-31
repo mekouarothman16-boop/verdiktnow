@@ -17,20 +17,20 @@ export function Footer() {
   return (
     <footer className="border-t border-line">
       <div className="max-w-[1160px] mx-auto px-5 sm:px-6 py-10 flex flex-col sm:flex-row items-center justify-between gap-5">
-        <div className="flex items-center gap-2.5">
-          <div className="w-7 h-7 rounded-md bg-ink flex items-center justify-center">
-            <Gauge size={14} color="var(--color-accent-soft)" />
+        <div className="flex items-center gap-3">
+          <div className="w-9 h-9 rounded-lg bg-ink flex items-center justify-center shrink-0">
+            <Gauge size={17} color="var(--color-accent-soft)" />
           </div>
-          <span className="font-display text-[14px] font-extrabold tracking-[0.01em] text-ink">VerdiktNow</span>
+          <span className="font-display text-[16px] font-extrabold tracking-[0.01em] text-ink">VerdiktNow</span>
         </div>
         <nav className="flex items-center gap-5">
           {LEGAL_LINKS.map((l) => (
-            <LocaleLink key={l.href} href={l.href} className="text-[12px] text-ink-faint hover:text-ink transition-colors">
+            <LocaleLink key={l.href} href={l.href} className="text-[13px] text-ink-faint hover:text-ink transition-colors">
               {l.label}
             </LocaleLink>
           ))}
         </nav>
-        <span className="text-[12px] text-ink-faint">
+        <span className="text-[13px] text-ink-faint">
           {t.footer.copyright.replace("{year}", String(new Date().getFullYear()))}
         </span>
       </div>

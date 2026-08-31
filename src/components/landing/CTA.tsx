@@ -25,9 +25,9 @@ export async function CTA() {
           </p>
           <LocaleLink
             href="/inscription"
-            className="group relative inline-flex items-center gap-2 px-7 py-3.5 rounded-full bg-accent-vivid text-ink text-[15px] font-semibold hover:brightness-95 transition duration-200 hover:-translate-y-0.5 active:translate-y-0 active:scale-[0.97]"
+            className="group relative inline-flex items-center gap-2.5 px-8 py-4 rounded-full bg-accent-vivid text-ink text-[16px] font-semibold hover:brightness-95 transition duration-200 hover:-translate-y-0.5 active:translate-y-0 active:scale-[0.97]"
           >
-            {t.button} <ArrowRight size={17} className="transition-transform duration-200 group-hover:translate-x-0.5" />
+            {t.button} <ArrowRight size={18} className="transition-transform duration-200 group-hover:translate-x-0.5" />
           </LocaleLink>
         </div>
       </Reveal>

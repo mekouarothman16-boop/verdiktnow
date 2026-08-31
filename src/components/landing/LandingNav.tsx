@@ -20,11 +20,11 @@ export function LandingNav({ loggedIn = false }: { loggedIn?: boolean }) {
   return (
     <header className="sticky top-0 z-50 border-b border-line bg-white/85 backdrop-blur-md backdrop-saturate-150">
       <div className="max-w-[1160px] mx-auto px-5 sm:px-6 h-16 flex items-center justify-between">
-        <LocaleLink href="/" className="flex items-center gap-2.5">
-          <div className="w-8 h-8 rounded-md bg-ink flex items-center justify-center">
-            <Gauge size={17} color="var(--color-accent-soft)" />
+        <LocaleLink href="/" className="flex items-center gap-3">
+          <div className="w-10 h-10 rounded-lg bg-ink flex items-center justify-center shrink-0">
+            <Gauge size={21} color="var(--color-accent-soft)" />
           </div>
-          <span className="font-display text-[16px] font-extrabold tracking-[0.01em] text-ink">VerdiktNow</span>
+          <span className="font-display text-[19px] font-extrabold tracking-[0.01em] text-ink">VerdiktNow</span>
         </LocaleLink>
 
         <nav className="hidden md:flex items-center gap-7">
@@ -38,23 +38,23 @@ export function LandingNav({ loggedIn = false }: { loggedIn?: boolean }) {
         <div className="hidden md:flex items-center gap-4">
           <LanguageSwitcher />
           {!loggedIn && (
-            <LocaleLink href="/connexion" className="text-[13.5px] font-medium text-ink-soft hover:text-ink transition-colors">
+            <LocaleLink href="/connexion" className="text-[14.5px] font-medium text-ink-soft hover:text-ink transition-colors">
               {t.nav.login}
             </LocaleLink>
           )}
           {loggedIn ? (
             <LocaleLink
               href="/processus"
-              className="group flex items-center gap-1.5 px-4 py-2.5 rounded-full bg-accent-vivid text-ink text-[13.5px] font-semibold hover:brightness-95 transition"
+              className="group flex items-center gap-2 px-5 py-3 rounded-full bg-accent-vivid text-ink text-[14.5px] font-semibold hover:brightness-95 transition duration-200 hover:-translate-y-0.5 active:translate-y-0 active:scale-[0.97]"
             >
-              {t.nav.myPortfolio} <ArrowRight size={14} className="transition-transform duration-200 group-hover:translate-x-0.5" />
+              {t.nav.myPortfolio} <ArrowRight size={15} className="transition-transform duration-200 group-hover:translate-x-0.5" />
             </LocaleLink>
           ) : (
             <a
               href="#tarifs"
-              className="group flex items-center gap-1.5 px-4 py-2.5 rounded-full bg-accent-vivid text-ink text-[13.5px] font-semibold hover:brightness-95 transition"
+              className="group flex items-center gap-2 px-5 py-3 rounded-full bg-accent-vivid text-ink text-[14.5px] font-semibold hover:brightness-95 transition duration-200 hover:-translate-y-0.5 active:translate-y-0 active:scale-[0.97]"
             >
-              {t.nav.seePricing} <ArrowRight size={14} className="transition-transform duration-200 group-hover:translate-x-0.5" />
+              {t.nav.seePricing} <ArrowRight size={15} className="transition-transform duration-200 group-hover:translate-x-0.5" />
             </a>
           )}
         </div>
@@ -95,17 +95,17 @@ export function LandingNav({ loggedIn = false }: { loggedIn?: boolean }) {
           {loggedIn ? (
             <LocaleLink
               href="/processus"
-              className="mt-3 flex items-center justify-center gap-1.5 px-4 py-3 rounded-full bg-accent-vivid text-ink text-[14px] font-semibold"
+              className="mt-3 flex items-center justify-center gap-2 px-5 py-3.5 rounded-full bg-accent-vivid text-ink text-[14.5px] font-semibold"
             >
-              {t.nav.myPortfolio} <ArrowRight size={14} />
+              {t.nav.myPortfolio} <ArrowRight size={15} />
             </LocaleLink>
           ) : (
             <a
               href="#tarifs"
               onClick={() => setOpen(false)}
-              className="mt-3 flex items-center justify-center gap-1.5 px-4 py-3 rounded-full bg-accent-vivid text-ink text-[14px] font-semibold"
+              className="mt-3 flex items-center justify-center gap-2 px-5 py-3.5 rounded-full bg-accent-vivid text-ink text-[14.5px] font-semibold"
             >
-              {t.nav.seePricing} <ArrowRight size={14} />
+              {t.nav.seePricing} <ArrowRight size={15} />
             </a>
           )}
         </div>

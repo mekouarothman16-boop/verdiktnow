@@ -51,9 +51,9 @@ export async function Hero() {
           <div className="flex flex-wrap items-center gap-4">
             <a
               href="#tarifs"
-              className="group flex items-center gap-2 px-6 py-3.5 rounded-full bg-accent-vivid text-ink text-[15px] font-semibold hover:brightness-95 transition duration-200 shadow-card-lg hover:-translate-y-0.5 active:translate-y-0 active:scale-[0.97]"
+              className="group flex items-center gap-2.5 px-7 py-4 rounded-full bg-accent-vivid text-ink text-[16px] font-semibold hover:brightness-95 transition duration-200 shadow-card-lg hover:-translate-y-0.5 active:translate-y-0 active:scale-[0.97]"
             >
-              {t.ctaPricing} <ArrowRight size={17} className="transition-transform duration-200 group-hover:translate-x-0.5" />
+              {t.ctaPricing} <ArrowRight size={18} className="transition-transform duration-200 group-hover:translate-x-0.5" />
             </a>
             <a
               href="#comment-ca-marche"
