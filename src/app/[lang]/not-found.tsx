@@ -12,8 +12,8 @@ export default async function NotFound() {
     <div className="flex-1 flex flex-col min-h-screen">
       <ContentHeader />
       <main className="flex-1 flex flex-col items-center justify-center text-center px-5 py-24">
-        <p className="font-display text-[13px] font-bold tracking-[0.08em] text-accent uppercase mb-3">{t.eyebrow}</p>
-        <h1 className="font-display text-[30px] sm:text-[36px] font-extrabold tracking-[-0.015em] text-ink mb-3">
+        <p className="font-display text-[13px] font-semibold tracking-[0.08em] text-accent uppercase mb-3">{t.eyebrow}</p>
+        <h1 className="font-display text-[30px] sm:text-[36px] font-semibold tracking-[0.005em] text-ink mb-3">
           {t.title}
         </h1>
         <p className="text-ink-soft text-[15px] leading-relaxed max-w-[440px] mb-8">{t.description}</p>

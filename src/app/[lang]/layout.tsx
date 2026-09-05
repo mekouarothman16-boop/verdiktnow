@@ -27,6 +27,19 @@ const mono = Inter({
   display: "swap",
 });
 
+// Le proxy laisse passer les adresses à extension statique (.pdf, .png, .svg…)
+// pour que les vrais fichiers de `public/` soient servis sans détour. Mais une
+// adresse comme /rapport-inexistant.pdf tombait alors sur ce segment, était
+// prise pour une langue, et rendait la page d'accueil avec un code 200 : un
+// faux 404 qui trompe autant les moteurs de recherche que le visiteur.
+//
+// Avec dynamicParams à false, toute valeur absente de generateStaticParams,
+// donc toute valeur autre que fr et en, répond 404 au niveau du routage. On ne
+// peut pas obtenir le même résultat en appelant notFound() ici : ce layout est
+// le layout racine, celui-là même dans lequel la page d'erreur devrait se
+// rendre.
+export const dynamicParams = false;
+
 export function generateStaticParams() {
   return LOCALES.map((lang) => ({ lang }));
 }

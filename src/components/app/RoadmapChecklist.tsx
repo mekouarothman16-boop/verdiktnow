@@ -130,9 +130,9 @@ export function AddStepForm({ onAdd, disabled, t }: { onAdd: (title: string) => 
           }
         }}
         placeholder={t.addActionPlaceholder}
-        className="flex-1 text-[13px] text-ink border border-line rounded-md px-2.5 py-1.5 outline-none bg-surface focus:border-accent transition-colors"
+        className="flex-1 text-[13px] text-ink border border-line rounded-[10px] px-2.5 py-1.5 outline-none bg-surface focus:border-accent transition-colors"
       />
-      <button type="button" onClick={submit} className="text-[12px] font-semibold text-white bg-ink px-3 py-1.5 rounded-md whitespace-nowrap">
+      <button type="button" onClick={submit} className="text-[12px] font-semibold text-white bg-ink px-3 py-1.5 rounded-full whitespace-nowrap">
         {t.addActionButton}
       </button>
       <button
@@ -393,7 +393,7 @@ export function RoadmapChecklist({
       </div>
 
       {doneCount === totalCount && totalCount > 0 && (
-        <div className="mb-6 px-4 py-2.5 rounded-lg bg-accent-soft text-accent-deep text-[12.5px] font-medium">
+        <div className="mb-6 px-4 py-2.5 rounded-[12px] bg-accent-soft text-accent-deep text-[12.5px] font-medium">
           {t.allDoneNotice}
         </div>
       )}

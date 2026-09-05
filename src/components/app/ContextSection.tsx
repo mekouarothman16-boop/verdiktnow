@@ -176,7 +176,7 @@ export function ContextSection({
             value={context.category || ""}
             onChange={(e) => set("category", e.target.value)}
             disabled={readOnly}
-            className="w-full border border-line rounded-lg px-[11px] py-2.5 font-sans text-[13.5px] text-ink outline-none bg-surface focus:border-accent transition-colors cursor-pointer disabled:text-ink-faint disabled:cursor-not-allowed"
+            className="w-full border border-line rounded-[12px] px-[11px] py-2.5 font-sans text-[13.5px] text-ink outline-none bg-surface focus:border-accent transition-colors cursor-pointer disabled:text-ink-faint disabled:cursor-not-allowed"
           >
             <option value="">{t.selectPlaceholder}</option>
             {getProcessCategories(locale).map((cat) => (
@@ -192,7 +192,7 @@ export function ContextSection({
             value={context.volumeVariability || ""}
             onChange={(e) => set("volumeVariability", e.target.value)}
             disabled={readOnly}
-            className="w-full border border-line rounded-lg px-[11px] py-2.5 font-sans text-[13.5px] text-ink outline-none bg-surface focus:border-accent transition-colors cursor-pointer disabled:text-ink-faint disabled:cursor-not-allowed"
+            className="w-full border border-line rounded-[12px] px-[11px] py-2.5 font-sans text-[13.5px] text-ink outline-none bg-surface focus:border-accent transition-colors cursor-pointer disabled:text-ink-faint disabled:cursor-not-allowed"
           >
             <option value="">{t.selectPlaceholder}</option>
             {getVolumeVariabilityOptions(locale).map((opt) => (
@@ -232,7 +232,7 @@ export function ContextSection({
             onChange={(e) => set("regulationsOther", e.target.value)}
             placeholder={t.regulationsOtherPlaceholder}
             disabled={readOnly}
-            className="w-full mt-2.5 border border-line rounded-lg px-[11px] py-2.5 font-sans text-[13.5px] text-ink outline-none bg-surface focus:border-accent transition-colors disabled:text-ink-faint disabled:cursor-not-allowed"
+            className="w-full mt-2.5 border border-line rounded-[12px] px-[11px] py-2.5 font-sans text-[13.5px] text-ink outline-none bg-surface focus:border-accent transition-colors disabled:text-ink-faint disabled:cursor-not-allowed"
           />
         )}
       </div>
@@ -282,7 +282,7 @@ export function ContextSection({
                   placeholder={q.placeholder}
                   rows={q.long ? 3 : 2}
                   disabled={readOnly}
-                  className="w-full border border-line rounded-lg px-[11px] py-2.5 font-sans text-[13.5px] text-ink outline-none resize-y leading-relaxed bg-surface focus:border-accent transition-colors disabled:text-ink-faint disabled:cursor-not-allowed"
+                  className="w-full border border-line rounded-[12px] px-[11px] py-2.5 font-sans text-[13.5px] text-ink outline-none resize-y leading-relaxed bg-surface focus:border-accent transition-colors disabled:text-ink-faint disabled:cursor-not-allowed"
                 />
               </label>
             ))}
@@ -316,7 +316,7 @@ export function ContextSection({
             <button
               onClick={analyze}
               disabled={loading || filled === 0 || aiExhausted}
-              className="flex items-center gap-2 px-4 py-2.5 rounded-lg font-sans text-[13.5px] font-semibold transition-colors disabled:cursor-not-allowed"
+              className="flex items-center gap-2 px-4 py-2.5 rounded-full font-sans text-[13.5px] font-semibold transition-colors disabled:cursor-not-allowed"
               style={{
                 border: `1px solid ${loading || filled === 0 || aiExhausted ? "var(--color-line)" : "var(--color-accent)"}`,
                 background: loading || filled === 0 || aiExhausted ? "var(--color-line-soft)" : "var(--color-accent-soft)",
@@ -371,7 +371,7 @@ export function ContextSection({
               <div className="text-[11.5px] font-semibold text-ink-soft mb-2">{t.suggestedStartScores}</div>
               {leverPreview.map((l) => (
                 <div key={l.id} className="flex gap-2.5 items-baseline py-1.5 border-t border-line-soft">
-                  <span className="font-mono text-xs text-accent-deep bg-surface border border-line rounded-[5px] px-1.5 py-0.5 min-w-[40px] text-center">
+                  <span className="font-mono text-xs text-accent-deep bg-surface border border-line rounded-full px-1.5 py-0.5 min-w-[40px] text-center">
                     {l.avg != null ? l.avg : "-"}
                   </span>
                   <div>
@@ -386,7 +386,7 @@ export function ContextSection({
             <div className="flex items-center flex-wrap gap-3">
               <button
                 onClick={applyScores}
-                className="px-4 py-2.5 rounded-lg bg-accent-vivid text-ink font-sans text-[13.5px] font-semibold hover:brightness-95 transition"
+                className="px-4 py-2.5 rounded-full bg-accent-vivid text-ink font-sans text-[13.5px] font-semibold hover:brightness-95 transition"
               >
                 {t.applyAsStartingPoint}
               </button>
@@ -414,7 +414,7 @@ export function ContextSection({
                 <button
                   onClick={applyRoi}
                   disabled={roiApplied}
-                  className="px-4 py-2.5 rounded-lg border border-accent text-accent-deep bg-accent-soft font-sans text-[13px] font-semibold hover:brightness-95 transition disabled:opacity-60 disabled:cursor-not-allowed"
+                  className="px-4 py-2.5 rounded-[12px] border border-accent text-accent-deep bg-accent-soft font-sans text-[13px] font-semibold hover:brightness-95 transition disabled:opacity-60 disabled:cursor-not-allowed"
                 >
                   {roiApplied ? t.roiApplied : t.roiApply}
                 </button>

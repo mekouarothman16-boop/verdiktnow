@@ -8,7 +8,7 @@ export function FAQItem({ question, answer, defaultOpen = false }: { question: s
   const [open, setOpen] = useState(defaultOpen);
 
   return (
-    <div className="rounded-xl border border-line bg-bg overflow-hidden">
+    <div className="rounded-[16px] border border-line bg-bg overflow-hidden">
       <button
         type="button"
         aria-expanded={open}

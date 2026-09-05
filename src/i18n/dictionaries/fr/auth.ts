@@ -34,6 +34,10 @@ export const auth = {
     confirmEmailMessage: "Vérifiez votre boîte courriel pour confirmer votre compte.",
   },
   compte: {
+    sampleReportEyebrow: "Rapport exemple",
+    sampleReportText:
+      "Un rapport complet de 17 pages généré par VerdiktNow, sur un processus fictif : verdict, scores détaillés par levier, dossier d'affaires chiffré et feuille de route. Utile pour montrer le livrable à un comité avant de produire le vôtre.",
+    sampleReportButton: "Ouvrir le rapport exemple",
     orgEyebrow: "Organisation",
     tierBadge: "Palier {tier}",
     noActivePlan: "Aucun forfait actif",

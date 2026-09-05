@@ -71,7 +71,7 @@ export function Roi({
             value={currency}
             onChange={(e) => setCurrency(e.target.value as Currency)}
             disabled={readOnly}
-            className="border border-line rounded-lg px-2.5 py-2 font-mono text-[13px] text-ink bg-surface outline-none cursor-pointer focus:border-accent transition-colors disabled:text-ink-faint disabled:cursor-not-allowed"
+            className="border border-line rounded-[12px] px-2.5 py-2 font-mono text-[13px] text-ink bg-surface outline-none cursor-pointer focus:border-accent transition-colors disabled:text-ink-faint disabled:cursor-not-allowed"
           >
             <option value="CAD">CAD $</option>
             <option value="USD">USD $</option>
@@ -248,7 +248,7 @@ export function Roi({
             <div className="flex justify-between items-center mb-1">
               <Eyebrow>{t.cashflowEyebrow.replace("{months}", String(ROI_HORIZON_YEARS * 12))}</Eyebrow>
               {r.payback && (
-                <span className="font-mono text-[11px] text-accent-deep bg-accent-soft px-2 py-0.5 rounded-md font-semibold">
+                <span className="font-mono text-[11px] text-accent-deep bg-accent-soft px-2 py-0.5 rounded-full font-semibold">
                   {t.paybackThreshold.replace("{n}", num(r.payback, 1))}
                 </span>
               )}

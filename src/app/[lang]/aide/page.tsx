@@ -26,7 +26,7 @@ export default async function AidePage({ params }: { params: Promise<{ lang: str
     <div className="flex-1 flex flex-col min-h-screen">
       <ContentHeader />
       <main className="flex-1 max-w-[760px] mx-auto w-full px-5 sm:px-6 py-14">
-        <h1 className="font-display text-[30px] sm:text-[36px] font-extrabold tracking-[-0.015em] text-ink mb-2">
+        <h1 className="font-display text-[30px] sm:text-[36px] font-semibold tracking-[0.005em] text-ink mb-2">
           {t.title}
         </h1>
         <p className="text-ink-soft text-[15px] leading-relaxed mb-9">{t.subtitle}</p>
@@ -44,7 +44,7 @@ export default async function AidePage({ params }: { params: Promise<{ lang: str
         </div>
 
         <Card className="p-6 flex items-start gap-4">
-          <div className="w-10 h-10 shrink-0 rounded-[9px] bg-accent-soft flex items-center justify-center">
+          <div className="w-10 h-10 shrink-0 rounded-[10px] bg-accent-soft flex items-center justify-center">
             <Mail size={18} className="text-accent-deep" />
           </div>
           <div>

@@ -109,14 +109,14 @@ export function Diagnostic({
       <AssessmentHistory history={history} currency={currency} />
 
       {driftedFields.length > 0 && (
-        <div className="no-print mb-6 flex items-start gap-2.5 px-4.5 py-3.5 rounded-lg border border-amber/25 bg-amber/10 text-[12.5px] text-ink-soft leading-relaxed">
+        <div className="no-print mb-6 flex items-start gap-2.5 px-4.5 py-3.5 rounded-[12px] border border-amber/25 bg-amber/10 text-[12.5px] text-ink-soft leading-relaxed">
           <History size={15} className="text-amber shrink-0 mt-0.5" />
           <span>{t.driftNotice.replace("{fields}", driftedFields.join(", "))}</span>
         </div>
       )}
 
       {!readOnly && !stepsDocumented && (
-        <div className="no-print mb-6 flex items-start gap-2.5 px-4.5 py-3.5 rounded-lg border border-line bg-bg text-[12.5px] text-ink-soft leading-relaxed">
+        <div className="no-print mb-6 flex items-start gap-2.5 px-4.5 py-3.5 rounded-[12px] border border-line bg-bg text-[12.5px] text-ink-soft leading-relaxed">
           <AlertTriangle size={15} className="text-ink-faint shrink-0 mt-0.5" />
           <span>
             {t.lowConfidenceNotice}
@@ -159,7 +159,7 @@ export function Diagnostic({
                     key={d.id}
                     onClick={() => openLever(d.id)}
                     className={clsx(
-                      "flex items-center gap-1.5 px-2.5 py-1.5 rounded-[7px] text-[11.5px] font-medium border transition-colors",
+                      "flex items-center gap-1.5 px-2.5 py-1.5 rounded-[6px] text-[11.5px] font-medium border transition-colors",
                       openId === d.id
                         ? "border-accent bg-accent-soft text-accent-deep"
                         : "border-line text-ink-soft hover:border-accent hover:text-accent"
@@ -262,7 +262,7 @@ export function Diagnostic({
                                     disabled={readOnly}
                                     title={o.label}
                                     className={clsx(
-                                      "flex-1 py-2 px-1 rounded-[7px] font-mono text-xs font-medium border transition",
+                                      "flex-1 py-2 px-1 rounded-[6px] font-mono text-xs font-medium border transition",
                                       on
                                         ? "border-accent-deep bg-accent-vivid text-ink"
                                         : "border-line bg-surface text-ink-soft hover:border-accent hover:text-accent",
@@ -333,7 +333,7 @@ export function Diagnostic({
             <Card className="p-5.5">
               <Eyebrow className="mb-3">{t.recommendedApproachEyebrow}</Eyebrow>
               <div className="flex items-start gap-3 mb-3">
-                <div className="w-10 h-10 shrink-0 rounded-[9px] bg-accent-soft flex items-center justify-center">
+                <div className="w-10 h-10 shrink-0 rounded-[10px] bg-accent-soft flex items-center justify-center">
                   {(() => {
                     const Icon = APPROACH_ICONS[approach.id];
                     return <Icon size={19} className="text-accent-deep" />;
@@ -399,7 +399,7 @@ export function Diagnostic({
             {!readOnly && (
               <button
                 onClick={() => setWeights({ ...DEFAULT_WEIGHTS })}
-                className="mt-1 font-mono text-[12px] text-ink-soft bg-transparent border border-line rounded-lg px-2.5 py-1.5 hover:border-accent hover:text-accent transition-colors"
+                className="mt-1 font-mono text-[12px] text-ink-soft bg-transparent border border-line rounded-full px-2.5 py-1.5 hover:border-accent hover:text-accent transition-colors"
               >
                 {t.resetWeights}
               </button>
@@ -462,7 +462,7 @@ export function Diagnostic({
               <div className="mt-3">
                 {weakest.map((d, i) => (
                   <div key={d.id} className={clsx("flex gap-3 py-3", i && "border-t border-line-soft")}>
-                    <span className="font-mono text-xs text-accent-deep bg-accent-soft rounded-md px-2 py-0.5 h-fit font-semibold">
+                    <span className="font-mono text-xs text-accent-deep bg-accent-soft rounded-full px-2 py-0.5 h-fit font-semibold">
                       {d.score}
                     </span>
                     <div>

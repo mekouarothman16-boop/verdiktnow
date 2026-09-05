@@ -31,7 +31,7 @@ export function ProGate({
 
       <LocaleLink
         href={loggedIn ? "/compte" : "/connexion?next=/compte"}
-        className="inline-flex items-center gap-2 px-6 py-3 rounded-lg bg-accent-vivid text-ink text-[13.5px] font-semibold hover:brightness-95 transition"
+        className="inline-flex items-center gap-2 px-6 py-3 rounded-full bg-accent-vivid text-ink text-[13.5px] font-semibold hover:brightness-95 transition"
       >
         {loggedIn
           ? t.viewTiersFrom.replace("{price}", formatSeatPrice(tiers.essentiel.priceMonthly ?? 0, "monthly", locale, getPerUserLabel(locale)))

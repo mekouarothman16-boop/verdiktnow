@@ -28,7 +28,7 @@ export function AccountActions() {
       <button
         onClick={openPortal}
         disabled={loading}
-        className="inline-flex items-center gap-2 px-5 py-2.5 rounded-lg bg-accent-vivid text-ink text-[13.5px] font-semibold hover:brightness-95 transition disabled:opacity-60"
+        className="inline-flex items-center gap-2 px-5 py-2.5 rounded-full bg-accent-vivid text-ink text-[13.5px] font-semibold hover:brightness-95 transition disabled:opacity-60"
       >
         {loading ? <Loader2 size={15} className="animate-spin-slow" /> : <Settings size={15} />}
         {t.manageSubscription}

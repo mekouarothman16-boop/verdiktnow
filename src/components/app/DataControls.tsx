@@ -58,7 +58,7 @@ export function DataControls({ userEmail }: { userEmail: string }) {
         <button
           onClick={handleExport}
           disabled={exporting}
-          className="flex items-center gap-2 px-4 py-2 rounded-lg border border-line bg-surface text-ink text-[13px] font-semibold hover:bg-accent-soft hover:border-accent/25 transition disabled:opacity-60"
+          className="flex items-center gap-2 px-4 py-2 rounded-full border border-line bg-surface text-ink text-[13px] font-semibold hover:bg-accent-soft hover:border-accent/25 transition disabled:opacity-60"
         >
           {exporting ? <Loader2 size={14} className="animate-spin-slow" /> : <Download size={14} />}
           {t.exportBtn}
@@ -72,7 +72,7 @@ export function DataControls({ userEmail }: { userEmail: string }) {
         </div>
         <button
           onClick={() => setConfirmOpen(true)}
-          className="flex items-center gap-2 px-4 py-2 rounded-lg border border-coral/25 bg-coral/5 text-coral text-[13px] font-semibold hover:bg-coral/10 transition"
+          className="flex items-center gap-2 px-4 py-2 rounded-[12px] border border-coral/25 bg-coral/5 text-coral text-[13px] font-semibold hover:bg-coral/10 transition"
         >
           <Trash2 size={14} />
           {t.deleteBtn}
@@ -91,7 +91,7 @@ export function DataControls({ userEmail }: { userEmail: string }) {
             <div className="flex items-center justify-between mb-3">
               <div className="flex items-center gap-2 text-coral">
                 <AlertTriangle size={16} />
-                <h2 className="font-display text-[16px] font-bold">{t.modalTitle}</h2>
+                <h2 className="font-display text-[16px] font-semibold">{t.modalTitle}</h2>
               </div>
               <button onClick={() => setConfirmOpen(false)} aria-label={t.closeAria} className="text-ink-faint hover:text-ink">
                 <X size={16} />
@@ -107,7 +107,7 @@ export function DataControls({ userEmail }: { userEmail: string }) {
               <input
                 value={confirmText}
                 onChange={(e) => setConfirmText(e.target.value)}
-                className="w-full border border-line rounded-lg px-3 py-2 text-[13px] text-ink outline-none bg-bg focus:border-coral transition-colors"
+                className="w-full border border-line rounded-[12px] px-3 py-2 text-[13px] text-ink outline-none bg-bg focus:border-coral transition-colors"
                 autoFocus
               />
             </label>
@@ -115,7 +115,7 @@ export function DataControls({ userEmail }: { userEmail: string }) {
             <button
               onClick={handleDelete}
               disabled={pending || confirmText.trim().toLowerCase() !== userEmail.toLowerCase()}
-              className="w-full px-4 py-2.5 rounded-lg bg-coral text-white text-[13.5px] font-semibold hover:brightness-110 transition disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center gap-2"
+              className="w-full px-4 py-2.5 rounded-full bg-coral text-white text-[13.5px] font-semibold hover:brightness-110 transition disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center gap-2"
             >
               {pending ? <Loader2 size={14} className="animate-spin-slow" /> : <Trash2 size={14} />}
               {t.confirmDeleteBtn}

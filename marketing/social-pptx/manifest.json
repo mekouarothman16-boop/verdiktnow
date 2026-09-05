@@ -1,0 +1,138 @@
+{
+  "linkedin": {
+    "deckTitle": "VerdiktNow — Publications LinkedIn",
+    "outputFolder": "Publication LinkedIn",
+    "outputFile": "VerdiktNow - LinkedIn.pptx",
+    "imageAspect": "1:1",
+    "posts": [
+      {
+        "id": "post-01-constat-2pourcent",
+        "label": "Post 1 — Le constat",
+        "image": "../linkedin/post-01-constat-2pourcent.png",
+        "text": "2 % seulement des entreprises sont réellement prêtes à automatiser un processus.\n\nPas parce que la technologie manque. Parce que la plupart des initiatives commencent par le choix d'un outil, jamais par une évaluation du processus lui-même.\n\nRésultat : des projets d'automatisation qui échouent, pas à cause du logiciel choisi, mais parce que le processus n'était pas prêt à l'être.\n\nVerdiktNow inverse l'ordre des choses. Avant d'engager un budget, un fournisseur ou du temps d'équipe : on documente le processus, puis un diagnostic pondéré révèle s'il est vraiment prêt, ce qu'il faut corriger d'abord, et lequel prioriser s'il y en a plusieurs.\n\nDiagnostiquer avant d'investir. Pas l'inverse."
+      },
+      {
+        "id": "post-02-boite-noire",
+        "label": "Post 2 — Comment le score est calculé",
+        "image": "../linkedin/post-02-boite-noire.png",
+        "text": "Un score d'aptitude, ce n'est pas une estimation à l'œil.\n\nChez VerdiktNow, chaque énoncé du diagnostic pèse dans son levier, chaque levier pèse dans le score global. Rien n'est arbitraire, rien n'est cosmétique. Vous voyez toujours pourquoi un score sort tel qu'il sort.\n\nLes pondérations ne sont pas figées non plus. Ajustez-les selon ce qui compte vraiment dans votre organisation, et le score se recalcule en direct.\n\nUne seule règle ne bouge jamais : le contexte que vous déclarez peut corriger un score vers le bas s'il semble trop optimiste, jamais vers le haut. Aucun mécanisme ne peut flatter artificiellement un résultat.\n\nUn score qu'on peut défendre devant une direction, pas un chiffre qu'on doit croire sur parole."
+      },
+      {
+        "id": "post-03-parcours-complet",
+        "label": "Post 3 — Le parcours complet",
+        "image": "../linkedin/post-03-parcours-complet.png",
+        "text": "VerdiktNow, ce n'est pas un diagnostic isolé. C'est un parcours complet.\n\nTout commence par le contexte : qui porte le processus, quels systèmes sont impliqués, quelles contraintes existent déjà.\n\nLe diagnostic d'aptitude évalue ensuite le processus sur ses leviers réels, pas sur une impression.\n\nLe calculateur de ROI traduit le potentiel en chiffres concrets : temps récupéré, coût évité, retour attendu.\n\nQuand plusieurs processus sont en jeu, la matrice de priorisation indique lequel automatiser en premier, selon l'effort et l'impact réels.\n\nEt tout ça se termine par une feuille de route claire, avec un rapport exportable en PDF prêt à être partagé avec une direction ou un comité.\n\nUn seul outil, du constat à la décision."
+      },
+      {
+        "id": "post-04-roi-chiffre",
+        "label": "Post 4 — Le calculateur de ROI",
+        "image": "../linkedin/post-04-roi-chiffre.png",
+        "text": "Automatiser sans connaître le retour, c'est avancer à l'aveugle.\n\nLe calculateur de ROI de VerdiktNow prend le relais dès que le diagnostic confirme qu'un processus est prêt.\n\nIl traduit le temps consacré aujourd'hui au processus, le taux horaire des personnes impliquées et le volume traité en un chiffre concret : combien d'heures récupérées, combien de coût évité, sur quelle période.\n\nPas une estimation générique tirée d'une moyenne sectorielle. Un calcul basé sur les données réelles de votre organisation, ajustables à tout moment.\n\nDe quoi transformer une intuition en argument chiffré qu'on peut présenter à une direction.\n\nAutomatiser, oui. Mais seulement quand le retour est démontré, pas supposé."
+      },
+      {
+        "id": "post-05-matrice-priorisation",
+        "label": "Post 5 — La matrice de priorisation",
+        "image": "../linkedin/post-05-matrice-priorisation.png",
+        "text": "Tous les processus ne méritent pas d'être automatisés en premier.\n\nQuand plusieurs candidats sont sur la table, choisir au hasard ou selon la voix la plus forte dans la salle coûte cher : du temps investi sur le mauvais processus, pendant que le vrai gain attend ailleurs.\n\nLa matrice de priorisation de VerdiktNow croise deux axes : l'aptitude du processus, issue du diagnostic pondéré, et la valeur qu'il représente pour l'organisation.\n\nChaque processus diagnostiqué s'y positionne automatiquement. Ceux qui combinent aptitude élevée et forte valeur ressortent comme prioritaires à automatiser. Les autres se répartissent entre à planifier, à préparer, ou à écarter pour l'instant.\n\nPrioriser ne devient plus une question d'opinion. C'est une lecture directe de deux axes mesurés."
+      },
+      {
+        "id": "post-06-feuille-route-pdf",
+        "label": "Post 6 — La feuille de route et le rapport PDF",
+        "image": "../linkedin/post-06-feuille-route-pdf.png",
+        "text": "Un diagnostic sans plan d'action reste une intention.\n\nUne fois le processus priorisé, VerdiktNow génère une feuille de route claire : les étapes concrètes pour préparer le processus, dans l'ordre où elles comptent, avec les responsables et les échéances qui s'y rattachent.\n\nRien de figé sur un tableur qu'on oublie après la réunion. La feuille de route reste vivante dans l'outil, avec un suivi d'avancement que l'équipe met à jour au fil du projet.\n\nEt tout ça se rassemble dans un rapport exportable en PDF : contexte, diagnostic, ROI, priorisation et feuille de route sur un seul document, prêt à être partagé avec une direction ou un comité.\n\nDu diagnostic à l'exécution, sans rupture entre les deux."
+      },
+      {
+        "id": "post-07-etude-cas-contexte",
+        "label": "Post 7 — Étude de cas : le contexte",
+        "image": "../linkedin/post-07-etude-cas-contexte.png",
+        "text": "Une PME manufacturière, un service comptable de trois personnes, un processus à bout de souffle.\n\nChaque facture fournisseur passait entre plusieurs mains avant d'être payée : réception par courriel, validation manuelle contre le bon de commande, puis saisie dans le système comptable.\n\nEnviron 600 factures par mois. Résultat : des retards de paiement récurrents, des erreurs de saisie découvertes des semaines plus tard, et une équipe qui passait plus de temps à chasser des validations qu'à faire de la finance.\n\nL'automatisation semblait une évidence. Mais par où commencer, sur quel processus, avec quel niveau de confiance dans le résultat : personne dans l'organisation n'avait de réponse claire.\n\nC'est exactement le vide que VerdiktNow vient combler."
+      },
+      {
+        "id": "post-08-etude-cas-resultat",
+        "label": "Post 8 — Étude de cas : le résultat chiffré",
+        "image": "../linkedin/post-08-etude-cas-resultat.png",
+        "text": "Le diagnostic a confirmé ce que l'équipe comptable soupçonnait déjà : ce processus était prêt.\n\nScore d'aptitude : 82 sur 100. Standardisation élevée, règles de décision claires, volume suffisant pour justifier l'investissement.\n\nLe calculateur de ROI a traduit ce potentiel en chiffres concrets : environ 35 heures récupérées par mois, soit près de 28 000 $ par année en temps de traitement évité.\n\nUne fois en place, le délai de validation d'une facture est passé de plusieurs jours à quelques heures. Les erreurs de saisie ont chuté. Et l'équipe comptable a pu réorienter son temps vers de l'analyse plutôt que de la saisie.\n\nUn chiffre avant de s'engager. Un résultat qui le confirme après."
+      },
+      {
+        "id": "post-09-etude-cas-priorisation",
+        "label": "Post 9 — Étude de cas : zoom sur la priorisation",
+        "image": "../linkedin/post-09-etude-cas-priorisation.png",
+        "text": "Le traitement des factures n'était pas le seul candidat sur la table.\n\nL'entreprise envisageait aussi d'automatiser la prise de commandes clients et la gestion des retours fournisseurs. Trois processus, un seul budget pour commencer.\n\nLa matrice de priorisation a tranché avec des données, pas avec des préférences. Le traitement des factures affichait une aptitude de 82 sur 100 (processus standardisé, règles claires, peu d'exceptions) et une valeur élevée compte tenu du volume mensuel.\n\nLa prise de commandes, elle, avait un potentiel de valeur comparable, mais une aptitude plus faible : trop de variantes non documentées, trop d'exceptions gérées au cas par cas. Un candidat à préparer, pas à automatiser tout de suite.\n\nUn seul projet lancé en premier. Avec la certitude que c'était le bon."
+      },
+      {
+        "id": "post-10-cloture-cta",
+        "label": "Post 10 — Clôture et appel à l'action",
+        "image": "../linkedin/post-10-cloture-cta.png",
+        "text": "2 % des entreprises sont prêtes à automatiser un processus. Cette PME en faisait partie, elle ne le savait simplement pas encore.\n\nUn diagnostic pondéré pour confirmer l'aptitude réelle. Un calculateur de ROI pour chiffrer le potentiel avant d'investir. Une matrice de priorisation pour choisir le bon processus en premier. Une feuille de route et un rapport PDF pour passer du constat à l'exécution.\n\nRésultat : un délai de validation passé de plusieurs jours à quelques heures, environ 35 heures récupérées chaque mois, et une équipe comptable qui fait enfin de la finance plutôt que de la saisie.\n\nVerdiktNow répond à une seule question, avant qu'un budget, un fournisseur ou du temps d'équipe ne soit engagé : ce processus est-il vraiment prêt à être automatisé ?\n\nFaites le diagnostic du vôtre sur verdiktnow.com."
+      }
+    ]
+  },
+  "instagram": {
+    "deckTitle": "VerdiktNow — Publications Instagram",
+    "outputFolder": "Publication Instagram",
+    "outputFile": "VerdiktNow - Instagram.pptx",
+    "imageAspect": "4:5",
+    "posts": [
+      {
+        "id": "post-01-constat-2pourcent",
+        "label": "Post 1 — Le constat",
+        "image": "../instagram/post-01-constat-2pourcent.png",
+        "text": "2 % des entreprises sont prêtes à automatiser un processus.\n\nPas un manque de technologie. Un manque de diagnostic avant d'investir.\n\nVerdiktNow évalue d'abord l'aptitude réelle du processus, avant le choix d'un outil.\n\nDiagnostiquer avant d'investir. Pas l'inverse.\n\n#automatisation #transformationnumerique #PME #diagnostic #productivite #verdiktnow"
+      },
+      {
+        "id": "post-02-boite-noire",
+        "label": "Post 2 — Comment le score est calculé",
+        "image": "../instagram/post-02-boite-noire.png",
+        "text": "Un score d'aptitude, ce n'est pas une estimation à l'œil.\n\nChaque énoncé pèse dans son levier, chaque levier pèse dans le score global. Rien d'arbitraire, rien de caché.\n\nLe contexte peut corriger un score vers le bas. Jamais vers le haut.\n\n#automatisation #diagnostic #transparence #PME #verdiktnow"
+      },
+      {
+        "id": "post-03-parcours-complet",
+        "label": "Post 3 — Le parcours complet",
+        "image": "../instagram/post-03-parcours-complet.png",
+        "text": "Un diagnostic isolé ne suffit pas. Il faut un parcours complet.\n\nContexte. Diagnostic d'aptitude. ROI. Priorisation. Feuille de route.\n\nUn seul outil, du constat à la décision.\n\n#automatisation #transformationnumerique #outil #PME #verdiktnow"
+      },
+      {
+        "id": "post-04-roi-chiffre",
+        "label": "Post 4 — Le calculateur de ROI",
+        "image": "../instagram/post-04-roi-chiffre.png",
+        "text": "Automatiser sans connaître le retour, c'est avancer à l'aveugle.\n\nLe calculateur de ROI de VerdiktNow traduit temps investi, taux horaire et volume traité en un chiffre concret.\n\nPas une estimation. Un chiffre démontré.\n\n#ROI #automatisation #finance #PME #verdiktnow"
+      },
+      {
+        "id": "post-05-matrice-priorisation",
+        "label": "Post 5 — La matrice de priorisation",
+        "image": "../instagram/post-05-matrice-priorisation.png",
+        "text": "Tous les processus ne méritent pas d'être automatisés en premier.\n\nLa matrice de priorisation croise aptitude et valeur pour révéler lequel automatiser en premier.\n\nPas une opinion. Une matrice claire.\n\n#priorisation #automatisation #strategie #PME #verdiktnow"
+      },
+      {
+        "id": "post-06-feuille-route-pdf",
+        "label": "Post 6 — La feuille de route et le rapport PDF",
+        "image": "../instagram/post-06-feuille-route-pdf.png",
+        "text": "Un diagnostic sans plan d'action reste une intention.\n\nFeuille de route claire, responsables, échéances. Et un rapport exportable en PDF prêt à partager.\n\nDu diagnostic à l'exécution.\n\n#gestiondeprojet #automatisation #PDF #PME #verdiktnow"
+      },
+      {
+        "id": "post-07-etude-cas-contexte",
+        "label": "Post 7 — Étude de cas : le contexte",
+        "image": "../instagram/post-07-etude-cas-contexte.png",
+        "text": "Une PME manufacturière. Trois personnes au service comptable. Un processus à bout de souffle.\n\n600 factures par mois. Des retards récurrents. Des erreurs découvertes trop tard.\n\nVerdiktNow vient combler ce vide.\n\n#etudedecas #automatisation #comptabilite #PME #verdiktnow"
+      },
+      {
+        "id": "post-08-etude-cas-resultat",
+        "label": "Post 8 — Étude de cas : le résultat chiffré",
+        "image": "../instagram/post-08-etude-cas-resultat.png",
+        "text": "Score d'aptitude : 82 sur 100.\n\n35 heures récupérées par mois. Près de 28 000 $ par année. Un délai de validation passé de plusieurs jours à quelques heures.\n\nUn résultat qui se mesure.\n\n#resultats #ROI #automatisation #PME #verdiktnow"
+      },
+      {
+        "id": "post-09-etude-cas-priorisation",
+        "label": "Post 9 — Étude de cas : zoom sur la priorisation",
+        "image": "../instagram/post-09-etude-cas-priorisation.png",
+        "text": "Le traitement des factures n'était pas le seul candidat.\n\nPrise de commandes, gestion des retours : trois processus, un seul budget. La matrice a tranché avec des données, pas des préférences.\n\nUn choix fondé sur des données.\n\n#priorisation #datadriven #automatisation #PME #verdiktnow"
+      },
+      {
+        "id": "post-10-cloture-cta",
+        "label": "Post 10 — Clôture et appel à l'action",
+        "image": "../instagram/post-10-cloture-cta.png",
+        "text": "2 % des entreprises sont prêtes à automatiser un processus. Cette PME en faisait partie, elle ne le savait pas encore.\n\nDiagnostic. ROI. Priorisation. Feuille de route. Du constat à l'exécution.\n\nFaites le diagnostic du vôtre sur verdiktnow.com.\n\n#automatisation #transformationnumerique #diagnostic #PME #verdiktnow"
+      }
+    ]
+  }
+}

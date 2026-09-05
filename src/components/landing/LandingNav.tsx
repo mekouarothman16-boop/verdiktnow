@@ -5,6 +5,7 @@ import { Gauge, Menu, X, ArrowRight } from "lucide-react";
 import { LocaleLink } from "@/components/i18n/LocaleLink";
 import { LanguageSwitcher } from "@/components/i18n/LanguageSwitcher";
 import { useDictionary } from "@/i18n/LocaleProvider";
+import { GUTTER, INSET, SHELL } from "./layout";
 
 export function LandingNav({ loggedIn = false }: { loggedIn?: boolean }) {
   const { common: t } = useDictionary();
@@ -17,17 +18,20 @@ export function LandingNav({ loggedIn = false }: { loggedIn?: boolean }) {
     { href: "#faq", label: t.nav.faq },
   ];
 
+  // Le logo tombe sur la colonne de contenu des sections, pas sur le bord des
+  // cartes : un seul axe vertical du haut en bas de la page, et le même que les
+  // en-têtes de l'application.
   return (
-    <header className="sticky top-0 z-50 border-b border-line bg-white/85 backdrop-blur-md backdrop-saturate-150">
-      <div className="max-w-[1160px] mx-auto px-5 sm:px-6 h-16 flex items-center justify-between">
+    <header className={`sticky top-0 z-50 border-b border-line bg-white/85 backdrop-blur-md backdrop-saturate-150 ${GUTTER}`}>
+      <div className={`${SHELL} ${INSET} h-16 flex items-center justify-between`}>
         <LocaleLink href="/" className="flex items-center gap-3">
-          <div className="w-10 h-10 rounded-lg bg-ink flex items-center justify-center shrink-0">
+          <div className="w-10 h-10 rounded-[10px] bg-ink flex items-center justify-center shrink-0">
             <Gauge size={21} color="var(--color-accent-soft)" />
           </div>
           <span className="font-display text-[19px] font-extrabold tracking-[0.01em] text-ink">VerdiktNow</span>
         </LocaleLink>
 
-        <nav className="hidden md:flex items-center gap-7">
+        <nav className="hidden lg:flex items-center gap-7">
           {LINKS.map((l) => (
             <a key={l.href} href={l.href} className="text-[13.5px] font-medium text-ink-soft hover:text-ink transition-colors">
               {l.label}
@@ -35,7 +39,7 @@ export function LandingNav({ loggedIn = false }: { loggedIn?: boolean }) {
           ))}
         </nav>
 
-        <div className="hidden md:flex items-center gap-4">
+        <div className="hidden lg:flex items-center gap-4">
           <LanguageSwitcher />
           {!loggedIn && (
             <LocaleLink href="/connexion" className="text-[14.5px] font-medium text-ink-soft hover:text-ink transition-colors">
@@ -62,14 +66,14 @@ export function LandingNav({ loggedIn = false }: { loggedIn?: boolean }) {
         <button
           aria-label="Ouvrir le menu"
           onClick={() => setOpen((o) => !o)}
-          className="md:hidden p-2 -mr-2 text-ink"
+          className="lg:hidden p-2 -mr-2 text-ink"
         >
           {open ? <X size={22} /> : <Menu size={22} />}
         </button>
       </div>
 
       <div
-        className="md:hidden grid transition-[grid-template-rows] duration-300 ease-out"
+        className="lg:hidden grid transition-[grid-template-rows] duration-300 ease-out"
         style={{ gridTemplateRows: open ? "1fr" : "0fr" }}
       >
         <div className="overflow-hidden">

@@ -90,21 +90,21 @@ export function ActivityList({
                         onChange={(e) => update(a.id, { label: e.target.value })}
                         placeholder={t.placeholderStep}
                         disabled={readOnly}
-                        className="border border-line rounded-lg px-2.5 py-1.5 text-[12.5px] text-ink outline-none bg-surface focus:border-accent transition-colors disabled:text-ink-faint"
+                        className="border border-line rounded-[12px] px-2.5 py-1.5 text-[12.5px] text-ink outline-none bg-surface focus:border-accent transition-colors disabled:text-ink-faint"
                       />
                       <input
                         value={a.actor}
                         onChange={(e) => update(a.id, { actor: e.target.value })}
                         placeholder={t.placeholderActor}
                         disabled={readOnly}
-                        className="border border-line rounded-lg px-2.5 py-1.5 text-[12.5px] text-ink outline-none bg-surface focus:border-accent transition-colors disabled:text-ink-faint"
+                        className="border border-line rounded-[12px] px-2.5 py-1.5 text-[12.5px] text-ink outline-none bg-surface focus:border-accent transition-colors disabled:text-ink-faint"
                       />
                       <input
                         value={a.system}
                         onChange={(e) => update(a.id, { system: e.target.value })}
                         placeholder={t.placeholderSystem}
                         disabled={readOnly}
-                        className="border border-line rounded-lg px-2.5 py-1.5 text-[12.5px] text-ink outline-none bg-surface focus:border-accent transition-colors disabled:text-ink-faint"
+                        className="border border-line rounded-[12px] px-2.5 py-1.5 text-[12.5px] text-ink outline-none bg-surface focus:border-accent transition-colors disabled:text-ink-faint"
                       />
                       <input
                         type="number"
@@ -113,14 +113,14 @@ export function ActivityList({
                         onChange={(e) => update(a.id, { minutes: e.target.value === "" ? 0 : parseFloat(e.target.value) })}
                         placeholder={t.placeholderMinutes}
                         disabled={readOnly}
-                        className="border border-line rounded-lg px-2.5 py-1.5 text-[12.5px] text-ink outline-none bg-surface focus:border-accent transition-colors disabled:text-ink-faint"
+                        className="border border-line rounded-[12px] px-2.5 py-1.5 text-[12.5px] text-ink outline-none bg-surface focus:border-accent transition-colors disabled:text-ink-faint"
                       />
                       <input
                         value={a.friction}
                         onChange={(e) => update(a.id, { friction: e.target.value })}
                         placeholder={t.placeholderFriction}
                         disabled={readOnly}
-                        className="border border-line rounded-lg px-2.5 py-1.5 text-[12.5px] text-ink outline-none bg-surface focus:border-accent transition-colors disabled:text-ink-faint"
+                        className="border border-line rounded-[12px] px-2.5 py-1.5 text-[12.5px] text-ink outline-none bg-surface focus:border-accent transition-colors disabled:text-ink-faint"
                       />
                       {!readOnly && (
                         <button
@@ -199,7 +199,7 @@ export function ActivityList({
                 <button
                   onClick={applyToRoi}
                   disabled={applied}
-                  className="flex items-center gap-1.5 px-3 py-1.5 rounded-lg border border-accent text-accent-deep bg-accent-soft text-[11.5px] font-semibold hover:brightness-95 transition disabled:opacity-60 disabled:cursor-not-allowed"
+                  className="flex items-center gap-1.5 px-3 py-1.5 rounded-[12px] border border-accent text-accent-deep bg-accent-soft text-[11.5px] font-semibold hover:brightness-95 transition disabled:opacity-60 disabled:cursor-not-allowed"
                 >
                   <Calculator size={12} />
                   {applied ? t.appliedToRoi : t.applyToRoiButton}

@@ -26,7 +26,7 @@ export function QuickWins({ summary }: { summary: QuickWinsSummary }) {
         {summary.items.map((item) => (
           <div
             key={item.activityId}
-            className="flex items-center justify-between gap-3 px-3 py-2 rounded-lg border border-line bg-surface"
+            className="flex items-center justify-between gap-3 px-3 py-2 rounded-[12px] border border-line bg-surface"
           >
             <span className="text-[12.5px] text-ink font-medium">{item.label}</span>
             <div className="flex items-center gap-2 shrink-0">

@@ -129,21 +129,21 @@ export function ToolInventory({
                       onChange={(e) => updateCustom(tool.id, { name: e.target.value })}
                       placeholder={t.customNamePlaceholder}
                       disabled={readOnly}
-                      className="border border-line rounded-lg px-2.5 py-1.5 text-[12.5px] text-ink outline-none bg-surface focus:border-accent transition-colors disabled:text-ink-faint"
+                      className="border border-line rounded-[12px] px-2.5 py-1.5 text-[12.5px] text-ink outline-none bg-surface focus:border-accent transition-colors disabled:text-ink-faint"
                     />
                     <input
                       value={tool.usage}
                       onChange={(e) => updateCustom(tool.id, { usage: e.target.value })}
                       placeholder={t.customUsagePlaceholder}
                       disabled={readOnly}
-                      className="border border-line rounded-lg px-2.5 py-1.5 text-[12.5px] text-ink outline-none bg-surface focus:border-accent transition-colors disabled:text-ink-faint"
+                      className="border border-line rounded-[12px] px-2.5 py-1.5 text-[12.5px] text-ink outline-none bg-surface focus:border-accent transition-colors disabled:text-ink-faint"
                     />
                     <select
                       value={tool.role}
                       onChange={(e) => updateCustom(tool.id, { role: e.target.value as CustomTool["role"] })}
                       disabled={readOnly}
                       title={roleMeta[tool.role].description}
-                      className="border border-line rounded-lg px-2.5 py-1.5 text-[12.5px] text-ink outline-none bg-surface focus:border-accent transition-colors cursor-pointer disabled:text-ink-faint disabled:cursor-not-allowed"
+                      className="border border-line rounded-[12px] px-2.5 py-1.5 text-[12.5px] text-ink outline-none bg-surface focus:border-accent transition-colors cursor-pointer disabled:text-ink-faint disabled:cursor-not-allowed"
                     >
                       <option value="unknown">{t.roleOptionUnknown}</option>
                       <option value="platform">{t.roleOptionPlatform}</option>
@@ -203,7 +203,7 @@ export function ToolInventory({
                 </div>
               ))}
               {inventory.verdict && (
-                <p className="mt-3 p-3 rounded-lg bg-accent-soft/60 border border-accent/15 text-[12.5px] text-ink leading-relaxed">
+                <p className="mt-3 p-3 rounded-[12px] bg-accent-soft/60 border border-accent/15 text-[12.5px] text-ink leading-relaxed">
                   {inventory.verdict}
                 </p>
               )}

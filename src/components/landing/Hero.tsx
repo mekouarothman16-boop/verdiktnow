@@ -4,6 +4,8 @@ import { GaugeArc } from "@/components/ui/GaugeArc";
 import { Eyebrow } from "@/components/ui/Eyebrow";
 import { getLevels } from "@/lib/scoring";
 import { Reveal } from "./Reveal";
+import { GUTTER, INSET, SHELL } from "./layout";
+import { ParallaxLayer, ParallaxScene } from "./ParallaxScene";
 import { FillBar } from "./FillBar";
 import { getServerDictionary, getRootParamsLocale } from "@/i18n/getDictionary";
 
@@ -16,24 +18,19 @@ export async function Hero() {
     { label: t.leverData, v: 69 },
   ];
   return (
-    <section className="relative overflow-hidden">
-      <div aria-hidden className="pointer-events-none absolute inset-0 overflow-hidden">
-        <Image
-          src="/generated/hero-bg.png"
-          alt=""
-          fill
-          priority
-          sizes="100vw"
-          className="object-cover opacity-70 animate-bg-drift"
-        />
-        <div className="absolute inset-0 bg-gradient-to-b from-bg/40 via-transparent to-bg" />
-      </div>
-      <div
+    <section className={`relative overflow-hidden ${GUTTER}`}>
+      {/* Quatre profondeurs : le halo de fond bouge à peine, le verdict au
+          premier plan bouge le plus et s'incline légèrement. Le texte, lui, ne
+          bouge jamais. */}
+      <ParallaxScene>
+      <ParallaxLayer
+        depth={14}
+        base="translateX(-50%)"
         aria-hidden
-        className="pointer-events-none absolute -top-52 left-1/2 -translate-x-1/2 w-[1100px] h-[680px] rounded-full blur-3xl opacity-60"
+        className="pointer-events-none absolute -top-52 left-1/2 w-[1100px] h-[680px] rounded-full blur-3xl opacity-60"
         style={{ background: "radial-gradient(closest-side, var(--color-accent-soft), transparent)" }}
       />
-      <div className="relative max-w-[1160px] mx-auto px-5 sm:px-6 pt-16 sm:pt-24 pb-16 sm:pb-20 grid lg:grid-cols-[1.05fr_0.95fr] gap-14 items-center">
+      <div className={`relative ${SHELL} ${INSET} pt-16 sm:pt-24 pb-16 sm:pb-20 grid lg:grid-cols-[1.05fr_0.95fr] gap-14 lg:gap-20 items-center`}>
         <Reveal>
           <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-accent-soft border border-accent/15 mb-6">
             <span className="w-1.5 h-1.5 rounded-full bg-accent" />
@@ -41,11 +38,11 @@ export async function Hero() {
               {t.badge}
             </span>
           </div>
-          <h1 className="font-display text-[48px] sm:text-[66px] font-extrabold tracking-[-0.02em] text-ink leading-[1.02] mb-6 text-balance">
+          <h1 className="font-display text-[48px] sm:text-[66px] font-semibold tracking-[0.005em] text-ink leading-[1.02] mb-6 text-balance">
             {t.titleLine}{" "}
             <span className="text-accent">{t.titleHighlight}</span>.
           </h1>
-          <p className="text-ink-soft text-[17px] sm:text-[18px] leading-relaxed max-w-[520px] mb-9">
+          <p className="text-ink-soft text-[17px] sm:text-[18px] leading-relaxed max-w-[560px] mb-9">
             {t.subtitle}
           </p>
           <div className="flex flex-wrap items-center gap-4">
@@ -77,34 +74,44 @@ export async function Hero() {
         </Reveal>
 
         <Reveal delay={0.12}>
-          <div className="relative mx-auto max-w-[420px]">
-            <div className="absolute -inset-4 rounded-[28px] bg-gradient-to-br from-accent-soft to-transparent -z-10" />
-            <div className="bg-surface border border-line rounded-2xl shadow-card-lg p-7">
-              <div className="flex items-center justify-between mb-1">
+          <div className="relative mx-auto max-w-[460px]">
+            <ParallaxLayer
+              depth={24}
+              aria-hidden
+              className="absolute -inset-4 rounded-[28px] bg-gradient-to-br from-accent-soft to-transparent -z-10"
+            />
+            <ParallaxLayer depth={30}>
+              <div className="bg-surface border border-line rounded-[24px] shadow-card-lg p-7">
                 <Eyebrow>{t.cardEyebrow}</Eyebrow>
-                <span
-                  className="px-2.5 py-1 rounded-full text-white font-mono text-[11px] font-semibold"
-                  style={{ background: level.color }}
-                >
-                  {level.label}
-                </span>
-              </div>
-              <GaugeArc score={78} level={level} caption={t.cardCaption} />
-              <div className="mt-4 pt-4 border-t border-line-soft space-y-2.5">
-                {levers.map((r, i) => (
-                  <div key={r.label} className="flex items-center gap-3">
-                    <span className="text-[11.5px] text-ink-soft flex-1">{r.label}</span>
-                    <div className="w-20">
-                      <FillBar percent={r.v} delay={0.15 + i * 0.1} />
+                <GaugeArc score={78} level={level} caption={t.cardCaption} />
+                <div className="mt-4 pt-4 border-t border-line-soft space-y-2.5">
+                  {levers.map((r, i) => (
+                    <div key={r.label} className="flex items-center gap-3">
+                      <span className="text-[11.5px] text-ink-soft flex-1">{r.label}</span>
+                      <div className="w-20">
+                        <FillBar percent={r.v} delay={0.15 + i * 0.1} />
+                      </div>
+                      <span className="font-mono text-[11px] text-ink w-6 text-right">{r.v}</span>
                     </div>
-                    <span className="font-mono text-[11px] text-ink w-6 text-right">{r.v}</span>
-                  </div>
-                ))}
+                  ))}
+                </div>
               </div>
-            </div>
+            </ParallaxLayer>
+            {/* Le verdict sort de l'en-tête de la carte pour flotter sur son
+                coin : c'est la réponse que donne l'outil, elle mérite d'être
+                au premier plan, et elle donne au parallaxe son calque avant. */}
+            <ParallaxLayer depth={46} tilt={4} className="absolute -top-3.5 -right-3.5 z-10">
+              <span
+                className="block px-4 py-2 rounded-full text-white font-display text-[13px] font-semibold shadow-card-lg"
+                style={{ background: level.color }}
+              >
+                {level.label}
+              </span>
+            </ParallaxLayer>
           </div>
         </Reveal>
       </div>
+      </ParallaxScene>
     </section>
   );
 }

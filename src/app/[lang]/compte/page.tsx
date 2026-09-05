@@ -1,5 +1,5 @@
 import { redirect } from "next/navigation";
-import { Gauge, LogOut } from "lucide-react";
+import { FileText, Gauge, LogOut } from "lucide-react";
 import { createClient, getUserOrg, isSupabaseConfigured } from "@/lib/supabase/server";
 import { createAdminClient, isSupabaseAdminConfigured } from "@/lib/supabase/admin";
 import { signOut } from "@/lib/supabase/actions";
@@ -73,10 +73,10 @@ export default async function ComptePage({
 
   return (
     <div className="flex-1 flex flex-col">
-      <header className="border-b border-line bg-white/90 backdrop-blur-md">
-        <div className="max-w-[900px] mx-auto px-5 sm:px-6 py-3.5 flex items-center justify-between">
+      <header className="border-b border-line bg-white/90 backdrop-blur-md px-4 sm:px-8">
+        <div className="max-w-[1320px] mx-auto px-5 sm:px-10 lg:px-14 py-3.5 flex items-center justify-between">
           <LocaleLink href="/" className="flex items-center gap-2.5">
-            <div className="w-[34px] h-[34px] rounded-md bg-ink flex items-center justify-center">
+            <div className="w-9 h-9 rounded-[10px] bg-ink flex items-center justify-center">
               <Gauge size={18} color="var(--color-accent-soft)" />
             </div>
             <span className="font-display text-[16px] font-extrabold tracking-[0.01em] text-ink">VerdiktNow</span>
@@ -97,15 +97,15 @@ export default async function ComptePage({
 
       <main className="max-w-[900px] mx-auto w-full px-5 sm:px-6 py-10 flex-1">
         <Eyebrow>{ct.orgEyebrow}</Eyebrow>
-        <h1 className="font-display text-[28px] font-extrabold text-ink mt-1.5 mb-8 tracking-[-0.01em]">{org.orgName}</h1>
+        <h1 className="font-display text-[28px] font-semibold text-ink mt-1.5 mb-8 tracking-[0.005em]">{org.orgName}</h1>
 
         {checkout === "success" && (
-          <div className="mb-6 px-4 py-3 rounded-lg bg-teal/10 border border-teal/20 text-[13px] text-teal">
+          <div className="mb-6 px-4 py-3 rounded-[12px] bg-teal/10 border border-teal/20 text-[13px] text-teal">
             {ct.checkoutSuccess}
           </div>
         )}
         {checkout === "cancelled" && (
-          <div className="mb-6 px-4 py-3 rounded-lg bg-line-soft border border-line text-[13px] text-ink-soft">
+          <div className="mb-6 px-4 py-3 rounded-[12px] bg-line-soft border border-line text-[13px] text-ink-soft">
             {ct.checkoutCancelled}
           </div>
         )}
@@ -135,6 +135,30 @@ export default async function ComptePage({
             {org.role === "owner" && (org.plan === "essentiel" || org.plan === "croissance") && <AccountActions />}
           </div>
         </Card>
+
+        {/* Le rapport exemple n'est plus servi depuis `public/` : il ne sort que
+            par /api/sample-report, qui refait le même contrôle de palier côté
+            serveur. Cacher la carte ne protège donc rien à lui seul, mais évite
+            de proposer à un compte sans forfait un lien qui lui répondrait 403. */}
+        {org.plan !== "free" && (
+          <Card className="p-6 mb-6">
+            <Eyebrow className="mb-4">{ct.sampleReportEyebrow}</Eyebrow>
+            <div className="flex flex-col sm:flex-row sm:items-center gap-5">
+              <span className="w-12 h-12 shrink-0 rounded-[12px] bg-accent-soft border border-accent/20 flex items-center justify-center">
+                <FileText size={20} className="text-accent-deep" />
+              </span>
+              <p className="flex-1 text-[13.5px] text-ink-soft leading-relaxed">{ct.sampleReportText}</p>
+              <a
+                href="/api/sample-report"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="shrink-0 inline-flex items-center justify-center gap-2 px-5 py-3 rounded-full border border-line bg-surface text-ink text-[13.5px] font-semibold hover:border-accent hover:text-accent transition"
+              >
+                <FileText size={15} /> {ct.sampleReportButton}
+              </a>
+            </div>
+          </Card>
+        )}
 
         <Card className="p-6 mb-6">
           <Eyebrow className="mb-4">{ct.tiersEyebrow}</Eyebrow>

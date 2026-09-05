@@ -26,7 +26,7 @@ export function FieldHint({ text }: { text: string }) {
       {open && (
         <span
           role="tooltip"
-          className="absolute z-30 left-0 top-[calc(100%+6px)] w-[230px] px-3 py-2 rounded-lg bg-ink text-white text-[11.5px] leading-relaxed shadow-lg"
+          className="absolute z-30 left-0 top-[calc(100%+6px)] w-[230px] px-3 py-2 rounded-[12px] bg-ink text-white text-[11.5px] leading-relaxed shadow-lg"
         >
           {text}
         </span>

@@ -1,0 +1,13 @@
+{
+  "name": "verdiktnow-pitch-deck",
+  "private": true,
+  "version": "1.0.0",
+  "description": "Outil interne : génère le support de présentation VerdiktNow (démo, promo). Pas lié à l'app Next.js.",
+  "type": "module",
+  "scripts": {
+    "build": "node build.mjs"
+  },
+  "dependencies": {
+    "pptxgenjs": "^3.12.0"
+  }
+}

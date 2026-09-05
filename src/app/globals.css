@@ -5,7 +5,7 @@
   --color-surface: #ffffff;
   --color-ink: #091315;
   --color-ink-soft: #686464;
-  --color-ink-faint: #6d7373;
+  --color-ink-faint: #656b6b;
   --color-line: #d7dbd8;
   --color-line-soft: #e2e5e2;
   --color-accent: #55631a;
@@ -23,6 +23,21 @@
   --color-coral-tint: #d0654a;
   --color-teal: #348269;
   --color-teal-tint: #3e9b7e;
+
+  /* Teintes décoratives : famille de fonds sourds pour les tuiles d'icônes,
+     ajoutée pour donner du relief aux sections sans toucher à l'échelle
+     sémantique (coral/ambre/olive/sarcelle), qui reste réservée aux scores.
+     Chaque teinte a son encre associée, calibrée pour rester lisible dessus. */
+  --color-tint-lime: #f2ffd9;
+  --color-tint-lime-ink: #3d4712;
+  --color-tint-sky: #dfeaf2;
+  --color-tint-sky-ink: #2b5a72;
+  --color-tint-sand: #f7efdc;
+  --color-tint-sand-ink: #7a5c1c;
+  --color-tint-clay: #f9e5dd;
+  --color-tint-clay-ink: #a04a30;
+  --color-tint-sage: #dfece5;
+  --color-tint-sage-ink: #2f6a56;
 
   --shadow-card: 0 1px 2px rgba(20, 23, 26, 0.04), 0 6px 20px rgba(20, 23, 26, 0.05);
   --shadow-card-lg: 0 4px 10px rgba(20, 23, 26, 0.05), 0 18px 46px rgba(20, 23, 26, 0.08);
@@ -51,6 +66,16 @@
   --color-coral-tint: var(--color-coral-tint);
   --color-teal: var(--color-teal);
   --color-teal-tint: var(--color-teal-tint);
+  --color-tint-lime: var(--color-tint-lime);
+  --color-tint-lime-ink: var(--color-tint-lime-ink);
+  --color-tint-sky: var(--color-tint-sky);
+  --color-tint-sky-ink: var(--color-tint-sky-ink);
+  --color-tint-sand: var(--color-tint-sand);
+  --color-tint-sand-ink: var(--color-tint-sand-ink);
+  --color-tint-clay: var(--color-tint-clay);
+  --color-tint-clay-ink: var(--color-tint-clay-ink);
+  --color-tint-sage: var(--color-tint-sage);
+  --color-tint-sage-ink: var(--color-tint-sage-ink);
 
   --font-sans: var(--font-sans), system-ui, sans-serif;
   --font-display: var(--font-display), var(--font-sans), system-ui, sans-serif;

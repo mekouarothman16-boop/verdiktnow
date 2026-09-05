@@ -17,7 +17,7 @@ export async function generateMetadata({ params }: { params: Promise<{ lang: str
 }
 
 function H2({ children }: { children: React.ReactNode }) {
-  return <h2 className="font-display text-[20px] font-bold text-ink mt-9 mb-3">{children}</h2>;
+  return <h2 className="font-display text-[20px] font-semibold text-ink mt-9 mb-3">{children}</h2>;
 }
 function P({ children, className = "" }: { children: React.ReactNode; className?: string }) {
   return <p className={`text-[14.5px] text-ink-soft leading-relaxed mb-3 ${className}`}>{children}</p>;
@@ -47,14 +47,14 @@ export default async function ConditionsPage({ params }: { params: Promise<{ lan
     <div className="flex-1 flex flex-col min-h-screen">
       <ContentHeader />
       <main className="flex-1 max-w-[760px] mx-auto w-full px-5 sm:px-6 py-14">
-        <h1 className="font-display text-[30px] sm:text-[36px] font-extrabold tracking-[-0.015em] text-ink mb-2">
+        <h1 className="font-display text-[30px] sm:text-[36px] font-semibold tracking-[0.005em] text-ink mb-2">
           {t.title}
         </h1>
         <p className="text-[13px] text-ink-faint mb-6">
           {t.lastUpdated} {new Date().toLocaleDateString(dateLocale, { dateStyle: "long" })}
         </p>
 
-        <div className="px-4.5 py-3.5 rounded-lg border border-amber/25 bg-amber/10 text-[12.5px] text-ink-soft leading-relaxed mb-8">
+        <div className="px-4.5 py-3.5 rounded-[12px] border border-amber/25 bg-amber/10 text-[12.5px] text-ink-soft leading-relaxed mb-8">
           {t.notice}
         </div>
 

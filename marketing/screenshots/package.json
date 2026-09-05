@@ -1,0 +1,10 @@
+{
+  "name": "verdiktnow-screenshots",
+  "private": true,
+  "version": "1.0.0",
+  "description": "Outil interne : capture des vraies captures d'écran de l'outil VerdiktNow (localhost:3000) pour le support de présentation. Pas lié à l'app Next.js.",
+  "type": "module",
+  "dependencies": {
+    "playwright": "^1.48.0"
+  }
+}

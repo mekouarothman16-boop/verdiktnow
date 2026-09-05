@@ -69,7 +69,7 @@ export function RoadmapGantt({
   const paybackPct = paybackWeek != null ? (Math.min(paybackWeek, totalWeeks) / totalWeeks) * 100 : null;
 
   return (
-    <div className="rounded-xl border border-line bg-surface p-5 mb-5">
+    <div className="rounded-[16px] border border-line bg-surface p-5 mb-5">
       <div className="text-[13.5px] font-semibold text-ink mb-1">{t.ganttTitle}</div>
       <p className="text-[12px] text-ink-faint leading-relaxed mb-4 max-w-[560px]">{t.ganttSubtitle}</p>
 
@@ -94,7 +94,7 @@ export function RoadmapGantt({
                   .replace("{total}", String(row.totalCount))}
                 className="relative h-7 group cursor-pointer"
               >
-                <div className="absolute inset-0 rounded-md bg-bg" />
+                <div className="absolute inset-0 rounded-[10px] bg-bg" />
                 {Array.from({ length: monthCount + 1 }).map((_, i) => (
                   <div
                     key={i}
@@ -114,7 +114,7 @@ export function RoadmapGantt({
                 )}
                 <div
                   className={clsx(
-                    "absolute inset-y-0 rounded-md border overflow-hidden transition-[filter] group-hover:brightness-95",
+                    "absolute inset-y-0 rounded-[10px] border overflow-hidden transition-[filter] group-hover:brightness-95",
                     row.isImmediate ? "border-gold-tint bg-gold-soft" : "border-accent/25 bg-accent-soft/60"
                   )}
                   style={{ left: `${leftPct}%`, width: `${widthPct}%` }}

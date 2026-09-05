@@ -1,7 +1,10 @@
 # See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
 
 # dependencies
-/node_modules
+# Sans barre oblique initiale, la règle s'applique à toute profondeur.
+# marketing/ contient plusieurs projets Node, et une règle ancrée à la racine
+# n'en attrapait aucun.
+node_modules/
 /.pnp
 .pnp.*
 .yarn/*
@@ -39,6 +42,10 @@ yarn-error.log*
 # claude code local settings (contains machine-specific permission history,
 # which has previously included secrets pasted into allowlisted commands)
 .claude/settings.local.json
+
+# impeccable design hook cache: keyed by session id and full of absolute paths
+# from whichever machine ran it, rewritten on every edit
+.impeccable/hook.cache.json
 
 # typescript
 *.tsbuildinfo

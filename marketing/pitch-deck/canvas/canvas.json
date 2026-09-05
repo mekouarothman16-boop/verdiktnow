@@ -1,0 +1,309 @@
+{
+  "artboards": [
+    {
+      "file": "Main.dc.html",
+      "x": 0,
+      "y": 0,
+      "w": 1280,
+      "h": 720,
+      "title": "01 · Titre",
+      "page": "page-1"
+    },
+    {
+      "file": "Sommaire.dc.html",
+      "x": 1400,
+      "y": 0,
+      "w": 1280,
+      "h": 720,
+      "title": "02 · Sommaire",
+      "page": "page-1"
+    },
+    {
+      "file": "Constat.dc.html",
+      "x": 0,
+      "y": 0,
+      "w": 1280,
+      "h": 720,
+      "title": "03 · Le constat",
+      "page": "page-2"
+    },
+    {
+      "file": "Probleme.dc.html",
+      "x": 1400,
+      "y": 0,
+      "w": 1280,
+      "h": 720,
+      "title": "04 · Le problème",
+      "page": "page-2"
+    },
+    {
+      "file": "PourQui.dc.html",
+      "x": 2800,
+      "y": 0,
+      "w": 1280,
+      "h": 720,
+      "title": "05 · Pour qui",
+      "page": "page-2"
+    },
+    {
+      "file": "Question.dc.html",
+      "x": 0,
+      "y": 880,
+      "w": 1280,
+      "h": 720,
+      "title": "06 · La question",
+      "page": "page-2"
+    },
+    {
+      "file": "Methode.dc.html",
+      "x": 0,
+      "y": 0,
+      "w": 1280,
+      "h": 720,
+      "title": "07 · La méthode",
+      "page": "page-3"
+    },
+    {
+      "file": "Contexte.dc.html",
+      "x": 1400,
+      "y": 0,
+      "w": 1280,
+      "h": 720,
+      "title": "08 · Étape 1 · Contexte",
+      "page": "page-3"
+    },
+    {
+      "file": "Leviers.dc.html",
+      "x": 2800,
+      "y": 0,
+      "w": 1280,
+      "h": 720,
+      "title": "09 · Étape 2 · Diagnostic",
+      "page": "page-3"
+    },
+    {
+      "file": "Transparence.dc.html",
+      "x": 0,
+      "y": 880,
+      "w": 1280,
+      "h": 720,
+      "title": "10 · Transparence",
+      "page": "page-3"
+    },
+    {
+      "file": "Regle.dc.html",
+      "x": 1400,
+      "y": 880,
+      "w": 1280,
+      "h": 720,
+      "title": "11 · La règle",
+      "page": "page-3"
+    },
+    {
+      "file": "Roi.dc.html",
+      "x": 2800,
+      "y": 880,
+      "w": 1280,
+      "h": 720,
+      "title": "12 · Étape 3 · ROI",
+      "page": "page-3"
+    },
+    {
+      "file": "Priorisation.dc.html",
+      "x": 0,
+      "y": 1760,
+      "w": 1280,
+      "h": 720,
+      "title": "13 · Étape 4 · Priorisation",
+      "page": "page-3"
+    },
+    {
+      "file": "FeuilleDeRoute.dc.html",
+      "x": 1400,
+      "y": 1760,
+      "w": 1280,
+      "h": 720,
+      "title": "14 · Étape 5 · Feuille de route",
+      "page": "page-3"
+    },
+    {
+      "file": "Livrable.dc.html",
+      "x": 2800,
+      "y": 1760,
+      "w": 1280,
+      "h": 720,
+      "title": "15 · Le livrable",
+      "page": "page-3"
+    },
+    {
+      "file": "QuinzeEtapes.dc.html",
+      "x": 0,
+      "y": 0,
+      "w": 1280,
+      "h": 720,
+      "title": "16 · Cas · 15 étapes",
+      "page": "page-4"
+    },
+    {
+      "file": "Complexe.dc.html",
+      "x": 1400,
+      "y": 0,
+      "w": 1280,
+      "h": 720,
+      "title": "17 · Cas · Complexité",
+      "page": "page-4"
+    },
+    {
+      "file": "CasContexte.dc.html",
+      "x": 2800,
+      "y": 0,
+      "w": 1280,
+      "h": 720,
+      "title": "18 · Cas · Contexte",
+      "page": "page-4"
+    },
+    {
+      "file": "CasDiagnostic.dc.html",
+      "x": 0,
+      "y": 880,
+      "w": 1280,
+      "h": 720,
+      "title": "19 · Cas · Diagnostic",
+      "page": "page-4"
+    },
+    {
+      "file": "CasLeviers.dc.html",
+      "x": 1400,
+      "y": 880,
+      "w": 1280,
+      "h": 720,
+      "title": "20 · Cas · Leviers",
+      "page": "page-4"
+    },
+    {
+      "file": "CasRoi.dc.html",
+      "x": 2800,
+      "y": 880,
+      "w": 1280,
+      "h": 720,
+      "title": "21 · Cas · ROI",
+      "page": "page-4"
+    },
+    {
+      "file": "CasPriorisation.dc.html",
+      "x": 0,
+      "y": 1760,
+      "w": 1280,
+      "h": 720,
+      "title": "22 · Cas · Priorisation",
+      "page": "page-4"
+    },
+    {
+      "file": "CasGantt.dc.html",
+      "x": 1400,
+      "y": 1760,
+      "w": 1280,
+      "h": 720,
+      "title": "23 · Cas · Feuille de route",
+      "page": "page-4"
+    },
+    {
+      "file": "CasTableau.dc.html",
+      "x": 2800,
+      "y": 1760,
+      "w": 1280,
+      "h": 720,
+      "title": "24 · Cas · Tableau de suivi",
+      "page": "page-4"
+    },
+    {
+      "file": "Resultat.dc.html",
+      "x": 0,
+      "y": 2640,
+      "w": 1280,
+      "h": 720,
+      "title": "25 · Cas · Résultat",
+      "page": "page-4"
+    },
+    {
+      "file": "Chiffrier.dc.html",
+      "x": 0,
+      "y": 0,
+      "w": 1280,
+      "h": 720,
+      "title": "26 · Pourquoi pas un chiffrier",
+      "page": "page-5"
+    },
+    {
+      "file": "Opportunite.dc.html",
+      "x": 1400,
+      "y": 0,
+      "w": 1280,
+      "h": 720,
+      "title": "27 · L'opportunité",
+      "page": "page-5"
+    },
+    {
+      "file": "Modele.dc.html",
+      "x": 2800,
+      "y": 0,
+      "w": 1280,
+      "h": 720,
+      "title": "28 · Modèle d'affaires",
+      "page": "page-5"
+    },
+    {
+      "file": "OuEnEst.dc.html",
+      "x": 0,
+      "y": 880,
+      "w": 1280,
+      "h": 720,
+      "title": "29 · Où en est VerdiktNow",
+      "page": "page-5"
+    },
+    {
+      "file": "Suite.dc.html",
+      "x": 1400,
+      "y": 880,
+      "w": 1280,
+      "h": 720,
+      "title": "30 · La suite",
+      "page": "page-5"
+    },
+    {
+      "file": "Cta.dc.html",
+      "x": 2800,
+      "y": 880,
+      "w": 1280,
+      "h": 720,
+      "title": "31 · Appel à l'action",
+      "page": "page-5"
+    }
+  ],
+  "pages": [
+    {
+      "id": "page-1",
+      "name": "Ouverture"
+    },
+    {
+      "id": "page-2",
+      "name": "Le problème"
+    },
+    {
+      "id": "page-3",
+      "name": "La méthode"
+    },
+    {
+      "id": "page-4",
+      "name": "Cas illustratif"
+    },
+    {
+      "id": "page-5",
+      "name": "Aujourd'hui & suite"
+    }
+  ],
+  "launch": {
+    "view": "canvas",
+    "page": "page-1"
+  }
+}
