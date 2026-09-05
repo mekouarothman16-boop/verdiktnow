@@ -75,7 +75,7 @@ export function PricingGrid({
         </div>
       </Reveal>
 
-      <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6 max-w-[1160px] mx-auto items-stretch">
+      <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6 items-stretch">
         {SELF_SERVE_TIERS.map((tier, i) => {
           const tc = tiers[tier];
           const featured = tier === "croissance";
@@ -84,8 +84,8 @@ export function PricingGrid({
               <div
                 className={
                   featured
-                    ? "relative h-full bg-ink rounded-2xl p-8 flex flex-col overflow-hidden"
-                    : "h-full bg-surface border border-line rounded-2xl p-8 flex flex-col"
+                    ? "relative h-full bg-ink rounded-[24px] p-8 flex flex-col overflow-hidden"
+                    : "h-full bg-surface border border-line rounded-[24px] p-8 flex flex-col"
                 }
                 style={featured ? { border: "1px solid rgba(201,162,39,.25)" } : undefined}
               >
@@ -150,7 +150,7 @@ export function PricingGrid({
         })}
 
         <Reveal delay={0.1 * (SELF_SERVE_TIERS.length + 1)}>
-          <div className="h-full bg-surface border border-line rounded-2xl p-8 flex flex-col">
+          <div className="h-full bg-surface border border-line rounded-[24px] p-8 flex flex-col">
             <Eyebrow>{tiers.entreprise.label}</Eyebrow>
             <div className="font-mono text-[26px] font-semibold text-ink mt-3 mb-1">{t.customPricing}</div>
             <p className="text-[13px] text-ink-faint mb-6">{tiers.entreprise.tagline}</p>
@@ -170,12 +170,12 @@ export function PricingGrid({
         </Reveal>
 
         <Reveal delay={0.1 * (SELF_SERVE_TIERS.length + 2)}>
-          <div className="h-full bg-surface border border-dashed border-line rounded-2xl p-8 flex flex-col">
+          <div className="h-full bg-surface border border-dashed border-line rounded-[24px] p-8 flex flex-col">
             <div className="flex items-center justify-between">
               <span className="font-mono text-[11px] tracking-[0.16em] uppercase text-ink-faint font-medium">
                 {viewerSeat.label}
               </span>
-              <span className="flex items-center gap-1 font-mono text-[10px] px-2.5 py-1 rounded-full bg-line-soft text-ink-faint">
+              <span className="flex items-center gap-1 font-mono text-[10px] px-2.5 py-1 rounded-full bg-line-soft text-ink-soft">
                 <Eye size={11} /> {t.viewerSeatBadge}
               </span>
             </div>

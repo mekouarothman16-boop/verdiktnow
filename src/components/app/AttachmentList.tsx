@@ -74,7 +74,7 @@ export function AttachmentList({
             const linkedId = activities.some((act) => act.id === links[a.path]) ? links[a.path] : "";
             const linkedActivity = activities.find((act) => act.id === linkedId);
             return (
-              <div key={a.path} className="px-3 py-2 rounded-lg border border-line">
+              <div key={a.path} className="px-3 py-2 rounded-[12px] border border-line">
                 <div className="flex items-center gap-2.5">
                   <Icon size={15} className="text-ink-faint shrink-0" />
                   <a

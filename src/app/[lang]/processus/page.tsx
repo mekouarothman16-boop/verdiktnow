@@ -99,10 +99,10 @@ export default async function ProcessusPage({
   if (org && org.plan === "free") {
     return (
       <div className="flex-1 flex flex-col">
-        <header className="border-b border-line bg-white/90 backdrop-blur-md">
-          <div className="max-w-[1160px] mx-auto px-5 sm:px-6 py-3.5 flex items-center justify-between">
+        <header className="border-b border-line bg-white/90 backdrop-blur-md px-4 sm:px-8">
+          <div className="max-w-[1320px] mx-auto px-5 sm:px-10 lg:px-14 py-3.5 flex items-center justify-between">
             <LocaleLink href="/" className="flex items-center gap-2.5">
-              <div className="w-[34px] h-[34px] rounded-md bg-ink flex items-center justify-center">
+              <div className="w-9 h-9 rounded-[10px] bg-ink flex items-center justify-center">
                 <Gauge size={18} color="var(--color-accent-soft)" />
               </div>
               <span className="font-display text-[16px] font-extrabold tracking-[0.01em] text-ink">VerdiktNow</span>
@@ -248,10 +248,10 @@ export default async function ProcessusPage({
 
   return (
     <div className="flex-1 flex flex-col">
-      <header className="border-b border-line bg-white/90 backdrop-blur-md">
-        <div className="max-w-[1160px] mx-auto px-5 sm:px-6 py-3.5 flex items-center justify-between">
+      <header className="border-b border-line bg-white/90 backdrop-blur-md px-4 sm:px-8">
+        <div className="max-w-[1320px] mx-auto px-5 sm:px-10 lg:px-14 py-3.5 flex items-center justify-between">
           <LocaleLink href="/" className="flex items-center gap-2.5">
-            <div className="w-[34px] h-[34px] rounded-md bg-ink flex items-center justify-center">
+            <div className="w-9 h-9 rounded-[10px] bg-ink flex items-center justify-center">
               <Gauge size={18} color="var(--color-accent-soft)" />
             </div>
             <span className="font-display text-[16px] font-extrabold tracking-[0.01em] text-ink">VerdiktNow</span>
@@ -278,13 +278,13 @@ export default async function ProcessusPage({
         <div className="flex items-center justify-between flex-wrap gap-4 mb-8">
           <div>
             <Eyebrow>{p.eyebrow}</Eyebrow>
-            <h1 className="font-display text-[28px] font-extrabold text-ink mt-1.5 tracking-[-0.01em]">{p.title}</h1>
+            <h1 className="font-display text-[28px] font-semibold text-ink mt-1.5 tracking-[0.005em]">{p.title}</h1>
           </div>
           {!readOnly && (
             <div className="flex items-center gap-2.5">
               <ImportCsvButton />
               <form action={createProcess}>
-                <button className="flex items-center gap-2 px-4.5 py-2.5 rounded-lg bg-accent-vivid text-ink text-[13.5px] font-semibold hover:brightness-95 transition">
+                <button className="flex items-center gap-2 px-4.5 py-2.5 rounded-full bg-accent-vivid text-ink text-[13.5px] font-semibold hover:brightness-95 transition">
                   <Plus size={16} /> {p.newProcessButton}
                 </button>
               </form>
@@ -293,13 +293,13 @@ export default async function ProcessusPage({
         </div>
 
         {error && (
-          <div className="mb-6 px-4 py-3 rounded-lg bg-coral/10 border border-coral/20 text-[13px] text-coral">
+          <div className="mb-6 px-4 py-3 rounded-[12px] bg-coral/10 border border-coral/20 text-[13px] text-coral">
             {error}
           </div>
         )}
 
         {overdueTotal > 0 && (
-          <div className="mb-6 px-4.5 py-3.5 rounded-lg bg-coral/10 border border-coral/20 flex items-start gap-2.5">
+          <div className="mb-6 px-4.5 py-3.5 rounded-[12px] bg-coral/10 border border-coral/20 flex items-start gap-2.5">
             <AlertTriangle size={15} className="text-coral shrink-0 mt-0.5" />
             <div className="text-[13px] leading-relaxed">
               <span className="font-semibold text-coral">
@@ -323,7 +323,7 @@ export default async function ProcessusPage({
             </p>
             {!readOnly && (
               <form action={createProcess} className="inline-block">
-                <button className="flex items-center gap-2 px-5 py-3 rounded-lg bg-accent-vivid text-ink text-[14px] font-semibold hover:brightness-95 transition">
+                <button className="flex items-center gap-2 px-5 py-3 rounded-full bg-accent-vivid text-ink text-[14px] font-semibold hover:brightness-95 transition">
                   <Plus size={16} /> {p.emptyStateButton}
                 </button>
               </form>

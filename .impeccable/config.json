@@ -1,6 +1,8 @@
 {
   "detector": {
-    "ignoreRules": [],
+    "ignoreRules": [
+      "overused-font"
+    ],
     "ignoreFiles": [],
     "ignoreValues": [
       {
@@ -14,6 +16,12 @@
         "value": "rgba(138,162,63,1)",
         "createdAt": "2026-08-29T02:04:10.009Z",
         "reason": "matches existing token --color-olive-tint (#8aa23f), expressed as raw rgba for gradient opacity fade"
+      },
+      {
+        "rule": "overused-font",
+        "value": "inter",
+        "createdAt": "2026-09-03T03:25:10.288Z",
+        "reason": "Police de marque documentee (PRODUCT.md / DESIGN.md, decision explicite du fondateur). Variante capitalisee: l'entree existante 'inter' ne couvrait que la graphie minuscule de l'URL Google Fonts, pas les declarations font-family."
       }
     ]
   }

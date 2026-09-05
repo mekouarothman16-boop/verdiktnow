@@ -42,10 +42,10 @@ export function PublicToolView({
 
   return (
     <div className="flex-1 flex flex-col">
-      <header className="sticky top-0 z-20 border-b border-line bg-white/90 backdrop-blur-md backdrop-saturate-150">
-        <div className="max-w-[1160px] mx-auto px-3.5 sm:px-6 py-2.5 sm:py-3.5 flex items-center justify-between gap-2 sm:gap-3">
+      <header className="sticky top-0 z-20 border-b border-line bg-white/90 backdrop-blur-md px-4 sm:px-8 backdrop-saturate-150">
+        <div className="max-w-[1320px] mx-auto px-5 sm:px-10 lg:px-14 py-2.5 sm:py-3.5 flex items-center justify-between gap-2 sm:gap-3">
           <div className="flex items-center gap-2.5 sm:gap-3 shrink-0">
-            <div className="w-[30px] h-[30px] sm:w-[34px] sm:h-[34px] rounded-md bg-ink flex items-center justify-center shrink-0">
+            <div className="w-9 h-9 rounded-[10px] bg-ink flex items-center justify-center shrink-0">
               <Gauge size={16} color="var(--color-accent-soft)" />
             </div>
             <div>
@@ -62,7 +62,7 @@ export function PublicToolView({
                   key={T.id}
                   onClick={() => setTab(T.id)}
                   className={clsx(
-                    "flex items-center gap-1.5 px-2.5 sm:px-3.5 py-2 rounded-[7px] text-[12.5px] sm:text-[13.5px] whitespace-nowrap transition",
+                    "flex items-center gap-1.5 px-2.5 sm:px-3.5 py-2 rounded-[6px] text-[12.5px] sm:text-[13.5px] whitespace-nowrap transition",
                     on ? "bg-surface shadow-card text-ink font-semibold" : "text-ink-soft font-medium hover:text-ink"
                   )}
                 >
@@ -76,7 +76,7 @@ export function PublicToolView({
       </header>
 
       <main className="max-w-[1160px] mx-auto w-full px-5 sm:px-6 py-9 pb-16 flex-1">
-        <div className="mb-6 px-4 py-2.5 rounded-lg bg-accent-soft border border-accent/15 text-[12.5px] text-accent-deep">
+        <div className="mb-6 px-4 py-2.5 rounded-[12px] bg-accent-soft border border-accent/15 text-[12.5px] text-accent-deep">
           {(() => {
             const [before, after] = t.readOnlyBanner.split("{name}");
             return (

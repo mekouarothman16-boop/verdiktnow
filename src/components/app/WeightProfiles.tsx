@@ -72,13 +72,13 @@ export function WeightProfiles({
             onChange={(e) => setNameInput(e.target.value)}
             onKeyDown={(e) => e.key === "Enter" && save()}
             placeholder={t.namePlaceholder}
-            className="flex-1 border border-line rounded-lg px-2.5 py-1.5 text-[12px] text-ink outline-none bg-surface focus:border-accent transition-colors"
+            className="flex-1 border border-line rounded-[12px] px-2.5 py-1.5 text-[12px] text-ink outline-none bg-surface focus:border-accent transition-colors"
             autoFocus
           />
           <button
             onClick={save}
             disabled={pending || !nameInput.trim()}
-            className="px-2.5 py-1.5 rounded-lg bg-accent-vivid text-ink text-[11.5px] font-semibold disabled:opacity-60"
+            className="px-2.5 py-1.5 rounded-full bg-accent-vivid text-ink text-[11.5px] font-semibold disabled:opacity-60"
           >
             {t.saveButton}
           </button>
@@ -98,7 +98,7 @@ export function WeightProfiles({
       ) : (
         <div className="grid gap-1.5">
           {profiles.map((p) => (
-            <div key={p.id} className="flex items-center gap-2 px-2.5 py-1.5 rounded-lg border border-line hover:border-accent transition-colors">
+            <div key={p.id} className="flex items-center gap-2 px-2.5 py-1.5 rounded-full border border-line hover:border-accent transition-colors">
               <button onClick={() => apply(p)} className="flex-1 text-left text-[12px] text-ink font-medium">
                 {p.name}
                 {p.category && (

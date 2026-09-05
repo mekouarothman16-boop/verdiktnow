@@ -40,7 +40,7 @@ export default async function InscriptionPage({
             name="email"
             required
             autoComplete="email"
-            className="w-full border border-line rounded-lg px-3 py-2.5 font-sans text-sm text-ink outline-none bg-surface focus:border-accent transition-colors"
+            className="w-full border border-line rounded-[12px] px-3 py-2.5 font-sans text-sm text-ink outline-none bg-surface focus:border-accent transition-colors"
           />
         </label>
         <label className="block">
@@ -51,13 +51,13 @@ export default async function InscriptionPage({
             required
             minLength={8}
             autoComplete="new-password"
-            className="w-full border border-line rounded-lg px-3 py-2.5 font-sans text-sm text-ink outline-none bg-surface focus:border-accent transition-colors"
+            className="w-full border border-line rounded-[12px] px-3 py-2.5 font-sans text-sm text-ink outline-none bg-surface focus:border-accent transition-colors"
           />
           <span className="text-[11px] text-ink-faint block mt-1.5">{t.passwordHint}</span>
         </label>
         <button
           type="submit"
-          className="mt-1 flex items-center justify-center gap-2 px-5 py-3 rounded-lg bg-accent-vivid text-ink text-[14px] font-semibold hover:brightness-95 transition"
+          className="mt-1 flex items-center justify-center gap-2 px-5 py-3 rounded-full bg-accent-vivid text-ink text-[14px] font-semibold hover:brightness-95 transition"
         >
           <UserPlus size={15} /> {t.submit}
         </button>

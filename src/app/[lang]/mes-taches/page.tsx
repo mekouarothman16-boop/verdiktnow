@@ -71,10 +71,10 @@ export default async function MyTasksPage({ params }: { params: Promise<{ lang: 
 
   return (
     <div className="flex-1 flex flex-col">
-      <header className="border-b border-line bg-white/90 backdrop-blur-md">
-        <div className="max-w-[1160px] mx-auto px-5 sm:px-6 py-3.5 flex items-center justify-between">
+      <header className="border-b border-line bg-white/90 backdrop-blur-md px-4 sm:px-8">
+        <div className="max-w-[1320px] mx-auto px-5 sm:px-10 lg:px-14 py-3.5 flex items-center justify-between">
           <LocaleLink href="/" className="flex items-center gap-2.5">
-            <div className="w-[34px] h-[34px] rounded-md bg-ink flex items-center justify-center">
+            <div className="w-9 h-9 rounded-[10px] bg-ink flex items-center justify-center">
               <Gauge size={18} color="var(--color-accent-soft)" />
             </div>
             <span className="font-display text-[16px] font-extrabold tracking-[0.01em] text-ink">VerdiktNow</span>
@@ -98,11 +98,11 @@ export default async function MyTasksPage({ params }: { params: Promise<{ lang: 
         <LocaleLink href="/processus" className="flex items-center gap-1.5 text-[12.5px] text-ink-faint hover:text-ink transition-colors mb-5">
           <ArrowLeft size={13} /> {t.backToPortfolio}
         </LocaleLink>
-        <h1 className="font-display text-[26px] sm:text-[30px] font-extrabold tracking-[-0.015em] text-ink mb-2">{t.title}</h1>
+        <h1 className="font-display text-[26px] sm:text-[30px] font-semibold tracking-[0.005em] text-ink mb-2">{t.title}</h1>
         <p className="text-ink-soft text-[14px] leading-relaxed mb-8">{t.subtitle}</p>
 
         {tasks.length === 0 ? (
-          <div className="rounded-xl border border-dashed border-line bg-surface p-8 text-center">
+          <div className="rounded-[16px] border border-dashed border-line bg-surface p-8 text-center">
             <ListChecks size={22} className="text-ink-faint mx-auto mb-3" />
             <div className="font-sans text-[15px] font-semibold text-ink mb-1.5">{t.emptyTitle}</div>
             <p className="text-[13px] text-ink-soft leading-relaxed max-w-[420px] mx-auto">{t.emptyText}</p>
@@ -115,7 +115,7 @@ export default async function MyTasksPage({ params }: { params: Promise<{ lang: 
                 <LocaleLink
                   key={`${task.processId}-${i}`}
                   href={`/outil/${task.processId}?tab=roadmap`}
-                  className="flex items-center justify-between gap-4 rounded-xl border border-line bg-surface p-4 hover:border-accent/40 hover:shadow-card transition"
+                  className="flex items-center justify-between gap-4 rounded-[16px] border border-line bg-surface p-4 hover:border-accent/40 hover:shadow-card transition"
                 >
                   <div className="min-w-0">
                     <div className="text-[13.5px] text-ink leading-relaxed mb-1">{task.text}</div>

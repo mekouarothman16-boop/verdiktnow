@@ -66,12 +66,12 @@ export function RoadmapActualGantt({
   const scheduled = items.filter((i): i is ActualGanttItem & { startDate: string; dueDate: string } => !!i.startDate && !!i.dueDate);
 
   return (
-    <div className="rounded-xl border border-line bg-surface p-5 mb-5">
+    <div className="rounded-[16px] border border-line bg-surface p-5 mb-5">
       <div className="text-[13.5px] font-semibold text-ink mb-1">{t.actualGanttTitle}</div>
       <p className="text-[12px] text-ink-faint leading-relaxed mb-4 max-w-[560px]">{t.actualGanttSubtitle}</p>
 
       {scheduled.length === 0 ? (
-        <div className="flex items-center gap-3 rounded-lg bg-bg px-4 py-3.5">
+        <div className="flex items-center gap-3 rounded-[12px] bg-bg px-4 py-3.5">
           <CalendarRange size={16} className="text-ink-faint shrink-0" />
           <p className="text-[12.5px] text-ink-faint leading-relaxed">{t.actualGanttEmptyText}</p>
         </div>
@@ -106,14 +106,14 @@ export function RoadmapActualGantt({
                         {row.label}
                       </div>
                       <div className="relative h-7" title={label}>
-                        <div className="absolute inset-0 rounded-md bg-bg" />
+                        <div className="absolute inset-0 rounded-[10px] bg-bg" />
                         {months.map((m, i) => (
                           <div key={i} className="absolute inset-y-0 border-l border-line-soft" style={{ left: `${xOf(m.getTime())}%` }} />
                         ))}
                         <div className="absolute inset-y-0 w-px bg-accent/60" style={{ left: `${todayPct}%` }} />
                         <div
                           className={clsx(
-                            "absolute inset-y-0 rounded-md border overflow-hidden",
+                            "absolute inset-y-0 rounded-[10px] border overflow-hidden",
                             overdue ? "border-coral/40 bg-coral/10" : "border-accent/25 bg-accent-soft/60"
                           )}
                           style={{ left: `${leftPct}%`, width: `${widthPct}%` }}

@@ -16,6 +16,18 @@ export const landing = {
     leverRules: "Règles & décisions",
     leverData: "Données & intrants",
   },
+  showcase: {
+    eyebrow: "L'outil, sans détour",
+    title: 'Le verdict tient sur une seule matrice',
+    subtitle:
+      "Valeur d'un côté, aptitude de l'autre. Le quadrant où tombe votre processus donne la recommandation, sans interprétation à faire.",
+    panelLabel: 'Priorisation',
+    processName: 'Traitement des demandes',
+    exampleNote: 'Exemple de résultat',
+    scoreCaption: "score d'aptitude pondéré",
+    legendLabel: 'Les quatre quadrants',
+    verdictIntro: 'Recommandation',
+  },
   stats: {
     eyebrow: "Le constat",
     title: "L'automatisation échoue rarement à cause de l'outil",
@@ -39,57 +51,41 @@ export const landing = {
       },
     ],
   },
-  promises: {
-    eyebrow: "Ce que nous vous devons",
-    title: "Les promesses de VerdiktNow",
-    items: [
-      {
-        title: "Aucun score sans explication",
-        text: "Chaque énoncé, chaque levier, chaque pondération est visible et ajustable. Vous saurez toujours pourquoi un score sort tel qu'il sort — jamais une boîte noire à prendre sur parole.",
-      },
-      {
-        title: "Un dossier d'affaires, pas une intuition",
-        text: "Économies nettes, délai de récupération, valeur actualisée nette : la décision d'automatiser s'appuie sur des chiffres vérifiables, pas sur un ressenti.",
-      },
-      {
-        title: "Une recommandation, pas juste un score",
-        text: "Aptitude et valeur se combinent en une seule matrice : automatiser en priorité, planifier, préparer le terrain ou écarter. Vous savez quoi faire ensuite, pas seulement où vous en êtes.",
-      },
-      {
-        title: "Calibré à votre réalité, jamais figé",
-        text: "Poids des leviers, seuil de priorité, valeur d'une économie « élevée » : les repères par défaut s'ajustent à votre organisation, pas l'inverse.",
-      },
-    ],
-    costIntro: "Un audit de préparation à l'automatisation mené par une firme externe, pour un seul processus et avant même de commencer à automatiser, coûte généralement :",
-    costVendorLabel: "Firme d'automatisation externe",
-    costVendorValue: "3 000 $ à 25 000 $ US par mandat",
-    costVerdiktNowLabel: "VerdiktNow, diagnostics illimités",
-    costVerdiktNowValue: "à partir de 50 $ CAD / mois",
-    costSource: "Fourchette usuelle observée sur le marché du conseil en automatisation pour un audit de préparation, petites et moyennes entreprises.",
-  },
-  whyDiagnose: {
+  risks: {
     eyebrow: "Avant d'investir",
-    title: "Pourquoi diagnostiquer avant d'agir",
-    intro:
-      "La plupart des initiatives d'automatisation démarrent par le choix d'un outil, pas par une évaluation du processus. Un diagnostic d'aptitude en amont change l'ordre des choses : avant d'engager un budget, un fournisseur ou du temps d'équipe, il révèle si le processus est réellement prêt, ce qu'il faut corriger d'abord, et lequel prioriser s'il y en a plusieurs.",
-    reasons: [
+    title: "Quatre risques, quatre réponses",
+    pairs: [
       {
-        title: "Éviter les faux départs",
-        text: "La plupart des échecs ne viennent pas de l'outil, mais d'un processus qui n'était pas prêt à l'automatisation.",
-        example:
-          "Un processus jugé « prêt » à l'œil, où 40 % des cas sont en réalité des exceptions non documentées. Le levier Règles & décisions le repère avant l'achat d'un outil.",
+        risk: "Le processus n'était pas prêt",
+        riskText:
+          "La plupart des échecs d'automatisation ne viennent pas de l'outil, mais d'un processus qu'on croyait mûr. Un audit à l'œil ne voit pas les 40 % de cas qui sont en réalité des exceptions non documentées.",
+        answer: "Un score d'aptitude sur 6 leviers pondérés",
+        answerText:
+          "Déroulement, règles de décision, données, volume, faisabilité technique, gouvernance : chaque levier est noté séparément, et celui qui bloque se voit avant l'achat.",
       },
       {
-        title: "Prioriser avant d'engager un budget",
-        text: "Face à plusieurs processus candidats, tous ne se valent pas pour le même effort investi.",
-        example:
-          "Deux processus semblent aussi urgents l'un que l'autre : la matrice Valeur × Aptitude tranche lequel automatiser en premier, et lequel laisser attendre.",
+        risk: "Deux processus semblent aussi urgents",
+        riskText:
+          "Face à plusieurs candidats, tous ne se valent pas pour le même effort investi. Sans arbitrage, on automatise celui qui crie le plus fort, pas celui qui rapporte le plus.",
+        answer: "Une matrice Valeur × Aptitude qui tranche",
+        answerText:
+          "Le quadrant où tombe le processus donne la recommandation : automatiser en priorité, planifier, préparer le terrain ou écarter. Vous savez quoi faire ensuite, pas seulement où vous en êtes.",
       },
       {
-        title: "Justifier la décision avec des chiffres",
-        text: "Un score d'aptitude et un dossier d'affaires chiffrés convainquent un comité de direction mieux qu'une intuition.",
-        example:
-          "Pas un feu vert ou rouge, mais un score de 41/100 détaillé sur 6 leviers, avec ce qu'il faudrait corriger pour le faire progresser.",
+        risk: "Le comité ne signe pas sur une intuition",
+        riskText:
+          "« Ça nous ferait gagner du temps » ne débloque pas un budget. Il faut un chiffre défendable, et la méthode qui l'a produit.",
+        answer: "Un dossier d'affaires chiffré",
+        answerText:
+          "Économies nettes, délai de récupération et valeur actualisée nette sur 5 ans, recalculés en direct à partir de vos volumes et de vos coûts.",
+      },
+      {
+        risk: "Un score qu'on ne peut pas expliquer",
+        riskText:
+          "Un outil qui sort une note sans montrer son calcul vous laisse sans réponse à la première objection en réunion.",
+        answer: "Chaque poids visible et ajustable",
+        answerText:
+          "Énoncés, leviers, pondérations, seuil de priorité, valeur d'une économie « élevée » : tout est ouvert et se règle sur votre organisation, pas l'inverse.",
       },
     ],
     signalsLabel: "Ce que le diagnostic détecte",
@@ -101,6 +97,14 @@ export const landing = {
       "Contraintes techniques non résolues",
       "Gouvernance ou risque mal maîtrisé",
     ],
+    costIntro:
+      "Un audit de préparation à l'automatisation mené par une firme externe, pour un seul processus et avant même de commencer à automatiser, coûte généralement :",
+    costVendorLabel: "Firme d'automatisation externe",
+    costVendorValue: "3 000 $ à 25 000 $ US par mandat",
+    costVerdiktNowLabel: "VerdiktNow, diagnostics illimités",
+    costVerdiktNowValue: "à partir de 50 $ CAD / mois",
+    costSource:
+      "Fourchette usuelle observée sur le marché du conseil en automatisation pour un audit de préparation, petites et moyennes entreprises.",
   },
   howItWorks: {
     eyebrow: "Cinq modules, un seul processus",
@@ -206,28 +210,26 @@ export const landing = {
     ],
   },
   features: {
+    ganttEyebrow: "Feuille de route générée",
+    ganttSubtitle:
+      "Trois phases et leurs jalons, positionnés à partir d'aujourd'hui. Estimation indicative, pas un engagement de calendrier.",
+    ganttPhaseImmediate: "Actions immédiates",
+    ganttPhase1: "Phase 1 · Leviers faibles",
+    ganttPhase2: "Phase 2 · Pilote encadré",
+    ganttPhase3: "Phase 3 · Déploiement",
+    ganttFrame1: "0 à 6 semaines",
+    ganttFrame2: "6 à 16 semaines",
+    ganttFrame3: "16 à 40 semaines",
     eyebrow: "Conçu pour la décision",
     title: "Ce qui distingue VerdiktNow",
     items: [
-      {
-        title: "Double pondération",
-        text: "Chaque énoncé pèse dans son levier. Chaque levier pèse dans le score global. Ajustez les poids selon votre réalité : le score se recalcule en direct.",
-      },
       {
         title: "Analyse assistée par IA",
         text: "Décrivez le contexte du processus et laissez l'IA proposer un point de départ pour les 30 énoncés, avec justification par levier.",
       },
       {
-        title: "Dossier d'affaires chiffré",
-        text: "Économies nettes, délai de récupération, VAN sur 5 ans, trésorerie cumulée : de quoi convaincre sans tableur additionnel.",
-      },
-      {
-        title: "Méthode transparente",
-        text: "Toutes les formules sont visibles et explicables, sans boîte noire. Vous savez toujours pourquoi un score sort tel qu'il sort.",
-      },
-      {
         title: "Suivi de projet intégré",
-        text: "Assignez chaque action à un membre de l'équipe, suivez les jalons clés — du premier contact fournisseur à la mise en production — et l'avancement dans un tableau de bord partagé, avec rappels automatiques pour les échéances dépassées.",
+        text: "Assignez chaque action à un membre de l'équipe et suivez l'avancement dans un tableau de bord partagé, avec rappels automatiques pour les échéances dépassées.",
       },
       {
         title: "Export en un clic",
@@ -235,7 +237,36 @@ export const landing = {
       },
     ],
   },
+  testimonials: {
+    eyebrow: "Ce qu'on en dit",
+    title: "Les premiers retours",
+    subtitle:
+      "Ce que disent les premières personnes à avoir diagnostiqué un processus avec VerdiktNow.",
+    quotes: [
+      {
+        quote:
+          "VerdiktNow m'a permis de porter un regard rapide, précis et effectif sur l'aptitude de mes processus à l'automatisation.",
+        author: "Simon D.",
+        role: "Gestionnaire d'équipe",
+      },
+      {
+        quote:
+          "Dès mon premier essai de VerdiktNow, j'ai su ce qui nous manquait au sein de l'organisation pour entamer une démarche d'automatisation des processus. Cette démarche aurait pu nous sauver du temps et de l'argent.",
+        author: "Christian B.",
+        role: "Directeur général",
+      },
+      {
+        quote:
+          "En tant que gestionnaire d'une équipe de 12 personnes, VerdiktNow a permis à mon équipe et à moi d'identifier des opportunités incontournables.",
+        author: "Alicia G.",
+        role: "Gestionnaire d'équipe",
+      },
+    ],
+  },
   pricing: {
+    reportTitle: "Un rapport de 17 pages, pas une capture d'écran",
+    reportText:
+      "Verdict et recommandation, scores détaillés levier par levier, dossier d'affaires chiffré, feuille de route en trois phases. Généré en un clic, prêt à déposer devant un comité.",
     eyebrow: "Tarification, par organisation",
     title: "Des forfaits simples, sans limite de processus",
     subtitle:
@@ -249,7 +280,6 @@ export const landing = {
       "Vue portefeuille multi processus",
       "Export du dossier d'affaires soigné",
     ],
-    sampleReportLink: "Voir un exemple de rapport",
     recommended: "Recommandé",
     monthlyBillingLabel: "Mensuel",
     annualBillingLabel: "Annuel",

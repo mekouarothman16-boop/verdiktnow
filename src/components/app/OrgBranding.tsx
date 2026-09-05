@@ -43,7 +43,7 @@ export function OrgBranding({ logoUrl, isOwner }: { logoUrl: string | null; isOw
       <p className="text-[11.5px] text-ink-faint mb-3.5 leading-relaxed max-w-[540px]">{t.description}</p>
 
       <div className="flex items-center gap-4">
-        <div className="w-16 h-16 rounded-lg border border-line bg-surface flex items-center justify-center shrink-0 overflow-hidden">
+        <div className="w-16 h-16 rounded-[12px] border border-line bg-surface flex items-center justify-center shrink-0 overflow-hidden">
           {preview ? (
             // eslint-disable-next-line @next/next/no-img-element
             <img src={preview} alt={t.logoAlt} className="w-full h-full object-contain" />

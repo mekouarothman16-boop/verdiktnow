@@ -47,12 +47,12 @@ export default async function LoginCodePage({
             inputMode="numeric"
             placeholder={t.codePlaceholder}
             autoFocus
-            className="w-full border border-line rounded-lg px-3 py-2.5 font-mono text-lg tracking-[0.3em] text-ink outline-none bg-surface focus:border-accent transition-colors text-center"
+            className="w-full border border-line rounded-[12px] px-3 py-2.5 font-mono text-lg tracking-[0.3em] text-ink outline-none bg-surface focus:border-accent transition-colors text-center"
           />
         </label>
         <button
           type="submit"
-          className="mt-1 flex items-center justify-center gap-2 px-5 py-3 rounded-lg bg-accent-vivid text-ink text-[14px] font-semibold hover:brightness-95 transition"
+          className="mt-1 flex items-center justify-center gap-2 px-5 py-3 rounded-full bg-accent-vivid text-ink text-[14px] font-semibold hover:brightness-95 transition"
         >
           <KeyRound size={15} /> {t.submit}
         </button>

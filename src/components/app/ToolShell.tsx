@@ -340,7 +340,7 @@ export function ToolShell({
           <div className="mt-9 flex justify-end no-print">
             <button
               onClick={() => changeTab(nextTab)}
-              className="flex items-center gap-2 px-5 py-2.5 rounded-lg bg-accent-vivid text-ink text-[13.5px] font-semibold hover:brightness-95 transition"
+              className="flex items-center gap-2 px-5 py-2.5 rounded-full bg-accent-vivid text-ink text-[13.5px] font-semibold hover:brightness-95 transition"
             >
               {t.continueToTab.replace("{label}", TAB_LABELS[nextTab])}
               <ArrowRight size={15} />
@@ -410,7 +410,7 @@ export function ToolShell({
                   onClick={handleExportSummary}
                   disabled={isExporting}
                   title={t.summaryTooltip}
-                  className="px-4 py-2.5 rounded-lg border border-line bg-surface text-ink text-[13.5px] font-semibold hover:bg-accent-soft hover:border-accent/25 transition disabled:opacity-60 flex items-center gap-2"
+                  className="px-4 py-2.5 rounded-full border border-line bg-surface text-ink text-[13.5px] font-semibold hover:bg-accent-soft hover:border-accent/25 transition disabled:opacity-60 flex items-center gap-2"
                 >
                   {isExporting && exportKind === "summary" ? (
                     <>
@@ -427,7 +427,7 @@ export function ToolShell({
                   onClick={handleExport}
                   disabled={isExporting}
                   title={t.reportTooltip}
-                  className="px-5 py-2.5 rounded-lg border border-line bg-surface text-ink text-[13.5px] font-semibold hover:bg-accent-soft hover:border-accent/25 transition disabled:opacity-60 flex items-center gap-2"
+                  className="px-5 py-2.5 rounded-full border border-line bg-surface text-ink text-[13.5px] font-semibold hover:bg-accent-soft hover:border-accent/25 transition disabled:opacity-60 flex items-center gap-2"
                 >
                   {isExporting && exportKind === "full" ? (
                     <>
@@ -446,7 +446,7 @@ export function ToolShell({
               <button
                 onClick={() => handleSave()}
                 disabled={isSaving}
-                className="px-5 py-2.5 rounded-lg bg-accent-vivid text-ink text-[13.5px] font-semibold hover:brightness-95 transition disabled:opacity-60"
+                className="px-5 py-2.5 rounded-full bg-accent-vivid text-ink text-[13.5px] font-semibold hover:brightness-95 transition disabled:opacity-60"
               >
                 {t.saveButtonLabel}
               </button>

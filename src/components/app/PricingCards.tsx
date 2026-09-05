@@ -72,7 +72,7 @@ export function PricingCards({ currentPlan, isOwner }: { currentPlan: Plan; isOw
                   <button
                     onClick={() => choose(tier)}
                     disabled={loadingTier !== null}
-                    className="w-full inline-flex items-center justify-center gap-2 px-4 py-2.5 rounded-lg bg-accent-vivid text-ink text-[13.5px] font-semibold hover:brightness-95 transition disabled:opacity-60"
+                    className="w-full inline-flex items-center justify-center gap-2 px-4 py-2.5 rounded-full bg-accent-vivid text-ink text-[13.5px] font-semibold hover:brightness-95 transition disabled:opacity-60"
                   >
                     {loadingTier === tier && <Loader2 size={14} className="animate-spin-slow" />}
                     {t.chooseThisTier}
@@ -93,7 +93,7 @@ export function PricingCards({ currentPlan, isOwner }: { currentPlan: Plan; isOw
           <div className="mt-auto pt-4">
             <a
               href={`mailto:${ENTERPRISE_CONTACT_EMAIL}?subject=${encodeURIComponent(t.enterpriseEmailSubject)}`}
-              className="w-full inline-flex items-center justify-center gap-2 px-4 py-2.5 rounded-lg border border-line text-ink text-[13.5px] font-semibold hover:bg-accent-soft transition"
+              className="w-full inline-flex items-center justify-center gap-2 px-4 py-2.5 rounded-full border border-line text-ink text-[13.5px] font-semibold hover:bg-accent-soft transition"
             >
               {t.contactUs}
             </a>

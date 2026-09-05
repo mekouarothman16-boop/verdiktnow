@@ -23,7 +23,7 @@ export function Field({
         {label}
         {hint && <FieldHint text={hint} />}
       </span>
-      <div className="flex items-center border border-line rounded-lg overflow-hidden bg-surface transition-colors focus-within:border-accent">
+      <div className="flex items-center border border-line rounded-[12px] overflow-hidden bg-surface transition-colors focus-within:border-accent">
         <input
           type="number"
           value={value}

@@ -1,7 +1,7 @@
 "use client";
 
 import { useEffect, useRef, useState } from "react";
-import { AnimatePresence, motion } from "framer-motion";
+import { AnimatePresence, motion, useReducedMotion } from "framer-motion";
 import { FileText, Gauge, Calculator, LayoutGrid, ListChecks, Sparkles, Compass } from "lucide-react";
 import { GaugeArc } from "@/components/ui/GaugeArc";
 import { Eyebrow } from "@/components/ui/Eyebrow";
@@ -11,6 +11,16 @@ import { useLocale, useDictionary } from "@/i18n/LocaleProvider";
 
 const SCENE_MS = 4200;
 const SCENE_ICONS = [FileText, Gauge, Calculator, LayoutGrid, ListChecks];
+// Même rotation de teintes que les étapes de « Comment ça marche » : une scène
+// et son étape portent la même couleur, la position dans le parcours se lit
+// d'un bloc à l'autre.
+const SCENE_TINTS = [
+  "bg-tint-lime text-tint-lime-ink",
+  "bg-tint-sky text-tint-sky-ink",
+  "bg-tint-sand text-tint-sand-ink",
+  "bg-tint-clay text-tint-clay-ink",
+  "bg-tint-sage text-tint-sage-ink",
+];
 
 function useCountUp(target: number, active: boolean, duration = 900) {
   const [value, setValue] = useState(0);
@@ -51,7 +61,7 @@ function ContextScene({ t }: { t: ReturnType<typeof useDictionary>["landing"]["j
         {fields.map((f, i) => (
           <div
             key={f.label}
-            className="border border-line rounded-lg p-3 transition-[opacity,transform] ease-out"
+            className="border border-line rounded-[12px] p-3 transition-[opacity,transform] ease-out"
             style={{
               opacity: ready ? 1 : 0,
               transform: ready ? "translateY(0)" : "translateY(6px)",
@@ -144,13 +154,13 @@ function RoiScene({ t }: { t: ReturnType<typeof useDictionary>["landing"]["journ
         {money(net)}
       </div>
       <div className="grid grid-cols-2 gap-3">
-        <div className="border border-line rounded-lg p-3">
+        <div className="border border-line rounded-[12px] p-3">
           <div className="text-[10.5px] text-ink-faint mb-1">{t.roiPayback}</div>
           <div className="font-mono text-[17px] font-semibold text-ink tabular-nums">
             {(payback / 10).toFixed(1)} {t.roiPaybackUnit}
           </div>
         </div>
-        <div className="border border-line rounded-lg p-3">
+        <div className="border border-line rounded-[12px] p-3">
           <div className="text-[10.5px] text-ink-faint mb-1">{t.roiNpv}</div>
           <div className="font-mono text-[17px] font-semibold text-ink tabular-nums">{money(npv)}</div>
         </div>
@@ -260,8 +270,12 @@ export function JourneyDemo() {
   const [phase, setPhase] = useState(0);
   const [tick, setTick] = useState(0);
   const timerRef = useRef<ReturnType<typeof setInterval> | null>(null);
+  // Un carrousel qui avance tout seul est pénible pour qui a demandé moins de
+  // mouvement : sous prefers-reduced-motion, la démo attend le clic.
+  const reduced = useReducedMotion();
 
   useEffect(() => {
+    if (reduced) return;
     timerRef.current = setInterval(() => {
       setPhase((p) => (p + 1) % SCENES.length);
       setTick((t) => t + 1);
@@ -269,12 +283,13 @@ export function JourneyDemo() {
     return () => {
       if (timerRef.current) clearInterval(timerRef.current);
     };
-  }, [SCENES.length]);
+  }, [SCENES.length, reduced]);
 
   const goTo = (i: number) => {
     setPhase(i);
     setTick((t) => t + 1);
     if (timerRef.current) clearInterval(timerRef.current);
+    if (reduced) return;
     timerRef.current = setInterval(() => {
       setPhase((p) => (p + 1) % SCENES.length);
       setTick((t) => t + 1);
@@ -282,10 +297,16 @@ export function JourneyDemo() {
   };
 
   return (
-    <div className="relative mx-auto max-w-[420px]">
-      <div className="absolute -inset-4 rounded-[28px] bg-gradient-to-br from-accent-soft to-transparent -z-10" />
-      <div className="bg-surface border border-line rounded-2xl shadow-card-lg p-7 overflow-hidden">
-        <div className="flex items-center gap-1.5 mb-6 bg-bg p-1 rounded-[10px] border border-line">
+    // Fenêtre produit à deux colonnes : le parcours à gauche, la scène à
+    // droite. La scène garde la largeur pour laquelle elle a été dessinée,
+    // c'est la fenêtre qui gagne en présence, pas le contenu qui s'étire.
+    <div className="relative mx-auto max-w-[980px]">
+      <div className="absolute -inset-3 sm:-inset-5 rounded-[32px] bg-gradient-to-br from-accent-soft to-transparent -z-10" />
+      <div className="bg-surface border border-line rounded-[24px] shadow-card-lg overflow-hidden grid lg:grid-cols-[276px_1fr]">
+        <nav
+          aria-label={t.tabs.contexte}
+          className="border-b lg:border-b-0 lg:border-r border-line-soft p-4 sm:p-5 flex lg:flex-col gap-1.5 overflow-x-auto lg:overflow-visible"
+        >
           {SCENES.map((s, i) => {
             const Icon = SCENE_ICONS[i];
             const active = phase === i;
@@ -293,23 +314,44 @@ export function JourneyDemo() {
               <button
                 key={s.id}
                 onClick={() => goTo(i)}
-                title={s.label}
-                aria-label={s.label}
+                aria-current={active ? "step" : undefined}
                 className={
-                  "flex items-center justify-center gap-1.5 px-2 py-2 rounded-[7px] text-[11.5px] font-semibold transition overflow-hidden whitespace-nowrap " +
-                  (active ? "flex-1 bg-surface shadow-card text-ink" : "flex-none text-ink-faint hover:text-ink-soft")
+                  "relative shrink-0 lg:w-full flex items-center gap-3 px-3 py-2.5 rounded-[12px] text-[13px] font-semibold text-left transition overflow-hidden whitespace-nowrap " +
+                  (active ? "bg-bg text-ink" : "text-ink-faint hover:text-ink-soft")
                 }
               >
-                <Icon size={13} className="shrink-0" />
-                {active && s.label}
+                <span
+                  className={`w-8 h-8 shrink-0 rounded-[10px] border border-ink/10 flex items-center justify-center transition ${
+                    active ? SCENE_TINTS[i] : "bg-bg text-ink-faint"
+                  }`}
+                >
+                  <Icon size={15} />
+                </span>
+                <span className="hidden lg:block flex-1">{s.label}</span>
+                <span className="lg:hidden">{active ? s.label : ""}</span>
+                {/* La barre dit combien de temps il reste avant que la démo
+                    passe seule à l'étape suivante. Elle disparaît quand
+                    l'avance automatique est coupée, où elle mentirait. */}
+                {active && !reduced && (
+                  <motion.span
+                    key={tick}
+                    aria-hidden
+                    className="absolute left-0 bottom-0 h-0.5 w-full bg-accent origin-left"
+                    initial={{ transform: "scaleX(0)" }}
+                    animate={{ transform: "scaleX(1)" }}
+                    transition={{ duration: SCENE_MS / 1000, ease: "linear" }}
+                  />
+                )}
               </button>
             );
           })}
-        </div>
-        <div className="relative min-h-[300px]">
+        </nav>
+
+        <div className="relative min-h-[340px] p-6 sm:p-8">
           <AnimatePresence mode="wait">
             <motion.div
               key={tick}
+              className="mx-auto max-w-[420px]"
               initial={{ opacity: 0, x: 12 }}
               animate={{ opacity: 1, x: 0 }}
               exit={{ opacity: 0, x: -12 }}

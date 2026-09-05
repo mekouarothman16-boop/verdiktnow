@@ -2,6 +2,7 @@
 
 # dependencies
 /node_modules
+/marketing/social-pptx/node_modules
 /.pnp
 .pnp.*
 .yarn/*

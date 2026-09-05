@@ -183,7 +183,7 @@ export function SecondOpinion({
                 <button
                   onClick={submit}
                   disabled={submitting || answeredCount === 0}
-                  className="px-4 py-2.5 rounded-lg bg-accent-vivid text-ink text-[13px] font-semibold hover:brightness-95 transition disabled:opacity-60"
+                  className="px-4 py-2.5 rounded-full bg-accent-vivid text-ink text-[13px] font-semibold hover:brightness-95 transition disabled:opacity-60"
                 >
                   {submitting ? t.submitting : t.submitButton}
                 </button>

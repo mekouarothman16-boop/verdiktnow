@@ -129,14 +129,14 @@ export function ProcessGrid({ processes, readOnly = false }: { processes: Proces
             value={query}
             onChange={(e) => setQuery(e.target.value)}
             placeholder={t.searchPlaceholder}
-            className="w-full pl-9 pr-3 py-2.5 rounded-lg border border-line text-[13.5px] text-ink outline-none bg-surface focus:border-accent transition-colors"
+            className="w-full pl-9 pr-3 py-2.5 rounded-[12px] border border-line text-[13.5px] text-ink outline-none bg-surface focus:border-accent transition-colors"
           />
         </div>
         {categories.length > 1 && (
           <select
             value={categoryFilter}
             onChange={(e) => setCategoryFilter(e.target.value)}
-            className="px-3 py-2.5 rounded-lg border border-line text-[13px] text-ink-soft outline-none bg-surface focus:border-accent transition-colors cursor-pointer"
+            className="px-3 py-2.5 rounded-[12px] border border-line text-[13px] text-ink-soft outline-none bg-surface focus:border-accent transition-colors cursor-pointer"
           >
             <option value="">{t.allCategories}</option>
             {categories.map((c) => (
@@ -147,7 +147,7 @@ export function ProcessGrid({ processes, readOnly = false }: { processes: Proces
         <select
           value={sortBy}
           onChange={(e) => setSortBy(e.target.value as SortKey)}
-          className="px-3 py-2.5 rounded-lg border border-line text-[13px] text-ink-soft outline-none bg-surface focus:border-accent transition-colors cursor-pointer"
+          className="px-3 py-2.5 rounded-[12px] border border-line text-[13px] text-ink-soft outline-none bg-surface focus:border-accent transition-colors cursor-pointer"
         >
           <option value="recent">{t.sortRecent}</option>
           <option value="score">{t.sortScore}</option>
@@ -156,7 +156,7 @@ export function ProcessGrid({ processes, readOnly = false }: { processes: Proces
         <button
           onClick={() => downloadCsv(filtered, t, locale)}
           title={t.csvExportTooltip}
-          className="flex items-center gap-1.5 px-3 py-2.5 rounded-lg border border-line text-[13px] text-ink-soft hover:border-accent hover:text-accent transition-colors"
+          className="flex items-center gap-1.5 px-3 py-2.5 rounded-full border border-line text-[13px] text-ink-soft hover:border-accent hover:text-accent transition-colors"
         >
           <Download size={14} /> {t.csvButtonLabel}
         </button>
@@ -168,8 +168,8 @@ export function ProcessGrid({ processes, readOnly = false }: { processes: Proces
           title={t.compareTooltip}
           className={
             compareMode
-              ? "flex items-center gap-1.5 px-3 py-2.5 rounded-lg border border-accent bg-accent-soft text-[13px] text-accent-deep font-semibold transition-colors"
-              : "flex items-center gap-1.5 px-3 py-2.5 rounded-lg border border-line text-[13px] text-ink-soft hover:border-accent hover:text-accent transition-colors"
+              ? "flex items-center gap-1.5 px-3 py-2.5 rounded-[12px] border border-accent bg-accent-soft text-[13px] text-accent-deep font-semibold transition-colors"
+              : "flex items-center gap-1.5 px-3 py-2.5 rounded-full border border-line text-[13px] text-ink-soft hover:border-accent hover:text-accent transition-colors"
           }
         >
           <Columns3 size={14} /> {t.compareButtonLabel}
@@ -180,8 +180,8 @@ export function ProcessGrid({ processes, readOnly = false }: { processes: Proces
             title={t.archivesTooltip}
             className={
               showArchived
-                ? "flex items-center gap-1.5 px-3 py-2.5 rounded-lg border border-accent bg-accent-soft text-[13px] text-accent-deep font-semibold transition-colors"
-                : "flex items-center gap-1.5 px-3 py-2.5 rounded-lg border border-line text-[13px] text-ink-soft hover:border-accent hover:text-accent transition-colors"
+                ? "flex items-center gap-1.5 px-3 py-2.5 rounded-[12px] border border-accent bg-accent-soft text-[13px] text-accent-deep font-semibold transition-colors"
+                : "flex items-center gap-1.5 px-3 py-2.5 rounded-full border border-line text-[13px] text-ink-soft hover:border-accent hover:text-accent transition-colors"
             }
           >
             <Archive size={14} /> {t.archivesButtonLabel.replace("{n}", String(archivedCount))}

@@ -112,13 +112,13 @@ export function OrgMembers({
               value={email}
               onChange={(e) => setEmail(e.target.value)}
               placeholder={t.emailPlaceholder}
-              className="flex-1 border border-line rounded-lg px-3 py-2.5 font-sans text-[13.5px] text-ink outline-none bg-surface focus:border-accent transition-colors"
+              className="flex-1 border border-line rounded-[12px] px-3 py-2.5 font-sans text-[13.5px] text-ink outline-none bg-surface focus:border-accent transition-colors"
             />
             <select
               value={inviteRole}
               onChange={(e) => setInviteRole(e.target.value as "member" | "viewer")}
               title={t.roleSelectTitle}
-              className="border border-line rounded-lg px-2.5 py-2.5 font-sans text-[13px] text-ink-soft outline-none bg-surface focus:border-accent transition-colors cursor-pointer"
+              className="border border-line rounded-[12px] px-2.5 py-2.5 font-sans text-[13px] text-ink-soft outline-none bg-surface focus:border-accent transition-colors cursor-pointer"
             >
               <option value="member">{t.roleMember}</option>
               <option value="viewer">{t.viewerOption}</option>
@@ -126,7 +126,7 @@ export function OrgMembers({
             <button
               type="submit"
               disabled={inviting}
-              className="shrink-0 inline-flex items-center gap-2 px-4 py-2.5 rounded-lg bg-accent-vivid text-ink text-[13.5px] font-semibold hover:brightness-95 transition disabled:opacity-60"
+              className="shrink-0 inline-flex items-center gap-2 px-4 py-2.5 rounded-full bg-accent-vivid text-ink text-[13.5px] font-semibold hover:brightness-95 transition disabled:opacity-60"
             >
               {inviting ? <Loader2 size={14} className="animate-spin-slow" /> : <UserPlus size={14} />}
               {t.invite}

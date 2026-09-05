@@ -36,7 +36,7 @@ function TextCell({ value, onCommit, disabled, placeholder, className }: { value
         if (trimmed !== value) onCommit(trimmed);
       }}
       className={clsx(
-        "w-full text-[12.5px] text-ink bg-transparent outline-none border border-transparent rounded-md px-1.5 py-1 resize-none overflow-hidden leading-snug focus:border-accent focus:bg-surface transition-colors disabled:text-ink-faint",
+        "w-full text-[12.5px] text-ink bg-transparent outline-none border border-transparent rounded-[10px] px-1.5 py-1 resize-none overflow-hidden leading-snug focus:border-accent focus:bg-surface transition-colors disabled:text-ink-faint",
         className
       )}
     />
@@ -61,7 +61,7 @@ function TitleCell({ value, onCommit, disabled, className }: { value: string; on
         if (trimmed !== value) onCommit(trimmed);
       }}
       className={clsx(
-        "w-full truncate text-[12.5px] text-ink bg-transparent outline-none border border-transparent rounded-md px-1.5 py-1 focus:border-accent focus:bg-surface transition-colors disabled:text-ink-faint",
+        "w-full truncate text-[12.5px] text-ink bg-transparent outline-none border border-transparent rounded-[10px] px-1.5 py-1 focus:border-accent focus:bg-surface transition-colors disabled:text-ink-faint",
         className
       )}
     />
@@ -114,7 +114,7 @@ function Row({
           value={item.assignedTo ?? ""}
           disabled={disabled}
           onChange={(e) => onSaveAssignee(e.target.value || null)}
-          className="w-full truncate text-[12px] text-ink bg-transparent outline-none border border-line-soft rounded-md px-1.5 py-1 focus:border-accent transition-colors disabled:text-ink-faint"
+          className="w-full truncate text-[12px] text-ink bg-transparent outline-none border border-line-soft rounded-[10px] px-1.5 py-1 focus:border-accent transition-colors disabled:text-ink-faint"
         >
           <option value="">{t.unassignedOption}</option>
           {members.map((m) => (
@@ -130,7 +130,7 @@ function Row({
           value={item.startDate ?? ""}
           disabled={disabled}
           onChange={(e) => onSaveStartDate(e.target.value || null)}
-          className="w-full text-[11.5px] text-ink bg-transparent outline-none border border-line-soft rounded-md px-1.5 py-1 focus:border-accent transition-colors disabled:text-ink-faint"
+          className="w-full text-[11.5px] text-ink bg-transparent outline-none border border-line-soft rounded-[10px] px-1.5 py-1 focus:border-accent transition-colors disabled:text-ink-faint"
         />
       </td>
       <td className="py-1.5 pr-2">
@@ -140,7 +140,7 @@ function Row({
           disabled={disabled}
           onChange={(e) => onSaveDueDate(e.target.value || null)}
           className={clsx(
-            "w-full text-[11.5px] bg-transparent outline-none border rounded-md px-1.5 py-1 focus:border-accent transition-colors disabled:text-ink-faint",
+            "w-full text-[11.5px] bg-transparent outline-none border rounded-[10px] px-1.5 py-1 focus:border-accent transition-colors disabled:text-ink-faint",
             !item.done && item.dueDate && item.dueDate < new Date().toISOString().slice(0, 10)
               ? "text-coral border-coral/40"
               : "text-ink border-line-soft"
@@ -156,7 +156,7 @@ function Row({
             value={item.progressPercent}
             disabled={disabled}
             onChange={(e) => onSaveProgress(Math.max(0, Math.min(100, Number(e.target.value) || 0)))}
-            className="w-10 text-[12px] text-ink bg-transparent outline-none border border-line-soft rounded-md px-1.5 py-1 focus:border-accent transition-colors disabled:text-ink-faint"
+            className="w-10 text-[12px] text-ink bg-transparent outline-none border border-line-soft rounded-[10px] px-1.5 py-1 focus:border-accent transition-colors disabled:text-ink-faint"
           />
           <span className="text-[11px] text-ink-faint">%</span>
         </div>
@@ -181,7 +181,7 @@ function Row({
           value={item.statusColor ?? "red"}
           disabled={disabled}
           onChange={(e) => onSaveStatus(e.target.value as StatusColor)}
-          className="w-full truncate text-[12px] text-ink bg-transparent outline-none border border-line-soft rounded-md pl-2 pr-1.5 py-1 focus:border-accent transition-colors disabled:text-ink-faint"
+          className="w-full truncate text-[12px] text-ink bg-transparent outline-none border border-line-soft rounded-[10px] pl-2 pr-1.5 py-1 focus:border-accent transition-colors disabled:text-ink-faint"
         >
           <option value="red">{t.statusRed}</option>
           <option value="yellow">{t.statusYellow}</option>
@@ -245,7 +245,7 @@ export function RoadmapDashboardTable({
           <div
             key={section.phaseKey}
             id={`roadmap-section-${section.phaseKey}`}
-            className="rounded-xl border border-line bg-surface p-4 scroll-mt-4"
+            className="rounded-[16px] border border-line bg-surface p-4 scroll-mt-4"
           >
             <div className="flex items-baseline justify-between gap-3 mb-3">
               <div className="text-[12.5px] font-semibold text-ink">{section.label}</div>

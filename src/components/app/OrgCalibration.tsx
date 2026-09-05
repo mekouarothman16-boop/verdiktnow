@@ -46,7 +46,7 @@ export function OrgCalibration({
           <span className="text-[12.5px] text-ink-soft mb-1.5 block" title={t.hoursPerFteHint}>
             {t.hoursPerFteLabel}
           </span>
-          <div className="flex items-center border border-line rounded-lg overflow-hidden bg-surface transition-colors focus-within:border-accent">
+          <div className="flex items-center border border-line rounded-[12px] overflow-hidden bg-surface transition-colors focus-within:border-accent">
             <input
               type="number"
               value={values.hoursPerFte}
@@ -63,7 +63,7 @@ export function OrgCalibration({
           <span className="text-[12.5px] text-ink-soft mb-1.5 block" title={t.magnitudeRefHint}>
             {t.magnitudeRefLabel}
           </span>
-          <div className="flex items-center border border-line rounded-lg overflow-hidden bg-surface transition-colors focus-within:border-accent">
+          <div className="flex items-center border border-line rounded-[12px] overflow-hidden bg-surface transition-colors focus-within:border-accent">
             <input
               type="number"
               value={values.magnitudeRef}
@@ -80,7 +80,7 @@ export function OrgCalibration({
           <span className="text-[12.5px] text-ink-soft mb-1.5 block" title={t.priorityThresholdHint}>
             {t.priorityThresholdLabel}
           </span>
-          <div className="flex items-center border border-line rounded-lg overflow-hidden bg-surface transition-colors focus-within:border-accent">
+          <div className="flex items-center border border-line rounded-[12px] overflow-hidden bg-surface transition-colors focus-within:border-accent">
             <input
               type="number"
               value={values.priorityThreshold}
@@ -98,7 +98,7 @@ export function OrgCalibration({
         <button
           onClick={handleSave}
           disabled={busy}
-          className="px-4 py-2 rounded-lg bg-accent-vivid text-ink text-[12.5px] font-semibold hover:brightness-95 transition disabled:opacity-60 flex items-center gap-2"
+          className="px-4 py-2 rounded-full bg-accent-vivid text-ink text-[12.5px] font-semibold hover:brightness-95 transition disabled:opacity-60 flex items-center gap-2"
         >
           {busy && <Loader2 size={13} className="animate-spin-slow" />}
           {t.save}

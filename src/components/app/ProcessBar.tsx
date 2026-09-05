@@ -37,7 +37,7 @@ export function ProcessBar({
           value={processName}
           onChange={(e) => setProcessName(e.target.value)}
           disabled={readOnly}
-          className="flex-1 min-w-[220px] border border-line rounded-lg px-3 py-2 font-sans text-[15px] font-semibold text-ink outline-none bg-bg focus:border-accent transition-colors disabled:text-ink-faint disabled:cursor-not-allowed"
+          className="flex-1 min-w-[220px] border border-line rounded-[12px] px-3 py-2 font-sans text-[15px] font-semibold text-ink outline-none bg-bg focus:border-accent transition-colors disabled:text-ink-faint disabled:cursor-not-allowed"
         />
         {((tags ?? []).length > 0 || onAddTag) && (
           <div className="flex items-center gap-1.5 flex-wrap">

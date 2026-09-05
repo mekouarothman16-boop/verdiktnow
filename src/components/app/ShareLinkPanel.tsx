@@ -46,7 +46,7 @@ export function ShareLinkPanel({ processId }: { processId: string }) {
     <div className="relative">
       <button
         onClick={() => setOpen((v) => !v)}
-        className="px-4 py-2.5 rounded-lg border border-line bg-surface text-ink text-[13.5px] font-semibold hover:bg-accent-soft hover:border-accent/25 transition flex items-center gap-2"
+        className="px-4 py-2.5 rounded-full border border-line bg-surface text-ink text-[13.5px] font-semibold hover:bg-accent-soft hover:border-accent/25 transition flex items-center gap-2"
       >
         <Share2 size={14} /> {t.shareButton}
       </button>
@@ -64,7 +64,7 @@ export function ShareLinkPanel({ processId }: { processId: string }) {
           {activeLinks.length > 0 && (
             <div className="grid gap-2 mb-3">
               {activeLinks.map((l) => (
-                <div key={l.id} className="flex items-center gap-2 px-2.5 py-2 rounded-lg border border-line">
+                <div key={l.id} className="flex items-center gap-2 px-2.5 py-2 rounded-[12px] border border-line">
                   <span className="flex-1 text-[11px] font-mono text-ink-soft truncate">
                     /partage/{l.token.slice(0, 8)}…
                   </span>
@@ -81,7 +81,7 @@ export function ShareLinkPanel({ processId }: { processId: string }) {
           <button
             onClick={create}
             disabled={pending}
-            className="w-full px-3 py-2 rounded-lg bg-accent-vivid text-ink text-[12.5px] font-semibold hover:brightness-95 transition disabled:opacity-60"
+            className="w-full px-3 py-2 rounded-full bg-accent-vivid text-ink text-[12.5px] font-semibold hover:brightness-95 transition disabled:opacity-60"
           >
             {t.createButton}
           </button>

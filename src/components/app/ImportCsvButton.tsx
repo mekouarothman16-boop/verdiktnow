@@ -122,7 +122,7 @@ export function ImportCsvButton() {
     <>
       <button
         onClick={() => setOpen(true)}
-        className="flex items-center gap-2 px-4.5 py-2.5 rounded-lg border border-line bg-surface text-ink text-[13.5px] font-semibold hover:bg-accent-soft hover:border-accent/25 transition"
+        className="flex items-center gap-2 px-4.5 py-2.5 rounded-full border border-line bg-surface text-ink text-[13.5px] font-semibold hover:bg-accent-soft hover:border-accent/25 transition"
       >
         <Upload size={16} /> {t.buttonLabel}
       </button>
@@ -133,7 +133,7 @@ export function ImportCsvButton() {
             onClick={(e) => e.stopPropagation()}
           >
             <div className="flex items-center justify-between mb-4">
-              <h2 className="font-display text-[18px] font-bold text-ink">{t.dialogTitle}</h2>
+              <h2 className="font-display text-[18px] font-semibold text-ink">{t.dialogTitle}</h2>
               <button onClick={close} aria-label={t.closeAriaLabel} className="text-ink-faint hover:text-ink">
                 <X size={16} />
               </button>
@@ -161,7 +161,7 @@ export function ImportCsvButton() {
                 <div className="text-[12px] text-ink-soft mb-2">
                   {t.detectedCount.replace("{n}", String(rows.length)).replace("{fileName}", fileName)}
                 </div>
-                <div className="border border-line rounded-lg overflow-hidden mb-4 max-h-[220px] overflow-y-auto">
+                <div className="border border-line rounded-[12px] overflow-hidden mb-4 max-h-[220px] overflow-y-auto">
                   <table className="w-full text-[12px]">
                     <tbody>
                       {rows.slice(0, 50).map((r, i) => (
@@ -179,7 +179,7 @@ export function ImportCsvButton() {
                 <button
                   onClick={confirmImport}
                   disabled={importing}
-                  className="w-full px-4 py-2.5 rounded-lg bg-accent-vivid text-ink text-[13.5px] font-semibold hover:brightness-95 transition disabled:opacity-60 flex items-center justify-center gap-2"
+                  className="w-full px-4 py-2.5 rounded-full bg-accent-vivid text-ink text-[13.5px] font-semibold hover:brightness-95 transition disabled:opacity-60 flex items-center justify-center gap-2"
                 >
                   {importing ? <Loader2 size={14} className="animate-spin-slow" /> : <Upload size={14} />}
                   {importing ? t.importing : t.importButton.replace("{n}", String(rows.length))}
@@ -188,7 +188,7 @@ export function ImportCsvButton() {
             )}
             {result && (
               <div
-                className={`mt-4 p-3 rounded-lg text-[12.5px] flex items-start gap-2 ${
+                className={`mt-4 p-3 rounded-[12px] text-[12.5px] flex items-start gap-2 ${
                   result.created === 0 && result.errors.length > 0 ? "bg-coral/10 text-coral" : "bg-accent-soft text-accent-deep"
                 }`}
               >

@@ -7,7 +7,7 @@ export function Card({ className, children, ...props }: CardProps) {
   return (
     <div
       className={clsx(
-        "bg-surface border border-line rounded-xl shadow-card",
+        "bg-surface border border-line rounded-[16px] shadow-card",
         className
       )}
       {...props}

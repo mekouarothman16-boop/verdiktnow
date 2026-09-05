@@ -18,6 +18,18 @@ export const landing: typeof fr = {
     leverRules: "Rules & decisions",
     leverData: "Data & inputs",
   },
+  showcase: {
+    eyebrow: 'The tool itself',
+    title: 'The verdict fits on a single matrix',
+    subtitle:
+      'Value on one axis, readiness on the other. The quadrant your process lands in gives you the recommendation, with nothing left to interpret.',
+    panelLabel: 'Prioritization',
+    processName: 'Request handling',
+    exampleNote: 'Example result',
+    scoreCaption: 'weighted readiness score',
+    legendLabel: 'The four quadrants',
+    verdictIntro: 'Recommendation',
+  },
   stats: {
     eyebrow: "The reality",
     title: "Automation rarely fails because of the tool",
@@ -40,68 +52,60 @@ export const landing: typeof fr = {
       },
     ],
   },
-  promises: {
-    eyebrow: "What we owe you",
-    title: "The VerdiktNow promises",
-    items: [
-      {
-        title: "No score without an explanation",
-        text: "Every statement, every lever, every weight is visible and adjustable. You'll always know why a score comes out the way it does — never a black box to take on faith.",
-      },
-      {
-        title: "A business case, not a hunch",
-        text: "Net savings, payback period, net present value: the decision to automate rests on verifiable numbers, not a gut feeling.",
-      },
-      {
-        title: "A recommendation, not just a score",
-        text: "Readiness and value combine into a single matrix: automate first, plan, prepare the ground, or set aside. You know what to do next, not just where you stand.",
-      },
-      {
-        title: "Calibrated to your reality, never fixed",
-        text: "Lever weights, priority threshold, what counts as a \"high\" saving: the default benchmarks adjust to your organization, not the other way around.",
-      },
-    ],
-    costIntro: "An automation readiness audit run by an external firm, for a single process and before you've even started automating, typically costs:",
-    costVendorLabel: "External automation firm",
-    costVendorValue: "$3,000 to $25,000 USD per engagement",
-    costVerdiktNowLabel: "VerdiktNow, unlimited diagnostics",
-    costVerdiktNowValue: "starting at $50 CAD / month",
-    costSource: "Typical range observed in the automation consulting market for a readiness audit, small and mid-size businesses.",
-  },
-  whyDiagnose: {
+  risks: {
     eyebrow: "Before you invest",
-    title: "Why diagnose before you act",
-    intro:
-      "Most automation initiatives start with picking a tool, not with assessing the process. An upfront readiness diagnostic changes that order: before committing a budget, a vendor, or team time, it reveals whether the process is truly ready, what needs fixing first, and which one to prioritize if there are several.",
-    reasons: [
+    title: "Four risks, four answers",
+    pairs: [
       {
-        title: "Avoid false starts",
-        text: "Most failures don't come from the tool, but from a process that wasn't ready for automation.",
-        example:
-          "A process judged “ready” by eye, where 40% of cases are actually undocumented exceptions. The Rules & Decisions lever catches it before a tool is purchased.",
+        risk: "The process was not ready",
+        riskText:
+          "Most automation failures come not from the tool but from a process everyone assumed was mature. An eyeball audit misses the 40 % of cases that turn out to be undocumented exceptions.",
+        answer: "A readiness score across 6 weighted levers",
+        answerText:
+          "Flow, decision rules, data, volume, technical feasibility, governance: each lever is scored separately, and the one that blocks shows up before you buy.",
       },
       {
-        title: "Prioritize before committing a budget",
-        text: "Facing several candidate processes, they're not all worth the same effort.",
-        example:
-          "Two processes seem equally urgent: the Value × Readiness matrix decides which to automate first, and which can wait.",
+        risk: "Two processes look equally urgent",
+        riskText:
+          "With several candidates on the table, they are not worth the same for the same effort. With no tiebreaker, you automate the one that shouts loudest, not the one that pays back.",
+        answer: "A Value × Readiness matrix that decides",
+        answerText:
+          "The quadrant your process lands in gives the recommendation: automate first, plan, prepare the ground, or set aside. You know what to do next, not just where you stand.",
       },
       {
-        title: "Justify the decision with numbers",
-        text: "A readiness score and a quantified business case convince a leadership team far better than a hunch.",
-        example:
-          "Not a green light or a red light, but a detailed score of 41/100 across 6 levers — and what it would take to improve it.",
+        risk: "The committee will not sign off on a hunch",
+        riskText:
+          "Saying it would save time does not release a budget. You need a defensible number, and the method that produced it.",
+        answer: "A quantified business case",
+        answerText:
+          "Net savings, payback period and net present value over 5 years, recalculated live from your own volumes and costs.",
+      },
+      {
+        risk: "A score you cannot explain",
+        riskText:
+          "A tool that returns a grade without showing its working leaves you with no answer to the first objection in the room.",
+        answer: "Every weight visible and adjustable",
+        answerText:
+          "Statements, levers, weightings, priority threshold, what counts as a high saving: all of it is open and tunes to your organization, not the other way round.",
       },
     ],
     signalsLabel: "What the diagnostic detects",
     signals: [
-      "Unstable workflow",
-      "Unclear decision rules",
+      "Unstable flow",
+      "Fuzzy decision rules",
       "Unstructured data",
       "Unpredictable volume",
       "Unresolved technical constraints",
-      "Governance or risk poorly controlled",
+      "Poorly controlled governance or risk",
     ],
+    costIntro:
+      "An automation readiness audit run by an outside firm, for a single process and before any automation begins, typically costs:",
+    costVendorLabel: "External automation firm",
+    costVendorValue: "$3,000 to $25,000 US per engagement",
+    costVerdiktNowLabel: "VerdiktNow, unlimited diagnostics",
+    costVerdiktNowValue: "from $50 CAD / month",
+    costSource:
+      "Usual range observed in the automation consulting market for a readiness audit, small and mid-sized businesses.",
   },
   howItWorks: {
     eyebrow: "Five modules, one process",
@@ -207,28 +211,26 @@ export const landing: typeof fr = {
     ],
   },
   features: {
+    ganttEyebrow: "Generated roadmap",
+    ganttSubtitle:
+      "Three phases and their milestones, positioned from today. Indicative estimate, not a schedule commitment.",
+    ganttPhaseImmediate: "Immediate actions",
+    ganttPhase1: "Phase 1 · Weak levers",
+    ganttPhase2: "Phase 2 · Supervised pilot",
+    ganttPhase3: "Phase 3 · Rollout",
+    ganttFrame1: "0 to 6 weeks",
+    ganttFrame2: "6 to 16 weeks",
+    ganttFrame3: "16 to 40 weeks",
     eyebrow: "Built for the decision",
     title: "What sets VerdiktNow apart",
     items: [
-      {
-        title: "Double weighting",
-        text: "Each statement weighs within its lever; each lever weighs within the overall score. Adjust the weights to your reality: the score recalculates live.",
-      },
       {
         title: "AI-assisted analysis",
         text: "Describe the process context and let the AI propose a starting point for the 30 statements, with a rationale per lever.",
       },
       {
-        title: "Quantified business case",
-        text: "Net savings, payback period, 5-year NPV, cumulative cash flow: enough to convince without an extra spreadsheet.",
-      },
-      {
-        title: "Transparent method",
-        text: "Every formula is visible and explainable, no black box. You always know why a score comes out the way it does.",
-      },
-      {
         title: "Built-in project tracking",
-        text: "Assign each action to a team member, track key milestones — from first vendor contact to production go-live — and progress in a shared dashboard, with automatic reminders for overdue deadlines.",
+        text: "Assign each action to a team member and track progress in a shared dashboard, with automatic reminders for overdue deadlines.",
       },
       {
         title: "One-click export",
@@ -236,7 +238,39 @@ export const landing: typeof fr = {
       },
     ],
   },
+  testimonials: {
+    eyebrow: "What people say",
+    title: "Early feedback",
+    subtitle:
+      "What the first people to diagnose a process with VerdiktNow have to say.",
+    // Traduites depuis le français, langue d'origine des témoignages. Pour
+    // publier le verbatim original à la place, remplacer `quote` par la version
+    // française et ne traduire que `role`.
+    quotes: [
+      {
+        quote:
+          "VerdiktNow gave me a fast, precise and effective read on how ready my processes were for automation.",
+        author: "Simon D.",
+        role: "Team manager",
+      },
+      {
+        quote:
+          "From my very first run with VerdiktNow, I knew what our organisation was missing before starting an automation effort. It would have saved us time and money.",
+        author: "Christian B.",
+        role: "General manager",
+      },
+      {
+        quote:
+          "As the manager of a twelve-person team, VerdiktNow helped my team and me identify opportunities we could not afford to miss.",
+        author: "Alicia G.",
+        role: "Team manager",
+      },
+    ],
+  },
   pricing: {
+    reportTitle: "A 17-page report, not a screenshot",
+    reportText:
+      "Verdict and recommendation, detailed scores lever by lever, a quantified business case, a three-phase roadmap. Generated in one click, ready to put in front of a committee.",
     eyebrow: "Pricing, per organization",
     title: "Simple plans, no limit on processes",
     subtitle:
@@ -250,7 +284,6 @@ export const landing: typeof fr = {
       "Multi-process portfolio view",
       "Polished business case export",
     ],
-    sampleReportLink: "See a sample report",
     recommended: "Recommended",
     monthlyBillingLabel: "Monthly",
     annualBillingLabel: "Annual",
