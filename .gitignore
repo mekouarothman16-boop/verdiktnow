@@ -43,6 +43,10 @@ yarn-error.log*
 # which has previously included secrets pasted into allowlisted commands)
 .claude/settings.local.json
 
+# impeccable design hook cache: keyed by session id and full of absolute paths
+# from whichever machine ran it, rewritten on every edit
+.impeccable/hook.cache.json
+
 # typescript
 *.tsbuildinfo
 next-env.d.ts
