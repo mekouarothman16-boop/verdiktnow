@@ -1,8 +1,10 @@
 # See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
 
 # dependencies
-/node_modules
-/marketing/social-pptx/node_modules
+# Sans barre oblique initiale, la règle s'applique à toute profondeur.
+# marketing/ contient plusieurs projets Node, et une règle ancrée à la racine
+# n'en attrapait aucun.
+node_modules/
 /.pnp
 .pnp.*
 .yarn/*

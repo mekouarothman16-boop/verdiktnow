@@ -1,0 +1,13 @@
+{
+  "name": "verdiktnow-social-pptx",
+  "private": true,
+  "version": "1.0.0",
+  "description": "Outil interne : génère les PPT de suivi des publications réseaux sociaux VerdiktNow à partir de manifest.json. Pas lié à l'app Next.js.",
+  "type": "module",
+  "scripts": {
+    "build": "node build.mjs"
+  },
+  "dependencies": {
+    "pptxgenjs": "^3.12.0"
+  }
+}
