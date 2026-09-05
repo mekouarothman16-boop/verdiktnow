@@ -1,8 +1,7 @@
-import { Check, FileText } from "lucide-react";
+import { Check } from "lucide-react";
 import { Eyebrow } from "@/components/ui/Eyebrow";
 import { Reveal } from "./Reveal";
 import { GUTTER, INSET, MEASURE, SHELL } from "./layout";
-import { tintWash } from "./tint";
 import { PricingGrid } from "./PricingGrid";
 import { getTiers, getViewerSeat } from "@/lib/plans";
 import { getServerDictionary, getRootParamsLocale } from "@/i18n/getDictionary";
@@ -23,32 +22,14 @@ export async function Pricing() {
           <h2 className="font-display text-[36px] sm:text-[46px] font-semibold tracking-[0.005em] text-ink text-center mb-4 text-balance">
             {t.title}
           </h2>
-          <p className={`text-ink-soft text-[15.5px] leading-relaxed text-center ${MEASURE} mb-4`}>
+          <p className={`text-ink-soft text-[15.5px] leading-relaxed text-center ${MEASURE} mb-12`}>
             {t.subtitle}
           </p>
         </Reveal>
 
-        {/* Le rapport est ce que l'acheteur emporte : l'énoncé garde sa place au
-            moment de la décision, mais la page n'en montre aucun exemplaire et
-            n'y donne aucun accès. Décision du fondateur, ne pas réintroduire de
-            lien vers un PDF exemple. */}
-        <Reveal delay={0.04}>
-          <div
-            className="flex items-start sm:items-center gap-5 bg-surface border border-line rounded-[16px] p-6 sm:p-7 mb-14 mt-2"
-            style={tintWash("sand")}
-          >
-            <span className="w-12 h-12 shrink-0 rounded-[12px] bg-accent-soft border border-accent/20 flex items-center justify-center">
-              <FileText size={20} className="text-accent-deep" />
-            </span>
-            <div className="flex-1 min-w-0">
-              <h3 className="font-display text-[19px] font-semibold tracking-[0.005em] text-ink mb-1.5 text-balance">
-                {t.reportTitle}
-              </h3>
-              <p className="text-[13.5px] text-ink-soft leading-relaxed">{t.reportText}</p>
-            </div>
-          </div>
-        </Reveal>
-
+        {/* Le rapport n'est plus annoncé ici : la page n'en montre aucun
+            exemplaire, n'y donne aucun accès et n'en fait plus la promesse à
+            l'achat. Décision du fondateur, ne pas réintroduire. */}
         <Reveal delay={0.05}>
           <div className="flex flex-wrap items-center justify-center gap-x-6 gap-y-2.5 mb-16">
             {t.sharedFeatures.map((f) => (

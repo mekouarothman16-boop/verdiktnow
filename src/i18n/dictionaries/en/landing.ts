@@ -268,9 +268,6 @@ export const landing: typeof fr = {
     ],
   },
   pricing: {
-    reportTitle: "A 17-page report, not a screenshot",
-    reportText:
-      "Verdict and recommendation, detailed scores lever by lever, a quantified business case, a three-phase roadmap. Generated in one click, ready to put in front of a committee.",
     eyebrow: "Pricing, per organization",
     title: "Simple plans, no limit on processes",
     subtitle:

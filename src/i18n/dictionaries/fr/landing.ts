@@ -264,9 +264,6 @@ export const landing = {
     ],
   },
   pricing: {
-    reportTitle: "Un rapport de 17 pages, pas une capture d'écran",
-    reportText:
-      "Verdict et recommandation, scores détaillés levier par levier, dossier d'affaires chiffré, feuille de route en trois phases. Généré en un clic, prêt à déposer devant un comité.",
     eyebrow: "Tarification, par organisation",
     title: "Des forfaits simples, sans limite de processus",
     subtitle:
