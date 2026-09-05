@@ -44,7 +44,10 @@ const SLIDE_W = 13.33;
 const SLIDE_H = 7.5;
 const M = 0.7;
 
-const OUT_DIR = join(homedir(), "OneDrive", "Documents", "Présentation VerdiktNow");
+// PPTX_OUT_DIR permet d'écrire ailleurs : PowerPoint verrouille le fichier
+// tant qu'il est ouvert, et une relecture ne doit pas dépendre de ça.
+const OUT_DIR = process.env.PPTX_OUT_DIR
+  || join(homedir(), "OneDrive", "Documents", "Présentation VerdiktNow");
 const OUT_FILE = join(OUT_DIR, "VerdiktNow - Architecture technique.pptx");
 
 const pptx = new pptxgen();
@@ -390,22 +393,29 @@ function card(s, { x, y, w, h, fill = SURFACE, border = LINE }) {
     ["Les douze variables présentes sont-elles dans Vercel ?", "Elles sont configurées en local ; la production est un environnement distinct."],
     ["Aucun robots.txt ni sitemap", "Rien n'indique aux moteurs quoi explorer. À créer avant l'ouverture au public."],
     ["Le contact entreprise est un Gmail personnel", "mekouarothman16@gmail.com s'affiche publiquement sur la page des forfaits."],
+    ["Le rapport exemple existe-t-il en production ?", "Les PDF sont lus sur le disque, hors des fichiers publics. Si Vercel ne les embarque pas, la route renvoie une 404."],
   ];
-  const cw = 5.8, ch = 1.0, gx = 0.3, gy = 0.16;
+  const cw = 5.8, ch = 0.86, gx = 0.3, gy = 0.12;
   items.forEach(([title, desc], i) => {
-    const x = M + (i % 2) * (cw + gx);
-    const y = 2.4 + Math.floor(i / 2) * (ch + gy);
-    card(s, { x, y, w: cw, h: ch, fill: "FCF7EC", border: "E5D5B6" });
-    s.addShape(pptx.ShapeType.ellipse, { x: x + 0.3, y: y + 0.24, w: 0.15, h: 0.15, fill: { color: AMBER } });
+    // Un nombre impair de points laisserait la dernière carte seule sur sa
+    // rangée, avec une description serrée sur deux lignes : elle prend alors
+    // toute la largeur, ce qui règle les deux problèmes d'un coup.
+    const last = i === items.length - 1 && items.length % 2 === 1;
+    const w = last ? cw * 2 + gx : cw;
+    const x = M + (last ? 0 : (i % 2) * (cw + gx));
+    const y = 2.25 + Math.floor(i / 2) * (ch + gy);
+    card(s, { x, y, w, h: ch, fill: "FCF7EC", border: "E5D5B6" });
+    s.addShape(pptx.ShapeType.ellipse, { x: x + 0.3, y: y + 0.19, w: 0.14, h: 0.14, fill: { color: AMBER } });
     s.addText(title, {
-      x: x + 0.6, y: y + 0.16, w: cw - 0.9, h: 0.3, isTextBox: true, margin: 0,
-      fontFace: HEAD_FONT, fontSize: 11.5, color: INK,
+      x: x + 0.58, y: y + 0.11, w: w - 0.88, h: 0.28, isTextBox: true, margin: 0,
+      fontFace: HEAD_FONT, fontSize: 11, color: INK,
     });
     s.addText(desc, {
-      x: x + 0.6, y: y + 0.5, w: cw - 0.9, h: 0.4, isTextBox: true, margin: 0,
-      fontFace: BODY_FONT, fontSize: 9.5, color: INK_SOFT, lineSpacingMultiple: 1.15,
+      x: x + 0.58, y: y + 0.41, w: w - 0.88, h: 0.38, isTextBox: true, margin: 0,
+      fontFace: BODY_FONT, fontSize: 9, color: INK_SOFT, lineSpacingMultiple: 1.12,
     });
   });
+  s.addNotes("Le rapport exemple : les deux PDF ont été sortis de public/ vers private/reports/ et sont servis par une route qui vérifie le palier. Ils ne sont donc plus copiés automatiquement dans le déploiement — c'est outputFileTracingIncludes, dans next.config.ts, qui demande à Vercel de les embarquer. Ce mécanisme n'a jamais tourné en production : à tester depuis un compte abonné dès le premier déploiement.");
 }
 
 /* ------------------------------------------------ 9. ce qui est déjà prêt */
@@ -473,7 +483,7 @@ function card(s, { x, y, w, h, fill = SURFACE, border = LINE }) {
 {
   const s = pptx.addSlide();
   s.background = { color: CHARTREUSE };
-  s.addText("Six bloquants, huit vérifications", {
+  s.addText("Six bloquants, neuf vérifications", {
     x: M, y: 2.7, w: 10.5, h: 1, isTextBox: true, margin: 0,
     fontFace: HEAD_FONT, fontSize: 40, color: INK,
   });
